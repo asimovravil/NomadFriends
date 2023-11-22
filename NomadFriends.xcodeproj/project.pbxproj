@@ -26,6 +26,8 @@
 		F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */; };
 		F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */; };
 		F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */; };
+		F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */; };
+		F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 				F1B60BDC2B0DE285002D21FA /* Menu */,
 				F1B60BDF2B0DE77C002D21FA /* Settings */,
 				F1B60BE62B0DF427002D21FA /* Profile */,
+				F1B60BE72B0E03A7002D21FA /* HowToPlay  */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -144,6 +149,15 @@
 				F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		F1B60BE72B0E03A7002D21FA /* HowToPlay  */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */,
+				F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */,
+			);
+			path = "HowToPlay ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +244,8 @@
 				F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
+				F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */,
+				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
 				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,

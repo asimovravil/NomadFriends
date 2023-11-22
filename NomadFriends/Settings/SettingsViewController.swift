@@ -12,7 +12,6 @@ class SettingsViewController: UIViewController {
     var backgroundView = UIImageView()
     var tableView = UITableView(frame: .zero, style: .plain)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
