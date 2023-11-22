@@ -19,6 +19,13 @@ class MenuViewController: UIViewController {
         super.viewDidLoad()
 
         setupViews()
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    }
+    
+    @objc private func settingsButtonTouch() {
+        let controller = SettingsViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -43,6 +50,7 @@ extension MenuViewController {
         view.addSubview(profileButton)
         
         settingsButton.setImage(UIImage(named: "settingsButton"), for: .normal)
+        settingsButton.addTarget(self, action: #selector(settingsButtonTouch), for: .touchUpInside)
         settingsButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(settingsButton)
         
