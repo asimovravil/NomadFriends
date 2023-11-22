@@ -25,6 +25,7 @@
 		F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */; };
 		F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */; };
 		F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */; };
+		F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				F1B60BC62B0DC86C002D21FA /* Training */,
 				F1B60BDC2B0DE285002D21FA /* Menu */,
 				F1B60BDF2B0DE77C002D21FA /* Settings */,
+				F1B60BE62B0DF427002D21FA /* Profile */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -133,6 +136,14 @@
 				F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		F1B60BE62B0DF427002D21FA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
+				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

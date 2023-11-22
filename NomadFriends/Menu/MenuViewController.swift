@@ -27,6 +27,11 @@ class MenuViewController: UIViewController {
         let controller = SettingsViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    @objc private func profileButtonTouch() {
+        let controller = ProfileViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 extension MenuViewController {
@@ -46,6 +51,7 @@ extension MenuViewController {
         view.addSubview(howToPlayButton)
         
         profileButton.setImage(UIImage(named: "profileButton"), for: .normal)
+        profileButton.addTarget(self, action: #selector(profileButtonTouch), for: .touchUpInside)
         profileButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(profileButton)
         
