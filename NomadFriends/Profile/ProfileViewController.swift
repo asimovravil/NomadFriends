@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class ProfileViewController: UIViewController {
     
@@ -25,14 +26,35 @@ class ProfileViewController: UIViewController {
 
         setupViews()
         setupNavigationBar()
+        loadProfileImage()
+        loadUsername()
     }
     
-    @objc private func editButtonTouch() {
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         
+        cameraImageView.layer.cornerRadius = 60
     }
     
     @objc private func deleteButtonTouch() {
+        UserDefaults.standard.removeObject(forKey: "userProfileImage")
+        UserDefaults.standard.removeObject(forKey: "username")
         
+        cameraImageView.image = UIImage(named: "cameraImage")
+        setnameTextField.text = ""
+    }
+    
+    func loadProfileImage() {
+        if let imageData = UserDefaults.standard.data(forKey: "userProfileImage"),
+           let image = UIImage(data: imageData) {
+            cameraImageView.image = image
+        }
+    }
+    
+    func loadUsername() {
+        if let username = UserDefaults.standard.string(forKey: "username") {
+            setnameTextField.text = username
+        }
     }
 }
 
@@ -113,6 +135,8 @@ extension ProfileViewController {
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             cameraImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cameraImageView.widthAnchor.constraint(equalToConstant: 120),
+            cameraImageView.heightAnchor.constraint(equalToConstant: 120),
             
             setnameTextField.topAnchor.constraint(equalTo: cameraImageView.bottomAnchor, constant: 16),
             setnameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -154,5 +178,69 @@ extension ProfileViewController {
         let titleImageView = UIImageView(image: UIImage(named: "profileNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView
+    }
+}
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @objc private func editButtonTouch() {
+        let status = PHPhotoLibrary.authorizationStatus()
+        if status == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { status in
+                if status == .authorized {
+                    self.presentImagePicker()
+                }
+            }
+        } else if status == .authorized {
+            self.presentImagePicker()
+        }
+    }
+
+    func presentImagePicker() {
+        DispatchQueue.main.async {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    // В методе, где вы устанавливаете изображение на кнопку:
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            let resizedImage = resizeImage(image: selectedImage, targetSize: cameraImageView.bounds.size)
+
+            // Сохранение изображения
+            saveImageToLocalStorage(resizedImage)
+
+            cameraImageView.image = resizedImage
+        }
+
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func saveImageToLocalStorage(_ image: UIImage) {
+        if let imageData = image.pngData() {
+            UserDefaults.standard.set(imageData, forKey: "userProfileImage")
+        }
+    }
+    
+    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
+
+        let widthRatio  = targetSize.width  / size.width
+        let heightRatio = targetSize.height / size.height
+
+        // Определяем "масштабный коэффициент" как минимум из двух отношений
+        _ = min(widthRatio, heightRatio)
+
+        let scaledImageSize = CGSize(width: 120, height: 120)
+
+        let renderer = UIGraphicsImageRenderer(size: scaledImageSize)
+        let scaledImage = renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: scaledImageSize))
+        }
+
+        return scaledImage
     }
 }
