@@ -37,14 +37,12 @@ class TrainingViewController: UIViewController {
         if currentPage < pages.count - 1 {
             currentPage += 1
         } else {
-            // Здесь можно добавить логику для завершения онбординга, например, переход к основному содержанию приложения
-            currentPage = 0 // Если хотите циклически начать сначала
+            currentPage = 0 
         }
         
         updateContentForPage(currentPage)
         pageControl.currentPage = currentPage
         
-        // Изменение текста кнопки, если достигнута последняя страница
         if currentPage == pages.count - 1 {
             nextButton.setImage(UIImage(named: "startAParty"), for: .normal)
         } else {
@@ -63,6 +61,8 @@ extension TrainingViewController {
         
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = currentPage
+        pageControl.currentPageIndicatorTintColor = .yellow
+        
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pageControl)
         
@@ -73,6 +73,7 @@ extension TrainingViewController {
         textTitleView.textAlignment = .center
         textTitleView.textColor = .white
         textTitleView.numberOfLines = 0
+        textTitleView.font = UIFont(name: "SFProDisplay-Bold", size: 32)
         textTitleView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textTitleView)
         
@@ -80,6 +81,7 @@ extension TrainingViewController {
         textSubTitleView.textColor = .white
         textSubTitleView.numberOfLines = 0
         textSubTitleView.alpha = 0.65
+        textSubTitleView.font = UIFont(name: "SFProDisplay-Regular", size: 14)
         textSubTitleView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(textSubTitleView)
         
@@ -109,8 +111,18 @@ extension TrainingViewController {
             pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -17),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                imageView.heightAnchor.constraint(equalToConstant: 340)
+            ])
+        }
     }
 }
