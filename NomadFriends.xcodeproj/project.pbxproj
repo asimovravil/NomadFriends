@@ -22,6 +22,7 @@
 		F1B60BD92B0DD227002D21FA /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BD02B0DD227002D21FA /* SFProDisplay-Semibold.ttf */; };
 		F1B60BDA2B0DD227002D21FA /* SFProDisplay-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BD12B0DD227002D21FA /* SFProDisplay-Heavy.ttf */; };
 		F1B60BDB2B0DD227002D21FA /* SFProDisplay-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BD22B0DD227002D21FA /* SFProDisplay-Thin.ttf */; };
+		F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		F1B60BD02B0DD227002D21FA /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		F1B60BD12B0DD227002D21FA /* SFProDisplay-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Heavy.ttf"; sourceTree = "<group>"; };
 		F1B60BD22B0DD227002D21FA /* SFProDisplay-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Thin.ttf"; sourceTree = "<group>"; };
+		F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				F1B60BB22B0DC813002D21FA /* AppDelegate.swift */,
 				F1B60BB42B0DC813002D21FA /* SceneDelegate.swift */,
 				F1B60BC62B0DC86C002D21FA /* Training */,
+				F1B60BDC2B0DE285002D21FA /* Menu */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -108,6 +111,14 @@
 				F1B60BD22B0DD227002D21FA /* SFProDisplay-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F1B60BDC2B0DE285002D21FA /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1B60BC82B0DC878002D21FA /* PageData.swift in Sources */,
+				F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */,
 				F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,

@@ -37,7 +37,9 @@ class TrainingViewController: UIViewController {
         if currentPage < pages.count - 1 {
             currentPage += 1
         } else {
-            currentPage = 0 
+            let controller = MenuViewController()
+            controller.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(controller, animated: true)
         }
         
         updateContentForPage(currentPage)
