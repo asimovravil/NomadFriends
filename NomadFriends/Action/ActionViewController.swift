@@ -54,7 +54,15 @@ class ActionViewController: UIViewController {
     }
     
     func createVerticalStackView(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
-        let stackView = UIStackView(arrangedSubviews: [imageView, label])
+        let closeButton = UIButton()
+        closeButton.setImage(UIImage(named: "close"), for: .normal)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        let successButton = UIButton()
+        successButton.setImage(UIImage(named: "success"), for: .normal)
+        successButton.translatesAutoresizingMaskIntoConstraints = false
+
+        let stackView = UIStackView(arrangedSubviews: [successButton, closeButton, imageView, label])
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .fill
