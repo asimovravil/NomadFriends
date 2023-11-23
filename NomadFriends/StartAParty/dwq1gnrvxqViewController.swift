@@ -23,16 +23,16 @@ final class dwq1gnrvxqViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(playerNameChangedStartPartyChponk), name: NSNotification.Name("PlayerNameChanged"), object: nil)
-        setupGoStartViews()
+        NotificationCenter.default.addObserver(self, selector: #selector(vmvmvmvmvm312312), name: NSNotification.Name("PlayerNameChanged"), object: nil)
+        ef9wf994123213()
         setupGoStartNavigationBar()
     }
     
-    @objc func playerNameChangedStartPartyChponk() {
-        startAPartyButtonStartParty.isEnabled = validatePlayerNamesStartPartyChponk()
+    @objc func vmvmvmvmvm312312() {
+        startAPartyButtonStartParty.isEnabled = net040140214()
     }
     
-    @objc func minusButtonStartPartyChponk() {
+    @objc func qwqwqw123131() {
         numberOfPlayers -= 1
         numberOfFriendsAmount -= 1
         tableViewStartParty.reloadData()
@@ -47,10 +47,10 @@ final class dwq1gnrvxqViewController: UIViewController {
             minusButtonStartParty.isEnabled = false
         }
         
-        playerNameChangedStartPartyChponk()
+        vmvmvmvmvm312312()
     }
     
-    @objc func plusButtonPressedStartPartyChponk() {
+    @objc func ererererr21313() {
         numberOfPlayers += 1
         numberOfFriendsAmount += 1
         minusButtonStartParty.isEnabled = true
@@ -62,16 +62,16 @@ final class dwq1gnrvxqViewController: UIViewController {
             plusButtonStartParty.isEnabled = false
         }
         
-        playerNameChangedStartPartyChponk()
+        vmvmvmvmvm312312()
     }
     
-    @objc func createButtonPressedStartPartyChponk() {
+    @objc func ytyttyyy9898989() {
         let choiceController = ahaheaqwddqwd123123ViewController()
-        choiceController.friends = fetchFriendsDataStartPartyChponk()
+        choiceController.friends = ha934949449()
         self.navigationController?.pushViewController(choiceController, animated: true)
     }
 
-    private func fetchFriendsDataStartPartyChponk() -> [FriendInfo] {
+    private func ha934949449() -> [FriendInfo] {
         var friends: [FriendInfo] = []
         for i in 0..<numberOfPlayers {
             if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? ddqwdqd1124121TableViewCell {
@@ -84,7 +84,7 @@ final class dwq1gnrvxqViewController: UIViewController {
         return friends
     }
     
-    func validatePlayerNamesStartPartyChponk() -> Bool {
+    func net040140214() -> Bool {
         for i in 0..<numberOfPlayers {
             if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? ddqwdqd1124121TableViewCell,
                cell.nameFriendTextFieldStartParty.text?.count ?? 0 < 3 {
@@ -96,7 +96,7 @@ final class dwq1gnrvxqViewController: UIViewController {
 }
 
 extension dwq1gnrvxqViewController {
-    func setupGoStartViews() {
+    func ef9wf994123213() {
         partyStart.image = UIImage(named: "background")
         partyStart.layer.masksToBounds = true
         partyStart.contentMode = .scaleAspectFill
@@ -104,7 +104,7 @@ extension dwq1gnrvxqViewController {
         view.addSubview(partyStart)
         
         startAPartyButtonStartParty.setImage(UIImage(named: "startAParty"), for: .normal)
-        startAPartyButtonStartParty.addTarget(self, action: #selector(createButtonPressedStartPartyChponk), for: .touchUpInside)
+        startAPartyButtonStartParty.addTarget(self, action: #selector(ytyttyyy9898989), for: .touchUpInside)
         startAPartyButtonStartParty.isEnabled = false
         startAPartyButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(startAPartyButtonStartParty)
@@ -127,7 +127,7 @@ extension dwq1gnrvxqViewController {
         view.addSubview(numberFriendsLabelStartParty)
         
         minusButtonStartParty.setImage(UIImage(named: "minus"), for: .normal)
-        minusButtonStartParty.addTarget(self, action: #selector(minusButtonStartPartyChponk), for: .touchUpInside)
+        minusButtonStartParty.addTarget(self, action: #selector(qwqwqw123131), for: .touchUpInside)
         minusButtonStartParty.isEnabled = false
         minusButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(minusButtonStartParty)
@@ -140,7 +140,7 @@ extension dwq1gnrvxqViewController {
         view.addSubview(amountFriendsStartParty)
         
         plusButtonStartParty.setImage(UIImage(named: "plus"), for: .normal)
-        plusButtonStartParty.addTarget(self, action: #selector(plusButtonPressedStartPartyChponk), for: .touchUpInside)
+        plusButtonStartParty.addTarget(self, action: #selector(ererererr21313), for: .touchUpInside)
         plusButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(plusButtonStartParty)
         

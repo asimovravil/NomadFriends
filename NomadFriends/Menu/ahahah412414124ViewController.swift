@@ -18,34 +18,34 @@ class ahahah412414124ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupMenuViews()
+        vcascsmacm214214214()
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    @objc private func startAPartyButtonMenuChponk() {
+    @objc private func cascal321() {
         let controller = dwq1gnrvxqViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func howToPlayButtonMenuChponk() {
+    @objc private func mnbbnm3441() {
         let controller = dqwdwq412211d12ViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func settingsButtonMenuChponk() {
+    @objc private func febbel1412412() {
         let controller = lalallafqjqfjqwf12321312ViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func profileButtonMenuChponk() {
+    @objc private func vfjvjv4124414() {
         let controller = gwefwe123ViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
 extension ahahah412414124ViewController {
-    func setupMenuViews() {
+    func vcascsmacm214214214() {
         menuMenu.image = UIImage(named: "menuBackground")
         menuMenu.layer.masksToBounds = true
         menuMenu.contentMode = .scaleAspectFill
@@ -53,22 +53,22 @@ extension ahahah412414124ViewController {
         view.addSubview(menuMenu)
         
         startAPartyButtonMenu.setImage(UIImage(named: "startAPartyButton"), for: .normal)
-        startAPartyButtonMenu.addTarget(self, action: #selector(startAPartyButtonMenuChponk), for: .touchUpInside)
+        startAPartyButtonMenu.addTarget(self, action: #selector(cascal321), for: .touchUpInside)
         startAPartyButtonMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(startAPartyButtonMenu)
         
         howToPlayButtonMenu.setImage(UIImage(named: "howToPlayButton"), for: .normal)
-        howToPlayButtonMenu.addTarget(self, action: #selector(howToPlayButtonMenuChponk), for: .touchUpInside)
+        howToPlayButtonMenu.addTarget(self, action: #selector(mnbbnm3441), for: .touchUpInside)
         howToPlayButtonMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(howToPlayButtonMenu)
         
         profileButtonMenu.setImage(UIImage(named: "profileButton"), for: .normal)
-        profileButtonMenu.addTarget(self, action: #selector(profileButtonMenuChponk), for: .touchUpInside)
+        profileButtonMenu.addTarget(self, action: #selector(vfjvjv4124414), for: .touchUpInside)
         profileButtonMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(profileButtonMenu)
         
         settingsButtonMenu.setImage(UIImage(named: "settingsButton"), for: .normal)
-        settingsButtonMenu.addTarget(self, action: #selector(settingsButtonMenuChponk), for: .touchUpInside)
+        settingsButtonMenu.addTarget(self, action: #selector(febbel1412412), for: .touchUpInside)
         settingsButtonMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(settingsButtonMenu)
         

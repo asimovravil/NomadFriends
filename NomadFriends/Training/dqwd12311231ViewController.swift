@@ -22,7 +22,7 @@ class dqwd12311231ViewController: UIViewController {
         super.viewDidLoad()
         
         updateContentForPage(currentPage)
-        setupTrainingViews()
+        bmbmcbmbmvcdqwdw112312312()
     }
 
     func updateContentForPage(_ page: Int) {
@@ -54,7 +54,7 @@ class dqwd12311231ViewController: UIViewController {
 }
 
 extension dqwd12311231ViewController {
-    func setupTrainingViews() {
+    func bmbmcbmbmvcdqwdw112312312() {
         training.image = UIImage(named: "background")
         training.layer.masksToBounds = true
         training.contentMode = .scaleAspectFill

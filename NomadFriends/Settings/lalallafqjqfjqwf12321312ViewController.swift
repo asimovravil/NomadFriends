@@ -15,11 +15,11 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSettingsViews()
+        mnbvnbv414455()
         setupSettingsNavigationBar()
     }
     
-    @objc private func rateUsButtonTouch() {
+    @objc private func kbfbdbl212412() {
         let appName = "Avix"
         
         if let url = URL(string: "https://itunes.apple.com/search?term=\(appName)&entity=software") {
@@ -34,7 +34,7 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
                            let results = json["results"] as? [[String: Any]],
                            let firstResult = results.first,
                            let appID = firstResult["trackId"] as? Int {
-                            self.appStore(for: appID)
+                            self.vsascsac142124(for: appID)
                         }
                     } catch {
                         print("JSON parsing error: \(error.localizedDescription)")
@@ -45,7 +45,7 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
         }
     }
     
-    private func appStore(for appID: Int) {
+    private func vsascsac142124(for appID: Int) {
         let appStoreURL = URL(string: "itms-apps://itunes.apple.com/app/id\(appID)?action=write-review")!
         
         if UIApplication.shared.canOpenURL(appStoreURL) {
@@ -55,7 +55,7 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
         }
     }
     
-    private func shareAppButtonTouch() {
+    private func czcdsadsad141214() {
         let textToShare = "Check out this awesome app!"
         let appURL = URL(string: "https://www.yourappstorelink.com")!
         
@@ -63,7 +63,7 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
         present(activityViewController, animated: true, completion: nil)
     }
     
-    @objc func switchChanged(_ sender : UISwitch){
+    @objc func mbfdbdfm1124124(_ sender : UISwitch){
         if sender.isOn {
             print("On")
         } else {
@@ -73,7 +73,7 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
 }
 
 extension lalallafqjqfjqwf12321312ViewController {
-    func setupSettingsViews() {
+    func mnbvnbv414455() {
         settingsSettings.image = UIImage(named: "background")
         settingsSettings.layer.masksToBounds = true
         settingsSettings.contentMode = .scaleAspectFill
@@ -135,7 +135,7 @@ extension lalallafqjqfjqwf12321312ViewController: UITableViewDataSource, UITable
             
             let switchView = UISwitch(frame: .zero)
             switchView.setOn(true, animated: true)
-            switchView.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
+            switchView.addTarget(self, action: #selector(mbfdbdfm1124124(_:)), for: .valueChanged)
             cell.accessoryView = switchView
         case 1:
             cell.titleCellSettings.text = "Privacy Policy"
@@ -160,11 +160,11 @@ extension lalallafqjqfjqwf12321312ViewController: UITableViewDataSource, UITable
             break
             
         case 2:
-            rateUsButtonTouch()
+            kbfbdbl212412()
             break
             
         case 3:
-            shareAppButtonTouch()
+            czcdsadsad141214()
             break
             
         default:

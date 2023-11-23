@@ -22,26 +22,26 @@ class dqwdwq412211d12ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupFAQViews()
+        ec8wcjqdjwqdq()
         setupFAQNavigationBar()
-        updateViewForCurrentPageFAQChponk()
+        feofofhhihihi13131321()
     }
     
-    @objc private func leftButtonFAQChponk() {
+    @objc private func bmgbfbk12321312() {
         if currentPageIndex > 0 {
             currentPageIndex -= 1
-            updateViewForCurrentPageFAQChponk()
+            feofofhhihihi13131321()
         }
     }
 
-    @objc private func rightButtonFAQChponk() {
+    @objc private func irwireiri1313213() {
         if currentPageIndex < cards.count - 1 {
             currentPageIndex += 1
-            updateViewForCurrentPageFAQChponk()
+            feofofhhihihi13131321()
         }
     }
     
-    private func updateViewForCurrentPageFAQChponk() {
+    private func feofofhhihihi13131321() {
         let currentPage = cards[currentPageIndex]
         
         UIView.transition(with: cardImageFAQ, duration: 0.5, options: .transitionCrossDissolve, animations: {
@@ -59,7 +59,7 @@ class dqwdwq412211d12ViewController: UIViewController {
 }
 
 extension dqwdwq412211d12ViewController {
-    private func setupFAQViews() {
+    private func ec8wcjqdjwqdq() {
         goStart.image = UIImage(named: "background")
         goStart.layer.masksToBounds = true
         goStart.contentMode = .scaleAspectFill
@@ -87,12 +87,12 @@ extension dqwdwq412211d12ViewController {
         view.addSubview(cardLabelFAQ)
         
         leftButtonFAQ.setImage(UIImage(named: "leftButton"), for: .normal)
-        leftButtonFAQ.addTarget(self, action: #selector(leftButtonFAQChponk), for: .touchUpInside)
+        leftButtonFAQ.addTarget(self, action: #selector(bmgbfbk12321312), for: .touchUpInside)
         leftButtonFAQ.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(leftButtonFAQ)
         
         rightButtonFAQ.setImage(UIImage(named: "rightButton"), for: .normal)
-        rightButtonFAQ.addTarget(self, action: #selector(rightButtonFAQChponk), for: .touchUpInside)
+        rightButtonFAQ.addTarget(self, action: #selector(irwireiri1313213), for: .touchUpInside)
         rightButtonFAQ.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(rightButtonFAQ)
         

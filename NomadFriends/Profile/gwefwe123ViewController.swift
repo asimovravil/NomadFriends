@@ -24,10 +24,10 @@ class gwefwe123ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupProfileViews()
+        dqd6qwdqwd6wd6()
         setupProfileNavigationBar()
-        loadProfileImageProfileChponk()
-        loadUsernameProfileChponk()
+        dlwqdlwq131313()
+        lelqd121412412414()
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,7 +36,7 @@ class gwefwe123ViewController: UIViewController {
         cameraImageProfile.layer.cornerRadius = 60
     }
     
-    @objc private func deleteButtonProfileChponk() {
+    @objc private func ldeledledldel12312() {
         UserDefaults.standard.removeObject(forKey: "userProfileImage")
         UserDefaults.standard.removeObject(forKey: "username")
         
@@ -44,14 +44,14 @@ class gwefwe123ViewController: UIViewController {
         setnameTextFieldProfile.text = ""
     }
     
-    func loadProfileImageProfileChponk() {
+    func dlwqdlwq131313() {
         if let imageData = UserDefaults.standard.data(forKey: "userProfileImage"),
            let image = UIImage(data: imageData) {
             cameraImageProfile.image = image
         }
     }
     
-    func loadUsernameProfileChponk() {
+    func lelqd121412412414() {
         if let username = UserDefaults.standard.string(forKey: "username") {
             setnameTextFieldProfile.text = username
         }
@@ -59,7 +59,7 @@ class gwefwe123ViewController: UIViewController {
 }
 
 extension gwefwe123ViewController {
-    private func setupProfileViews() {
+    private func dqd6qwdqwd6wd6() {
         profileProfile.image = UIImage(named: "profileBackground")
         profileProfile.layer.masksToBounds = true
         profileProfile.contentMode = .scaleAspectFill
@@ -124,7 +124,7 @@ extension gwefwe123ViewController {
         view.addSubview(friendsLabelProfile)
         
         deleteButtonProfile.setImage(UIImage(named: "deleteAccount"), for: .normal)
-        deleteButtonProfile.addTarget(self, action: #selector(deleteButtonProfileChponk), for: .touchUpInside)
+        deleteButtonProfile.addTarget(self, action: #selector(ldeledledldel12312), for: .touchUpInside)
         deleteButtonProfile.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(deleteButtonProfile)
         

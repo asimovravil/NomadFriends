@@ -16,7 +16,7 @@ class dwdwql13cbwedqwTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupSettingsViews()
+        mvsd1k4214211()
     }
     
     required init?(coder: NSCoder) {
@@ -25,7 +25,7 @@ class dwdwql13cbwedqwTableViewCell: UITableViewCell {
 }
 
 extension dwdwql13cbwedqwTableViewCell {
-    private func setupSettingsViews() {
+    private func mvsd1k4214211() {
         titleCellSettings.text = "aldDLda"
         titleCellSettings.textColor = .white
         titleCellSettings.numberOfLines = 0
