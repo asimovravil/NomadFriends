@@ -33,9 +33,10 @@ class LaderboardViewController: UIViewController {
         
         setupViews()
         setupNavigationBar()
+        setupFriendLabelsAndImages()
     }
     
-    private func setupPlayerLabelsAndImages() {
+    private func setupFriendLabelsAndImages() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -56,8 +57,8 @@ class LaderboardViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                pair.0.isHidden = true
-                pair.1.isHidden = true
+                setupLabel(pair.0, withText: "Friend")
+                setupImageView(pair.1, withImageName: "friend1")
             }
         }
     }

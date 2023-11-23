@@ -9,6 +9,8 @@ import UIKit
 
 class BonusViewController: UIViewController {
     
+    var friends: [FriendInfo] = []
+    
     var backgroundView = UIImageView()
     var stickView = UIImageView()
     var circleBonusView = UIImageView()
@@ -58,19 +60,22 @@ class BonusViewController: UIViewController {
     }
     
     @objc private func noIWontPressed() {
-        let controller = MenuViewController()
+        let controller = LaderboardViewController()
+        controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func iDidItPressed() {
-        let controller = MenuViewController()
+        let controller = LaderboardViewController()
+        controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func getButtonPressed() {
-        let controller = MenuViewController()
+        let controller = LaderboardViewController()
+        controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

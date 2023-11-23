@@ -8,7 +8,7 @@
 import UIKit
 
 final class QuizViewController: UIViewController {
-                
+                    
     var backgroundView = UIImageView()
     var answeredQuestionsCount = 0
     var friends: [FriendInfo] = []
@@ -38,7 +38,7 @@ final class QuizViewController: UIViewController {
         
         setupViews()
         setupNavigationBar()
-        setupPlayerLabelsAndImages()
+        setupFriendLabelsAndImages()
     }
     
     func setupLabel(_ label: UILabel, withText text: String) {
@@ -85,12 +85,13 @@ final class QuizViewController: UIViewController {
     }
 
     private func navigateToLeaderboard() {
-        let controller = ChoiceViewController()
+        let controller = BonusViewController()
+        controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    private func setupPlayerLabelsAndImages() {
+    private func setupFriendLabelsAndImages() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -111,8 +112,8 @@ final class QuizViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                pair.0.isHidden = true
-                pair.1.isHidden = true
+                setupLabel(pair.0, withText: "Friend")
+                setupImageView(pair.1, withImageName: "friend1")
             }
         }
     }

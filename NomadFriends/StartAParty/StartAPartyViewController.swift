@@ -46,6 +46,8 @@ final class StartAPartyViewController: UIViewController {
         if numberOfPlayers < 3 {
             minusButton.isEnabled = false
         }
+        
+        playerNameChanged()
     }
     
     @objc func plusButtonPressed() {
@@ -59,25 +61,27 @@ final class StartAPartyViewController: UIViewController {
         if numberOfPlayers >= 6 {
             plusButton.isEnabled = false
         }
+        
+        playerNameChanged()
     }
     
     @objc func createButtonPressed() {
         let choiceController = ChoiceViewController()
-        choiceController.friends = fetchPlayerData()
+        choiceController.friends = fetchFriendsData()
         self.navigationController?.pushViewController(choiceController, animated: true)
     }
 
-    private func fetchPlayerData() -> [FriendInfo] {
-        var players: [FriendInfo] = []
+    private func fetchFriendsData() -> [FriendInfo] {
+        var friends: [FriendInfo] = []
         for i in 0..<numberOfPlayers {
             if let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell {
                 let name = cell.nameFriendTextField.text ?? "Player \(i + 1)"
                 var imageName = cell.selectedImageName
                 imageName = imageName.replacingOccurrences(of: "Active", with: "")
-                players.append(FriendInfo(name: name, imageName: imageName))
+                friends.append(FriendInfo(name: name, imageName: imageName))
             }
         }
-        return players
+        return friends
     }
     
     func validatePlayerNames() -> Bool {

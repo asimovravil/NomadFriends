@@ -36,7 +36,7 @@ class ChoiceViewController: UIViewController {
         
         setupViews()
         setupNavigationBar()
-        setupPlayerLabelsAndImages()
+        setupFriendLabelsAndImages()
     }
     
     func setupLabel(_ label: UILabel, withText text: String) {
@@ -63,7 +63,7 @@ class ChoiceViewController: UIViewController {
         return stackView
     }
     
-    private func setupPlayerLabelsAndImages() {
+    private func setupFriendLabelsAndImages() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -84,8 +84,8 @@ class ChoiceViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                pair.0.isHidden = true
-                pair.1.isHidden = true
+                setupLabel(pair.0, withText: "Friend")
+                setupImageView(pair.1, withImageName: "friend1")
             }
         }
     }

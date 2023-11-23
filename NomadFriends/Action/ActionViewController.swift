@@ -45,10 +45,10 @@ class ActionViewController: UIViewController {
         
         setupViews()
         setupNavigationBar()
-        setupPlayerLabelsAndImages()
+        setupFriendLabelsAndImages()
     }
     
-    private func setupPlayerLabelsAndImages() {
+    private func setupFriendLabelsAndImages() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -69,8 +69,8 @@ class ActionViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                pair.0.isHidden = true
-                pair.1.isHidden = true
+                setupLabel(pair.0, withText: "Friend")
+                setupImageView(pair.1, withImageName: "friend1")
             }
         }
     }
@@ -139,7 +139,9 @@ class ActionViewController: UIViewController {
     func showPopupAndTransition(imageView: UIImageView) {
         imageView.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let controller = ChoiceViewController()
+            let controller = BonusViewController()
+            controller.friends = self.friends
+            controller.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
