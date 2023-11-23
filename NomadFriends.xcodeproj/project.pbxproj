@@ -37,6 +37,7 @@
 		F1B60BFC2B0F5BBB002D21FA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFB2B0F5BBB002D21FA /* Question.swift */; };
 		F1B60BFE2B0F5BC4002D21FA /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */; };
 		F1B60C012B0F61A8002D21FA /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C002B0F61A8002D21FA /* ActionViewController.swift */; };
+		F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C032B0F9120002D21FA /* BonusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		F1B60BFB2B0F5BBB002D21FA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		F1B60C002B0F61A8002D21FA /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		F1B60C032B0F9120002D21FA /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				F1B60BF32B0F4841002D21FA /* Choice */,
 				F1B60BF62B0F5B93002D21FA /* Quiz */,
 				F1B60BFF2B0F6195002D21FA /* Action */,
+				F1B60C022B0F9115002D21FA /* Bonus */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -219,6 +222,14 @@
 			path = Action;
 			sourceTree = "<group>";
 		};
+		F1B60C022B0F9115002D21FA /* Bonus */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60C032B0F9120002D21FA /* BonusViewController.swift */,
+			);
+			path = Bonus;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +315,7 @@
 				F1B60BFC2B0F5BBB002D21FA /* Question.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
+				F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */,
 				F1B60C012B0F61A8002D21FA /* ActionViewController.swift in Sources */,
 				F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */,
 				F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */,
