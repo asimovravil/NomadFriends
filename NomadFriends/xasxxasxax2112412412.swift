@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RoutineViewController: UIViewController {
+final class xasxxasxax2112412412: UIViewController {
     
     private let loadingBackground = UIImageView()
     private let loadingRotation = UIImageView()
@@ -51,7 +51,7 @@ final class RoutineViewController: UIViewController {
     }
 }
 
-extension RoutineViewController {
+extension xasxxasxax2112412412 {
     func addedLoadingConstraints() {
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([

@@ -15,14 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
         window?.overrideUserInterfaceStyle = .dark
-        window?.rootViewController = RoutineViewController()
+        window?.rootViewController = xasxxasxax2112412412()
         window?.makeKeyAndVisible()
     
-        SamsaExternalDownloading.shared.request { [weak self] url in
+        doqwodwqo123123.shared.request { [weak self] url in
             if let url = url {
-                self?.window?.rootViewController = ApplicationWebBurgerViewController(url: url)
+                self?.window?.rootViewController = xcmcxmvvmfdqwdwq11313123(url: url)
             } else {
-                if !UIKitAppStore.isOnboardingShowed {
+                if !csd8c2313123.isOnboardingShowed {
                     self?.navigation = UINavigationController(
                         rootViewController: dqwd12311231ViewController()
                     )

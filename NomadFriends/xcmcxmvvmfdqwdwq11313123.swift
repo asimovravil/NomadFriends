@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ApplicationWebBurgerViewController: UIViewController {
+class xcmcxmvvmfdqwdwq11313123: UIViewController {
 
     let url: URL
     let isNeed: Bool
@@ -69,7 +69,7 @@ class ApplicationWebBurgerViewController: UIViewController {
     }
 }
 
-extension ApplicationWebBurgerViewController: WKNavigationDelegate {
+extension xcmcxmvvmfdqwdwq11313123: WKNavigationDelegate {
     
     private func mayanCoockieWebViewSave() {
         let cookieJar: HTTPCookieStorage = HTTPCookieStorage.shared
@@ -105,7 +105,7 @@ extension ApplicationWebBurgerViewController: WKNavigationDelegate {
             let regex = try? NSRegularExpression(pattern: "www."),
             let _ = regex.firstMatch(in: redirectedUrl, range: NSRange(location: 0, length: redirectedUrl.utf16.count))
         {
-            UIKitAppStore.url = redirectedUrl
+            csd8c2313123.url = redirectedUrl
         }
         decisionHandler(.allow)
     }

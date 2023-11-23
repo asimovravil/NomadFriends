@@ -9,12 +9,12 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-final class SamsaExternalDownloading {
-    static let shared = SamsaExternalDownloading()
+final class doqwodwqo123123 {
+    static let shared = doqwodwqo123123()
     var getPrivacyLolKekPolicyURL: URL?
     func request(completion: @escaping (URL?) -> Void) {
         FirebaseApp.configure()
-        if let url = UIKitAppStore.url, let url = URL(string: url) {
+        if let url = csd8c2313123.url, let url = URL(string: url) {
             completion(url)
             return
         }

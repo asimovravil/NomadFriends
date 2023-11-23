@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class UIKitAppStore {
+final class csd8c2313123 {
     
     static let userDefaults = UserDefaults.standard
     

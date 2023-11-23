@@ -39,10 +39,10 @@
 		F1B60C012B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C002B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift */; };
 		F1B60C042B0F9120002D21FA /* gerge4312414214ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C032B0F9120002D21FA /* gerge4312414214ViewController.swift */; };
 		F1B60C072B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C062B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift */; };
-		F1B60C0C2B0FB0C6002D21FA /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C082B0FB0C5002D21FA /* RoutineViewController.swift */; };
-		F1B60C0D2B0FB0C6002D21FA /* SamsaExternalDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C092B0FB0C6002D21FA /* SamsaExternalDownloading.swift */; };
-		F1B60C0E2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C0A2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift */; };
-		F1B60C0F2B0FB0C6002D21FA /* UIKitAppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C0B2B0FB0C6002D21FA /* UIKitAppStore.swift */; };
+		F1B60C0C2B0FB0C6002D21FA /* xasxxasxax2112412412.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C082B0FB0C5002D21FA /* xasxxasxax2112412412.swift */; };
+		F1B60C0D2B0FB0C6002D21FA /* doqwodwqo123123.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C092B0FB0C6002D21FA /* doqwodwqo123123.swift */; };
+		F1B60C0E2B0FB0C6002D21FA /* xcmcxmvvmfdqwdwq11313123.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C0A2B0FB0C6002D21FA /* xcmcxmvvmfdqwdwq11313123.swift */; };
+		F1B60C0F2B0FB0C6002D21FA /* csd8c2313123.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C0B2B0FB0C6002D21FA /* csd8c2313123.swift */; };
 		F1B60C112B0FB0C9002D21FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1B60C102B0FB0C9002D21FA /* GoogleService-Info.plist */; };
 		F1B60C142B0FB10F002D21FA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1B60C132B0FB10F002D21FA /* FirebaseAnalytics */; };
 		F1B60C162B0FB10F002D21FA /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F1B60C152B0FB10F002D21FA /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -128,10 +128,10 @@
 		F1B60C002B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lhltehrhegwqewqeViewController.swift; sourceTree = "<group>"; };
 		F1B60C032B0F9120002D21FA /* gerge4312414214ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gerge4312414214ViewController.swift; sourceTree = "<group>"; };
 		F1B60C062B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lalalallaOkekekekeekViewController.swift; sourceTree = "<group>"; };
-		F1B60C082B0FB0C5002D21FA /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
-		F1B60C092B0FB0C6002D21FA /* SamsaExternalDownloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamsaExternalDownloading.swift; sourceTree = "<group>"; };
-		F1B60C0A2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationWebBurgerViewController.swift; sourceTree = "<group>"; };
-		F1B60C0B2B0FB0C6002D21FA /* UIKitAppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitAppStore.swift; sourceTree = "<group>"; };
+		F1B60C082B0FB0C5002D21FA /* xasxxasxax2112412412.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xasxxasxax2112412412.swift; sourceTree = "<group>"; };
+		F1B60C092B0FB0C6002D21FA /* doqwodwqo123123.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = doqwodwqo123123.swift; sourceTree = "<group>"; };
+		F1B60C0A2B0FB0C6002D21FA /* xcmcxmvvmfdqwdwq11313123.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = xcmcxmvvmfdqwdwq11313123.swift; sourceTree = "<group>"; };
+		F1B60C0B2B0FB0C6002D21FA /* csd8c2313123.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csd8c2313123.swift; sourceTree = "<group>"; };
 		F1B60C102B0FB0C9002D21FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,10 +212,10 @@
 		F1B60BB12B0DC813002D21FA /* NomadFriends */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60C092B0FB0C6002D21FA /* SamsaExternalDownloading.swift */,
-				F1B60C0B2B0FB0C6002D21FA /* UIKitAppStore.swift */,
-				F1B60C082B0FB0C5002D21FA /* RoutineViewController.swift */,
-				F1B60C0A2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift */,
+				F1B60C092B0FB0C6002D21FA /* doqwodwqo123123.swift */,
+				F1B60C0B2B0FB0C6002D21FA /* csd8c2313123.swift */,
+				F1B60C082B0FB0C5002D21FA /* xasxxasxax2112412412.swift */,
+				F1B60C0A2B0FB0C6002D21FA /* xcmcxmvvmfdqwdwq11313123.swift */,
 				F1B60BC92B0DD227002D21FA /* Fonts */,
 				F1B60BB22B0DC813002D21FA /* AppDelegate.swift */,
 				F1B60BB42B0DC813002D21FA /* SceneDelegate.swift */,
@@ -484,7 +484,7 @@
 			files = (
 				F1B60BC82B0DC878002D21FA /* PageData.swift in Sources */,
 				F1B60BDE2B0DE343002D21FA /* ahahah412414124ViewController.swift in Sources */,
-				F1B60C0F2B0FB0C6002D21FA /* UIKitAppStore.swift in Sources */,
+				F1B60C0F2B0FB0C6002D21FA /* csd8c2313123.swift in Sources */,
 				F1B60BB72B0DC813002D21FA /* dqwd12311231ViewController.swift in Sources */,
 				F1B60BFC2B0F5BBB002D21FA /* Vopros.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
@@ -497,14 +497,14 @@
 				F1B60BFE2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift in Sources */,
 				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
 				F1B60BF02B0F3471002D21FA /* ddqwdqd1124121TableViewCell.swift in Sources */,
-				F1B60C0D2B0FB0C6002D21FA /* SamsaExternalDownloading.swift in Sources */,
+				F1B60C0D2B0FB0C6002D21FA /* doqwodwqo123123.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
 				F1B60C072B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift in Sources */,
-				F1B60C0E2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift in Sources */,
+				F1B60C0E2B0FB0C6002D21FA /* xcmcxmvvmfdqwdwq11313123.swift in Sources */,
 				F1B60BEE2B0F3463002D21FA /* dwq1gnrvxqViewController.swift in Sources */,
 				F1B60BE52B0DF423002D21FA /* gwefwe123ViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* lalallafqjqfjqwf12321312ViewController.swift in Sources */,
-				F1B60C0C2B0FB0C6002D21FA /* RoutineViewController.swift in Sources */,
+				F1B60C0C2B0FB0C6002D21FA /* xasxxasxax2112412412.swift in Sources */,
 				F1B60BFA2B0F5BAF002D21FA /* mnmnbnfn41233TableViewCell.swift in Sources */,
 				F1B60BF52B0F4856002D21FA /* ahaheaqwddqwd123123ViewController.swift in Sources */,
 			);
