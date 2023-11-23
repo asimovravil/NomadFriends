@@ -85,7 +85,7 @@ final class QuizViewController: UIViewController {
     }
 
     private func navigateToLeaderboard() {
-        let controller = MenuViewController()
+        let controller = ChoiceViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

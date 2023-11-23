@@ -139,7 +139,7 @@ class ActionViewController: UIViewController {
     func showPopupAndTransition(imageView: UIImageView) {
         imageView.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let controller = MenuViewController()
+            let controller = ChoiceViewController()
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
