@@ -89,7 +89,12 @@ class ChoiceViewController: UIViewController {
             }
         }
     }
-
+    
+    @objc func questionButtonTouch() {
+        let quizController = QuizViewController()
+        quizController.friends = friends
+        self.navigationController?.pushViewController(quizController, animated: true)
+    }
 }
 
 extension ChoiceViewController {
@@ -141,6 +146,7 @@ extension ChoiceViewController {
         roundImage.translatesAutoresizingMaskIntoConstraints = false
         
         questionButton.setImage(UIImage(named: "questionCard"), for: .normal)
+        questionButton.addTarget(self, action: #selector(questionButtonTouch), for: .touchUpInside)
         questionButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(questionButton)
         

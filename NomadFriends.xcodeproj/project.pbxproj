@@ -32,6 +32,10 @@
 		F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */; };
 		F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */; };
 		F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */; };
+		F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */; };
+		F1B60BFA2B0F5BAF002D21FA /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */; };
+		F1B60BFC2B0F5BBB002D21FA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFB2B0F5BBB002D21FA /* Question.swift */; };
+		F1B60BFE2B0F5BC4002D21FA /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyTableViewCell.swift; sourceTree = "<group>"; };
 		F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfo.swift; sourceTree = "<group>"; };
 		F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
+		F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
+		F1B60BFB2B0F5BBB002D21FA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,7 @@
 				F1B60BE72B0E03A7002D21FA /* HowToPlay  */,
 				F1B60BEC2B0F344F002D21FA /* StartAParty */,
 				F1B60BF32B0F4841002D21FA /* Choice */,
+				F1B60BF62B0F5B93002D21FA /* Quiz */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -188,6 +197,17 @@
 			path = Choice;
 			sourceTree = "<group>";
 		};
+		F1B60BF62B0F5B93002D21FA /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */,
+				F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */,
+				F1B60BFB2B0F5BBB002D21FA /* Question.swift */,
+				F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,16 +290,20 @@
 				F1B60BC82B0DC878002D21FA /* PageData.swift in Sources */,
 				F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */,
 				F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */,
+				F1B60BFC2B0F5BBB002D21FA /* Question.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
 				F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */,
+				F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */,
 				F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */,
+				F1B60BFE2B0F5BC4002D21FA /* QuizBrain.swift in Sources */,
 				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
 				F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
 				F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */,
 				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,
+				F1B60BFA2B0F5BAF002D21FA /* QuizTableViewCell.swift in Sources */,
 				F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
