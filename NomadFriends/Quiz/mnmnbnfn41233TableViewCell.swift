@@ -35,15 +35,15 @@ final class mnmnbnfn41233TableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupQuizViews()
-        updateCHAHCHAHUI()
+        dalbankqdwkdqkdq()
+        dabildqp11231()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc public func updateCHAHCHAHUI() {
+    @objc public func dabildqp11231() {
         let questionText = quizBrainQuizChponk.getQuestionText()
         let answers = quizBrainQuizChponk.getAnswers()
         
@@ -66,7 +66,7 @@ final class mnmnbnfn41233TableViewCell: UITableViewCell {
         answerSelected = false
     }
     
-    @objc private func answerButtonTappedChahChah(_ sender: UIButton) {
+    @objc private func bvbvbvbvbvbvv(_ sender: UIButton) {
         if !answerSelected {
             let userAnswer = sender.currentTitle!
             let userGotItRight = quizBrainQuizChponk.checkAnswer(userAnswer: userAnswer)
@@ -80,14 +80,14 @@ final class mnmnbnfn41233TableViewCell: UITableViewCell {
                 popIncorrectQuizChponk.isHidden = false
             }
             
-            quizViewController?.updateCountLabelQuizChponk(with: quizBrainQuizChponk.questionNumber + 1, totalQuestions: quizBrainQuizChponk.quiz.count)
+            quizViewController?.asxaxaxsa12131231(with: quizBrainQuizChponk.questionNumber + 1, totalQuestions: quizBrainQuizChponk.quiz.count)
 
             sender.layer.cornerRadius = 20
             answerSelected = true
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.quizBrainQuizChponk.nextQuestion()
-                self.updateCHAHCHAHUI()
+                self.dabildqp11231()
                 self.answerSelected = false
                 self.delegate?.didAnswerQuestionADdwdkDKdLoh(correctAnswers: self.userCorrectAnswers)
             }
@@ -97,7 +97,7 @@ final class mnmnbnfn41233TableViewCell: UITableViewCell {
 }
 
 extension mnmnbnfn41233TableViewCell {
-    func setupQuizViews() {
+    func dalbankqdwkdqkdq() {
         contentView.addSubview(cardQuestionQuizChponk)
         contentView.addSubview(questionLabelQuizChponk)
         contentView.addSubview(firstAnswerButtonQuizChponk)
@@ -135,7 +135,7 @@ extension mnmnbnfn41233TableViewCell {
         firstAnswerButtonQuizChponk.setTitleColor(.white, for: .normal)
         firstAnswerButtonQuizChponk.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 16)
         firstAnswerButtonQuizChponk.contentHorizontalAlignment = .center
-        firstAnswerButtonQuizChponk.addTarget(self, action: #selector(answerButtonTappedChahChah(_:)), for: .touchUpInside)
+        firstAnswerButtonQuizChponk.addTarget(self, action: #selector(bvbvbvbvbvbvv(_:)), for: .touchUpInside)
         firstAnswerButtonQuizChponk.layer.cornerRadius = 20
         firstAnswerButtonQuizChponk.layer.borderWidth = 2
         firstAnswerButtonQuizChponk.layer.borderColor = UIColor.white.cgColor
@@ -145,7 +145,7 @@ extension mnmnbnfn41233TableViewCell {
         secondAnswerButtonQuizChponk.setTitleColor(.white, for: .normal)
         secondAnswerButtonQuizChponk.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 16)
         secondAnswerButtonQuizChponk.contentHorizontalAlignment = .center
-        secondAnswerButtonQuizChponk.addTarget(self, action: #selector(answerButtonTappedChahChah(_:)), for: .touchUpInside)
+        secondAnswerButtonQuizChponk.addTarget(self, action: #selector(bvbvbvbvbvbvv(_:)), for: .touchUpInside)
         secondAnswerButtonQuizChponk.layer.cornerRadius = 20
         secondAnswerButtonQuizChponk.layer.borderWidth = 2
         secondAnswerButtonQuizChponk.layer.borderColor = UIColor.white.cgColor
@@ -155,7 +155,7 @@ extension mnmnbnfn41233TableViewCell {
         thirdAnswerButtonQuizChponk.setTitleColor(.white, for: .normal)
         thirdAnswerButtonQuizChponk.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 16)
         thirdAnswerButtonQuizChponk.contentHorizontalAlignment = .center
-        thirdAnswerButtonQuizChponk.addTarget(self, action: #selector(answerButtonTappedChahChah(_:)), for: .touchUpInside)
+        thirdAnswerButtonQuizChponk.addTarget(self, action: #selector(bvbvbvbvbvbvv(_:)), for: .touchUpInside)
         thirdAnswerButtonQuizChponk.layer.cornerRadius = 20
         thirdAnswerButtonQuizChponk.layer.borderWidth = 2
         thirdAnswerButtonQuizChponk.layer.borderColor = UIColor.white.cgColor
@@ -165,7 +165,7 @@ extension mnmnbnfn41233TableViewCell {
         fourthAnswerButtonQuizChponk.setTitleColor(.white, for: .normal)
         fourthAnswerButtonQuizChponk.titleLabel?.font = UIFont(name: "SFProDisplay-Semibold", size: 16)
         fourthAnswerButtonQuizChponk.contentHorizontalAlignment = .center
-        fourthAnswerButtonQuizChponk.addTarget(self, action: #selector(answerButtonTappedChahChah(_:)), for: .touchUpInside)
+        fourthAnswerButtonQuizChponk.addTarget(self, action: #selector(bvbvbvbvbvbvv(_:)), for: .touchUpInside)
         fourthAnswerButtonQuizChponk.layer.cornerRadius = 20
         fourthAnswerButtonQuizChponk.layer.borderWidth = 2
         fourthAnswerButtonQuizChponk.layer.borderColor = UIColor.white.cgColor

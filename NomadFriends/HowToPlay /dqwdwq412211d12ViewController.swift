@@ -23,7 +23,7 @@ class dqwdwq412211d12ViewController: UIViewController {
         super.viewDidLoad()
 
         ec8wcjqdjwqdq()
-        setupFAQNavigationBar()
+        hghghgh2424124()
         feofofhhihihi13131321()
     }
     
@@ -131,7 +131,7 @@ extension dqwdwq412211d12ViewController {
         ])
     }
     
-    private func setupFAQNavigationBar() {
+    private func hghghgh2424124() {
         let titleImageView = UIImageView(image: UIImage(named: "howToPlayNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView

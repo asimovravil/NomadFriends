@@ -36,26 +36,26 @@ final class cclcql3123Controller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupQuizViews()
-        setupQuizNavigationBar()
-        setupFriendLabelsAndImagesQuizChponk()
+        cdqdwwqw53253()
+        vxmvcxnvmv21241()
+        dadada321321()
     }
     
-    func setupLabelQuizChponk(_ label: UILabel, withText text: String) {
+    func vnjfdvjdv12123(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 10)
         label.textColor = .white
         label.textAlignment = .center
     }
     
-    func setupImageViewQuizChponk(_ imageView: UIImageView, withImageName imageName: String) {
+    func xgasgxasxsaxs231312(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func createVerticalStackViewQuizChponk(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
+    func cnxzczdwqqqwqd1212(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: [imageView, label])
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -65,11 +65,11 @@ final class cclcql3123Controller: UIViewController {
         return stackView
     }
     
-    func updateCountLabelQuizChponk(with currentQuestion: Int, totalQuestions: Int) {
+    func asxaxaxsa12131231(with currentQuestion: Int, totalQuestions: Int) {
         countLabelQuiz.text = "\(currentQuestion)/\(totalQuestions)"
     }
     
-    func didAnswerQuestionQuizChponk(correctly: Bool) {
+    func cascascbj12312323(correctly: Bool) {
         if correctly {
             friends[currentPlayerIndex].score += 1
         }
@@ -80,18 +80,18 @@ final class cclcql3123Controller: UIViewController {
         answeredQuestionsCountQuiz += 1
 
         if answeredQuestionsCountQuiz >= 1 {
-            navigateToQuizChponk()
+            netnetnetnetn2424()
         }
     }
 
-    private func navigateToQuizChponk() {
+    private func netnetnetnetn2424() {
         let controller = gerge4312414214ViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    private func setupFriendLabelsAndImagesQuizChponk() {
+    private func dadada321321() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -112,41 +112,41 @@ final class cclcql3123Controller: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabelQuizChponk(pair.0, withText: "Friend")
-                setupImageViewQuizChponk(pair.1, withImageName: "friend1")
+                vnjfdvjdv12123(pair.0, withText: "Friend")
+                xgasgxasxsaxs231312(pair.1, withImageName: "friend1")
             }
         }
     }
 }
 
 extension cclcql3123Controller {
-    func setupQuizViews() {
+    func cdqdwwqw53253() {
         quizAk.image = UIImage(named: "background")
         quizAk.layer.masksToBounds = true
         quizAk.contentMode = .scaleAspectFill
         quizAk.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(quizAk)
         
-        setupImageViewQuizChponk(friend1Image, withImageName: "friend1")
-        setupImageViewQuizChponk(friend2Image, withImageName: "friend2")
-        setupImageViewQuizChponk(friend3Image, withImageName: "friend3")
-        setupImageViewQuizChponk(friend4Image, withImageName: "friend4")
-        setupImageViewQuizChponk(friend5Image, withImageName: "friend5")
-        setupImageViewQuizChponk(friend6Image, withImageName: "friend6")
+        xgasgxasxsaxs231312(friend1Image, withImageName: "friend1")
+        xgasgxasxsaxs231312(friend2Image, withImageName: "friend2")
+        xgasgxasxsaxs231312(friend3Image, withImageName: "friend3")
+        xgasgxasxsaxs231312(friend4Image, withImageName: "friend4")
+        xgasgxasxsaxs231312(friend5Image, withImageName: "friend5")
+        xgasgxasxsaxs231312(friend6Image, withImageName: "friend6")
         
-        setupLabelQuizChponk(friend1Label, withText: "Jane")
-        setupLabelQuizChponk(friend2Label, withText: "Jack")
-        setupLabelQuizChponk(friend3Label, withText: "Steven")
-        setupLabelQuizChponk(friend4Label, withText: "Mary")
-        setupLabelQuizChponk(friend5Label, withText: "Stefani")
-        setupLabelQuizChponk(friend6Label, withText: "Mike")
+        vnjfdvjdv12123(friend1Label, withText: "Jane")
+        vnjfdvjdv12123(friend2Label, withText: "Jack")
+        vnjfdvjdv12123(friend3Label, withText: "Steven")
+        vnjfdvjdv12123(friend4Label, withText: "Mary")
+        vnjfdvjdv12123(friend5Label, withText: "Stefani")
+        vnjfdvjdv12123(friend6Label, withText: "Mike")
         
-        let friend1Stack = createVerticalStackViewQuizChponk(withImageView: friend1Image, andLabel: friend1Label)
-        let friend2Stack = createVerticalStackViewQuizChponk(withImageView: friend2Image, andLabel: friend2Label)
-        let friend3Stack = createVerticalStackViewQuizChponk(withImageView: friend3Image, andLabel: friend3Label)
-        let friend4Stack = createVerticalStackViewQuizChponk(withImageView: friend4Image, andLabel: friend4Label)
-        let friend5Stack = createVerticalStackViewQuizChponk(withImageView: friend5Image, andLabel: friend5Label)
-        let friend6Stack = createVerticalStackViewQuizChponk(withImageView: friend6Image, andLabel: friend6Label)
+        let friend1Stack = cnxzczdwqqqwqd1212(withImageView: friend1Image, andLabel: friend1Label)
+        let friend2Stack = cnxzczdwqqqwqd1212(withImageView: friend2Image, andLabel: friend2Label)
+        let friend3Stack = cnxzczdwqqqwqd1212(withImageView: friend3Image, andLabel: friend3Label)
+        let friend4Stack = cnxzczdwqqqwqd1212(withImageView: friend4Image, andLabel: friend4Label)
+        let friend5Stack = cnxzczdwqqqwqd1212(withImageView: friend5Image, andLabel: friend5Label)
+        let friend6Stack = cnxzczdwqqqwqd1212(withImageView: friend6Image, andLabel: friend6Label)
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -203,7 +203,7 @@ extension cclcql3123Controller {
         }
     }
     
-    private func setupQuizNavigationBar() {
+    private func vxmvcxnvmv21241() {
         let titleLabel = UILabel()
         titleLabel.text = "Question"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
@@ -227,7 +227,7 @@ extension cclcql3123Controller: UITableViewDataSource, UITableViewDelegate, Quiz
         answeredQuestionsCountQuiz += 1
 
         if answeredQuestionsCountQuiz >= 1 {
-            navigateToQuizChponk()
+            netnetnetnetn2424()
         }
     }
     

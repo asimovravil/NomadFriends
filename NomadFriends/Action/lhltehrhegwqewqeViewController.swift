@@ -43,12 +43,12 @@ class lhltehrhegwqewqeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupActionViews()
-        setupActionNavigationBar()
-        setupFriendLabelsAndImagesActionhahaha()
+        udqwiudqwiu13123()
+        nbnbnbnn24231()
+        yohrtohrto2343242()
     }
     
-    private func setupFriendLabelsAndImagesActionhahaha() {
+    private func yohrtohrto2343242() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -69,32 +69,32 @@ class lhltehrhegwqewqeViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabelActionhahaha(pair.0, withText: "Friend")
-                setupImageViewActionhahaha(pair.1, withImageName: "friend1")
+                dwqkd1312321(pair.0, withText: "Friend")
+                dkdkwqdkq123123(pair.1, withImageName: "friend1")
             }
         }
     }
     
-    func setupLabelActionhahaha(_ label: UILabel, withText text: String) {
+    func dwqkd1312321(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 10)
         label.textColor = .white
         label.textAlignment = .center
     }
     
-    func setupImageViewActionhahaha(_ imageView: UIImageView, withImageName imageName: String) {
+    func dkdkwqdkq123123(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func createVerticalStackViewActionhahaha(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
+    func bcsdcbdsbc1231321(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
         let closeButton = UIButton()
         closeButton.setImage(UIImage(named: "close"), for: .normal)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
-        closeButton.addTarget(self, action: #selector(closeButtonTappedActionhahaha), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(ldwqdlw131313123), for: .touchUpInside)
         
         let successButton = UIButton()
         successButton.setImage(UIImage(named: "success"), for: .normal)
@@ -117,7 +117,7 @@ class lhltehrhegwqewqeViewController: UIViewController {
         checkForTransitionActionhahaha()
     }
 
-    @objc func closeButtonTappedActionhahaha() {
+    @objc func ldwqdlw131313123() {
         closeClickCountAction += 1
         successClickCountAction = max(successClickCountAction - 1, 0)
         checkForTransitionActionhahaha()
@@ -149,7 +149,7 @@ class lhltehrhegwqewqeViewController: UIViewController {
 }
 
 extension lhltehrhegwqewqeViewController {
-    func setupActionViews() {
+    func udqwiudqwiu13123() {
         actionBatAction.image = UIImage(named: "background")
         actionBatAction.layer.masksToBounds = true
         actionBatAction.contentMode = .scaleAspectFill
@@ -203,26 +203,26 @@ extension lhltehrhegwqewqeViewController {
         voteLabelAction.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(voteLabelAction)
         
-        setupImageViewActionhahaha(friend1Image, withImageName: "friend1")
-        setupImageViewActionhahaha(friend2Image, withImageName: "friend2")
-        setupImageViewActionhahaha(friend3Image, withImageName: "friend3")
-        setupImageViewActionhahaha(friend4Image, withImageName: "friend4")
-        setupImageViewActionhahaha(friend5Image, withImageName: "friend5")
-        setupImageViewActionhahaha(friend6Image, withImageName: "friend6")
+        dkdkwqdkq123123(friend1Image, withImageName: "friend1")
+        dkdkwqdkq123123(friend2Image, withImageName: "friend2")
+        dkdkwqdkq123123(friend3Image, withImageName: "friend3")
+        dkdkwqdkq123123(friend4Image, withImageName: "friend4")
+        dkdkwqdkq123123(friend5Image, withImageName: "friend5")
+        dkdkwqdkq123123(friend6Image, withImageName: "friend6")
         
-        setupLabelActionhahaha(friend1Label, withText: "Jane")
-        setupLabelActionhahaha(friend2Label, withText: "Jack")
-        setupLabelActionhahaha(friend3Label, withText: "Steven")
-        setupLabelActionhahaha(friend4Label, withText: "Mary")
-        setupLabelActionhahaha(friend5Label, withText: "Stefani")
-        setupLabelActionhahaha(friend6Label, withText: "Mike")
+        dwqkd1312321(friend1Label, withText: "Jane")
+        dwqkd1312321(friend2Label, withText: "Jack")
+        dwqkd1312321(friend3Label, withText: "Steven")
+        dwqkd1312321(friend4Label, withText: "Mary")
+        dwqkd1312321(friend5Label, withText: "Stefani")
+        dwqkd1312321(friend6Label, withText: "Mike")
         
-        let friend1Stack = createVerticalStackViewActionhahaha(withImageView: friend1Image, andLabel: friend1Label)
-        let friend2Stack = createVerticalStackViewActionhahaha(withImageView: friend2Image, andLabel: friend2Label)
-        let friend3Stack = createVerticalStackViewActionhahaha(withImageView: friend3Image, andLabel: friend3Label)
-        let friend4Stack = createVerticalStackViewActionhahaha(withImageView: friend4Image, andLabel: friend4Label)
-        let friend5Stack = createVerticalStackViewActionhahaha(withImageView: friend5Image, andLabel: friend5Label)
-        let friend6Stack = createVerticalStackViewActionhahaha(withImageView: friend6Image, andLabel: friend6Label)
+        let friend1Stack = bcsdcbdsbc1231321(withImageView: friend1Image, andLabel: friend1Label)
+        let friend2Stack = bcsdcbdsbc1231321(withImageView: friend2Image, andLabel: friend2Label)
+        let friend3Stack = bcsdcbdsbc1231321(withImageView: friend3Image, andLabel: friend3Label)
+        let friend4Stack = bcsdcbdsbc1231321(withImageView: friend4Image, andLabel: friend4Label)
+        let friend5Stack = bcsdcbdsbc1231321(withImageView: friend5Image, andLabel: friend5Label)
+        let friend6Stack = bcsdcbdsbc1231321(withImageView: friend6Image, andLabel: friend6Label)
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -281,7 +281,7 @@ extension lhltehrhegwqewqeViewController {
         }
     }
     
-    private func setupActionNavigationBar() {
+    private func nbnbnbnn24231() {
         let titleLabel = UILabel()
         titleLabel.text = "Action"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)

@@ -24,15 +24,15 @@ class gerge4312414214ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupBonusViews()
-        setupBonusNavigationBar()
+        cjcjjcqwjdjqwdqw()
+        dkqkdkq2312321()
     }
     
-    @objc private func spinButtonPressed() {
-        startSpinningBonusCoolakGoAheade()
+    @objc private func cjacjsacja1313123() {
+        nmnmnmnmmnb122213123()
     }
     
-    private func startSpinningBonusCoolakGoAheade() {
+    private func nmnmnmnmmnb122213123() {
         let fullRotation = CGFloat(Double.pi * 2)
         let spinAnimation = CABasicAnimation(keyPath: "transform.rotation")
         spinAnimation.fromValue = 0.0
@@ -42,13 +42,13 @@ class gerge4312414214ViewController: UIViewController {
 
         CATransaction.begin()
         CATransaction.setCompletionBlock {
-            self.showResultBonusCoolakGoAheade()
+            self.czbnzxcbxzb132113()
         }
         circleBonusBonusCoolak.layer.add(spinAnimation, forKey: "360rotation")
         CATransaction.commit()
     }
 
-    private func showResultBonusCoolakGoAheade() {
+    private func czbnzxcbxzb132113() {
         if Bool.random() {
             cardDanceBonusCoolak.isHidden = false
             noIWontBonusCoolak.isHidden = false
@@ -59,21 +59,21 @@ class gerge4312414214ViewController: UIViewController {
         }
     }
     
-    @objc private func noIWontPressedBonusCoolakGoAheade() {
+    @objc private func avcvavcxavxcx3321321() {
         let controller = lalalallaOkekekekeekViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func iDidItPressedBonusCoolakGoAheade() {
+    @objc private func ccewjcewjc33113123() {
         let controller = lalalallaOkekekekeekViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func getButtonPressedBonusCoolakGoAheade() {
+    @objc private func jkjkjkjkjkj() {
         let controller = lalalallaOkekekekeekViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
@@ -82,7 +82,7 @@ class gerge4312414214ViewController: UIViewController {
 }
 
 extension gerge4312414214ViewController {
-    func setupBonusViews() {
+    func cjcjjcqwjdjqwdqw() {
         bonusCool.image = UIImage(named: "bonusBackground")
         bonusCool.layer.masksToBounds = true
         bonusCool.contentMode = .scaleAspectFill
@@ -102,7 +102,7 @@ extension gerge4312414214ViewController {
         view.addSubview(stickViewBonusCoolak)
         
         spinButtonBonusCoolak.setImage(UIImage(named: "spin"), for: .normal)
-        spinButtonBonusCoolak.addTarget(self, action: #selector(spinButtonPressed), for: .touchUpInside)
+        spinButtonBonusCoolak.addTarget(self, action: #selector(cjacjsacja1313123), for: .touchUpInside)
         spinButtonBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(spinButtonBonusCoolak)
         
@@ -121,19 +121,19 @@ extension gerge4312414214ViewController {
         view.addSubview(cardResultBonusCoolak)
         
         noIWontBonusCoolak.setImage(UIImage(named: "noIwont"), for: .normal)
-        noIWontBonusCoolak.addTarget(self, action: #selector(noIWontPressedBonusCoolakGoAheade), for: .touchUpInside)
+        noIWontBonusCoolak.addTarget(self, action: #selector(avcvavcxavxcx3321321), for: .touchUpInside)
         noIWontBonusCoolak.isHidden = true
         noIWontBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(noIWontBonusCoolak)
         
         iDidItBonusCoolak.setImage(UIImage(named: "iDidIt"), for: .normal)
-        iDidItBonusCoolak.addTarget(self, action: #selector(iDidItPressedBonusCoolakGoAheade), for: .touchUpInside)
+        iDidItBonusCoolak.addTarget(self, action: #selector(ccewjcewjc33113123), for: .touchUpInside)
         iDidItBonusCoolak.isHidden = true
         iDidItBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(iDidItBonusCoolak)
         
         getButtonBonusCoolak.setImage(UIImage(named: "get"), for: .normal)
-        getButtonBonusCoolak.addTarget(self, action: #selector(getButtonPressedBonusCoolakGoAheade), for: .touchUpInside)
+        getButtonBonusCoolak.addTarget(self, action: #selector(jkjkjkjkjkj), for: .touchUpInside)
         getButtonBonusCoolak.isHidden = true
         getButtonBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(getButtonBonusCoolak)
@@ -179,13 +179,13 @@ extension gerge4312414214ViewController {
         }
     }
     
-    private func setupBonusNavigationBar() {
-        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTappedActionhahaha))
+    private func dkqkdkq2312321() {
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(ldwqdlw131313123))
         closeButton.tintColor = .white
         navigationItem.leftBarButtonItem = closeButton
     }
     
-    @objc private func closeButtonTappedActionhahaha() {
+    @objc private func ldwqdlw131313123() {
         let controller = ahahah412414124ViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)

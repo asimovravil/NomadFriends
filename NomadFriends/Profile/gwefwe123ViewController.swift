@@ -25,7 +25,7 @@ class gwefwe123ViewController: UIViewController {
         super.viewDidLoad()
 
         dqd6qwdqwd6wd6()
-        setupProfileNavigationBar()
+        dqwdwqdwqdwqdqwd()
         dlwqdlwq131313()
         lelqd121412412414()
     }
@@ -174,7 +174,7 @@ extension gwefwe123ViewController {
         }
     }
     
-    private func setupProfileNavigationBar() {
+    private func dqwdwqdwqdwqdqwd() {
         let titleImageView = UIImageView(image: UIImage(named: "profileNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView

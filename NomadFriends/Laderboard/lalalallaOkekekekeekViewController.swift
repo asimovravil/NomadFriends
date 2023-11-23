@@ -31,12 +31,12 @@ class lalalallaOkekekekeekViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLaderboardViews()
-        setupLaderboardNavigationBar()
-        setupFriendLabelsAndImages()
+        setsesetestsetstt()
+        dotdotdotdotdotdotdot()
+        lolololololo()
     }
     
-    private func setupFriendLabelsAndImages() {
+    private func lolololololo() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -57,19 +57,19 @@ class lalalallaOkekekekeekViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabelLaderboardShitSheeesh(pair.0, withText: "Friend")
-                setupImageLaderboardShitSheeesh(pair.1, withImageName: "friend1")
+                dkkqwodkow131231(pair.0, withText: "Friend")
+                shtthsihrishitishihis(pair.1, withImageName: "friend1")
             }
         }
     }
     
-    @objc private func playAgainButtonLaderboardShitSheeesh() {
+    @objc private func xmkasxksa21331() {
         let controller = ahahah412414124ViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func setupLabelLaderboardShitSheeesh(_ label: UILabel, withText text: String) {
+    func dkkqwodkow131231(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 12)
         label.textColor = .white
@@ -77,7 +77,7 @@ class lalalallaOkekekekeekViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func setupImageLaderboardShitSheeesh(_ imageView: UIImageView, withImageName imageName: String) {
+    func shtthsihrishitishihis(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
@@ -86,7 +86,7 @@ class lalalallaOkekekekeekViewController: UIViewController {
 }
 
 extension lalalallaOkekekekeekViewController {
-    func setupLaderboardViews() {
+    func setsesetestsetstt() {
         laderboardKakashka.image = UIImage(named: "leaderBackground")
         laderboardKakashka.layer.masksToBounds = true
         laderboardKakashka.contentMode = .scaleAspectFill
@@ -94,27 +94,27 @@ extension lalalallaOkekekekeekViewController {
         view.addSubview(laderboardKakashka)
         
         playAgainButtonLaderboardShit.setImage(UIImage(named: "playAgain"), for: .normal)
-        playAgainButtonLaderboardShit.addTarget(self, action: #selector(playAgainButtonLaderboardShitSheeesh), for: .touchUpInside)
+        playAgainButtonLaderboardShit.addTarget(self, action: #selector(xmkasxksa21331), for: .touchUpInside)
         playAgainButtonLaderboardShit.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(playAgainButtonLaderboardShit)
         
-        setupImageLaderboardShitSheeesh(friend1Image, withImageName: "friend1")
-        setupImageLaderboardShitSheeesh(friend2Image, withImageName: "friend2")
-        setupImageLaderboardShitSheeesh(friend3Image, withImageName: "friend3")
-        setupImageLaderboardShitSheeesh(friend4Image, withImageName: "friend4")
-        setupImageLaderboardShitSheeesh(friend5Image, withImageName: "friend5")
-        setupImageLaderboardShitSheeesh(friend6Image, withImageName: "friend6")
+        shtthsihrishitishihis(friend1Image, withImageName: "friend1")
+        shtthsihrishitishihis(friend2Image, withImageName: "friend2")
+        shtthsihrishitishihis(friend3Image, withImageName: "friend3")
+        shtthsihrishitishihis(friend4Image, withImageName: "friend4")
+        shtthsihrishitishihis(friend5Image, withImageName: "friend5")
+        shtthsihrishitishihis(friend6Image, withImageName: "friend6")
         
         friend4Label.font = UIFont(name: "SFProDisplay-Medium", size: 18)
         friend5Label.font = UIFont(name: "SFProDisplay-Medium", size: 18)
         friend6Label.font = UIFont(name: "SFProDisplay-Medium", size: 18)
         
-        setupLabelLaderboardShitSheeesh(friend1Label, withText: "Jane")
-        setupLabelLaderboardShitSheeesh(friend2Label, withText: "Jack")
-        setupLabelLaderboardShitSheeesh(friend3Label, withText: "Steven")
-        setupLabelLaderboardShitSheeesh(friend4Label, withText: "Mary")
-        setupLabelLaderboardShitSheeesh(friend5Label, withText: "Stefani")
-        setupLabelLaderboardShitSheeesh(friend6Label, withText: "Mike")
+        dkkqwodkow131231(friend1Label, withText: "Jane")
+        dkkqwodkow131231(friend2Label, withText: "Jack")
+        dkkqwodkow131231(friend3Label, withText: "Steven")
+        dkkqwodkow131231(friend4Label, withText: "Mary")
+        dkkqwodkow131231(friend5Label, withText: "Stefani")
+        dkkqwodkow131231(friend6Label, withText: "Mike")
         
         view.addSubview(friend1Image)
         view.addSubview(friend2Image)
@@ -199,14 +199,14 @@ extension lalalallaOkekekekeekViewController {
         }
     }
     
-    private func setupLaderboardNavigationBar() {
+    private func dotdotdotdotdotdotdot() {
         let titleLabel = UILabel()
         titleLabel.text = "Final Scoreboard"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
         titleLabel.textColor = .white
         titleLabel.sizeToFit()
         
-        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTappedActionhahaha))
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(ldwqdlw131313123))
         closeButton.tintColor = .white
         navigationItem.leftBarButtonItem = closeButton
                 
@@ -214,7 +214,7 @@ extension lalalallaOkekekekeekViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    @objc private func closeButtonTappedActionhahaha() {
+    @objc private func ldwqdlw131313123() {
         let controller = ahahah412414124ViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)

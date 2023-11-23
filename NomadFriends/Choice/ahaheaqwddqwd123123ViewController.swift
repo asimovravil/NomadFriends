@@ -34,26 +34,26 @@ class ahaheaqwddqwd123123ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupChoiceViews()
-        setupChoiceNavigationBar()
-        setupFriendLabelsAndImagesOpinionChponk()
+        djqwdqjj32112313()
+        jzccjxczjc123123()
+        gekggjhhgh141()
     }
     
-    func setupLabelOpinionChponk(_ label: UILabel, withText text: String) {
+    func cmacasc4121421(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 10)
         label.textColor = .white
         label.textAlignment = .center
     }
     
-    func setupImageViewOpinionChponk(_ imageView: UIImageView, withImageName imageName: String) {
+    func csndncmsncsm1241112(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func createVerticalStackViewOpinionChponk(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
+    func vcxmnbvxcnmvcx4124112(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: [imageView, label])
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -63,7 +63,7 @@ class ahaheaqwddqwd123123ViewController: UIViewController {
         return stackView
     }
     
-    private func setupFriendLabelsAndImagesOpinionChponk() {
+    private func gekggjhhgh141() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -84,19 +84,19 @@ class ahaheaqwddqwd123123ViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabelOpinionChponk(pair.0, withText: "Friend")
-                setupImageViewOpinionChponk(pair.1, withImageName: "friend1")
+                cmacasc4121421(pair.0, withText: "Friend")
+                csndncmsncsm1241112(pair.1, withImageName: "friend1")
             }
         }
     }
     
-    @objc func questionButtonTouchOpinionChponk() {
+    @objc func iowgiwwfijw1424214() {
         let quizController = cclcql3123Controller()
         quizController.friends = friends
         self.navigationController?.pushViewController(quizController, animated: true)
     }
     
-    @objc func actionButtonTouchOpinionChponk() {
+    @objc func xxnczxczxbc12411241412() {
         let actionController = lhltehrhegwqewqeViewController()
         actionController.friends = friends
         self.navigationController?.pushViewController(actionController, animated: true)
@@ -104,33 +104,33 @@ class ahaheaqwddqwd123123ViewController: UIViewController {
 }
 
 extension ahaheaqwddqwd123123ViewController {
-    func setupChoiceViews() {
+    func djqwdqjj32112313() {
         choceOpinion.image = UIImage(named: "background")
         choceOpinion.layer.masksToBounds = true
         choceOpinion.contentMode = .scaleAspectFill
         choceOpinion.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(choceOpinion)
         
-        setupImageViewOpinionChponk(friend1Image, withImageName: "friend1")
-        setupImageViewOpinionChponk(friend2Image, withImageName: "friend2")
-        setupImageViewOpinionChponk(friend3Image, withImageName: "friend3")
-        setupImageViewOpinionChponk(friend4Image, withImageName: "friend4")
-        setupImageViewOpinionChponk(friend5Image, withImageName: "friend5")
-        setupImageViewOpinionChponk(friend6Image, withImageName: "friend6")
+        csndncmsncsm1241112(friend1Image, withImageName: "friend1")
+        csndncmsncsm1241112(friend2Image, withImageName: "friend2")
+        csndncmsncsm1241112(friend3Image, withImageName: "friend3")
+        csndncmsncsm1241112(friend4Image, withImageName: "friend4")
+        csndncmsncsm1241112(friend5Image, withImageName: "friend5")
+        csndncmsncsm1241112(friend6Image, withImageName: "friend6")
         
-        setupLabelOpinionChponk(friend1Label, withText: "Jane")
-        setupLabelOpinionChponk(friend2Label, withText: "Jack")
-        setupLabelOpinionChponk(friend3Label, withText: "Steven")
-        setupLabelOpinionChponk(friend4Label, withText: "Mary")
-        setupLabelOpinionChponk(friend5Label, withText: "Stefani")
-        setupLabelOpinionChponk(friend6Label, withText: "Mike")
+        cmacasc4121421(friend1Label, withText: "Jane")
+        cmacasc4121421(friend2Label, withText: "Jack")
+        cmacasc4121421(friend3Label, withText: "Steven")
+        cmacasc4121421(friend4Label, withText: "Mary")
+        cmacasc4121421(friend5Label, withText: "Stefani")
+        cmacasc4121421(friend6Label, withText: "Mike")
         
-        let friend1Stack = createVerticalStackViewOpinionChponk(withImageView: friend1Image, andLabel: friend1Label)
-        let friend2Stack = createVerticalStackViewOpinionChponk(withImageView: friend2Image, andLabel: friend2Label)
-        let friend3Stack = createVerticalStackViewOpinionChponk(withImageView: friend3Image, andLabel: friend3Label)
-        let friend4Stack = createVerticalStackViewOpinionChponk(withImageView: friend4Image, andLabel: friend4Label)
-        let friend5Stack = createVerticalStackViewOpinionChponk(withImageView: friend5Image, andLabel: friend5Label)
-        let friend6Stack = createVerticalStackViewOpinionChponk(withImageView: friend6Image, andLabel: friend6Label)
+        let friend1Stack = vcxmnbvxcnmvcx4124112(withImageView: friend1Image, andLabel: friend1Label)
+        let friend2Stack = vcxmnbvxcnmvcx4124112(withImageView: friend2Image, andLabel: friend2Label)
+        let friend3Stack = vcxmnbvxcnmvcx4124112(withImageView: friend3Image, andLabel: friend3Label)
+        let friend4Stack = vcxmnbvxcnmvcx4124112(withImageView: friend4Image, andLabel: friend4Label)
+        let friend5Stack = vcxmnbvxcnmvcx4124112(withImageView: friend5Image, andLabel: friend5Label)
+        let friend6Stack = vcxmnbvxcnmvcx4124112(withImageView: friend6Image, andLabel: friend6Label)
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -152,12 +152,12 @@ extension ahaheaqwddqwd123123ViewController {
         roundImageOpinion.translatesAutoresizingMaskIntoConstraints = false
         
         questionButtonOpinion.setImage(UIImage(named: "questionCard"), for: .normal)
-        questionButtonOpinion.addTarget(self, action: #selector(questionButtonTouchOpinionChponk), for: .touchUpInside)
+        questionButtonOpinion.addTarget(self, action: #selector(iowgiwwfijw1424214), for: .touchUpInside)
         questionButtonOpinion.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(questionButtonOpinion)
         
         actionButtonOpinion.setImage(UIImage(named: "actionCard"), for: .normal)
-        actionButtonOpinion.addTarget(self, action: #selector(actionButtonTouchOpinionChponk), for: .touchUpInside)
+        actionButtonOpinion.addTarget(self, action: #selector(xxnczxczxbc12411241412), for: .touchUpInside)
         actionButtonOpinion.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(actionButtonOpinion)
         
@@ -188,7 +188,7 @@ extension ahaheaqwddqwd123123ViewController {
         }
     }
     
-    private func setupChoiceNavigationBar() {
+    private func jzccjxczjc123123() {
         let titleLabel = UILabel()
         titleLabel.text = "Question or Action?"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)

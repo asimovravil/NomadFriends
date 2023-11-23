@@ -16,7 +16,7 @@ class lalallafqjqfjqwf12321312ViewController: UIViewController {
         super.viewDidLoad()
         
         mnbvnbv414455()
-        setupSettingsNavigationBar()
+        dqwd132132()
     }
     
     @objc private func kbfbdbl212412() {
@@ -111,7 +111,7 @@ extension lalallafqjqfjqwf12321312ViewController {
         ])
     }
     
-    private func setupSettingsNavigationBar() {
+    private func dqwd132132() {
         let titleImageView = UIImageView(image: UIImage(named: "settingsNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView

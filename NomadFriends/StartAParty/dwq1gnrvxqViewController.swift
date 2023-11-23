@@ -25,7 +25,7 @@ final class dwq1gnrvxqViewController: UIViewController {
 
         NotificationCenter.default.addObserver(self, selector: #selector(vmvmvmvmvm312312), name: NSNotification.Name("PlayerNameChanged"), object: nil)
         ef9wf994123213()
-        setupGoStartNavigationBar()
+        bvbsdvsv616612312()
     }
     
     @objc func vmvmvmvmvm312312() {
@@ -172,7 +172,7 @@ extension dwq1gnrvxqViewController {
         ])
     }
     
-    private func setupGoStartNavigationBar() {
+    private func bvbsdvsv616612312() {
         let titleLabel = UILabel()
         titleLabel.text = "Add Players"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
