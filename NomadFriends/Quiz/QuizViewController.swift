@@ -79,13 +79,15 @@ final class QuizViewController: UIViewController {
 
         answeredQuestionsCount += 1
 
-        if answeredQuestionsCount == 10 {
+        if answeredQuestionsCount >= 1 {
             navigateToLeaderboard()
         }
     }
 
     private func navigateToLeaderboard() {
-        
+        let controller = MenuViewController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     private func setupPlayerLabelsAndImages() {
@@ -214,7 +216,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTa
 
         answeredQuestionsCount += 1
 
-        if answeredQuestionsCount == 10 {
+        if answeredQuestionsCount >= 1 {
             navigateToLeaderboard()
         }
     }
