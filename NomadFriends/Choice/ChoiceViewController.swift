@@ -11,7 +11,7 @@ class ChoiceViewController: UIViewController {
     
     var friends: [FriendInfo] = []
     
-    var backgroundView = UIImageView()
+    var choceOpinion = UIImageView()
     var roundImage = UIImageView()
     var questionButton = UIButton()
     var actionButton = UIButton()
@@ -34,8 +34,8 @@ class ChoiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
-        setupNavigationBar()
+        setupChoiceViews()
+        setupChoiceNavigationBar()
         setupFriendLabelsAndImages()
     }
     
@@ -104,12 +104,12 @@ class ChoiceViewController: UIViewController {
 }
 
 extension ChoiceViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupChoiceViews() {
+        choceOpinion.image = UIImage(named: "background")
+        choceOpinion.layer.masksToBounds = true
+        choceOpinion.contentMode = .scaleAspectFill
+        choceOpinion.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(choceOpinion)
         
         setupImageView(friend1Image, withImageName: "friend1")
         setupImageView(friend2Image, withImageName: "friend2")
@@ -162,10 +162,10 @@ extension ChoiceViewController {
         view.addSubview(actionButton)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            choceOpinion.topAnchor.constraint(equalTo: view.topAnchor),
+            choceOpinion.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            choceOpinion.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            choceOpinion.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             questionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -90),
             questionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -188,7 +188,7 @@ extension ChoiceViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    private func setupChoiceNavigationBar() {
         let titleLabel = UILabel()
         titleLabel.text = "Question or Action?"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)

@@ -17,7 +17,7 @@ class ActionViewController: UIViewController {
     var successClickCount = 0
     var closeClickCount = 0
     
-    var backgroundView = UIImageView()
+    var actionBat = UIImageView()
     var tableView = UITableView(frame: .zero, style: .plain)
     var cardQuestion = UIImageView()
     var questionLabel = UILabel()
@@ -43,8 +43,8 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
-        setupNavigationBar()
+        setupActionViews()
+        setupActionNavigationBar()
         setupFriendLabelsAndImages()
     }
     
@@ -149,12 +149,12 @@ class ActionViewController: UIViewController {
 }
 
 extension ActionViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupActionViews() {
+        actionBat.image = UIImage(named: "background")
+        actionBat.layer.masksToBounds = true
+        actionBat.contentMode = .scaleAspectFill
+        actionBat.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(actionBat)
         
         popCorrect.image = UIImage(named: "popCorrect")
         popCorrect.layer.masksToBounds = true
@@ -239,10 +239,10 @@ extension ActionViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            actionBat.topAnchor.constraint(equalTo: view.topAnchor),
+            actionBat.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            actionBat.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            actionBat.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             popCorrect.topAnchor.constraint(equalTo: view.topAnchor),
             popCorrect.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -281,7 +281,7 @@ extension ActionViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    private func setupActionNavigationBar() {
         let titleLabel = UILabel()
         titleLabel.text = "Action"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)

@@ -11,7 +11,7 @@ class LaderboardViewController: UIViewController {
     
     var friends: [FriendInfo] = []
     
-    var backgroundView = UIImageView()
+    var laderboardKakashka = UIImageView()
     var playAgainButton = UIButton()
     
     var friend1Image = UIImageView()
@@ -31,8 +31,8 @@ class LaderboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
-        setupNavigationBar()
+        setupLaderboardViews()
+        setupLaderboardNavigationBar()
         setupFriendLabelsAndImages()
     }
     
@@ -86,12 +86,12 @@ class LaderboardViewController: UIViewController {
 }
 
 extension LaderboardViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "leaderBackground")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupLaderboardViews() {
+        laderboardKakashka.image = UIImage(named: "leaderBackground")
+        laderboardKakashka.layer.masksToBounds = true
+        laderboardKakashka.contentMode = .scaleAspectFill
+        laderboardKakashka.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(laderboardKakashka)
         
         playAgainButton.setImage(UIImage(named: "playAgain"), for: .normal)
         playAgainButton.addTarget(self, action: #selector(playAgainButtonTouch), for: .touchUpInside)
@@ -131,10 +131,10 @@ extension LaderboardViewController {
         view.addSubview(friend6Label)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            laderboardKakashka.topAnchor.constraint(equalTo: view.topAnchor),
+            laderboardKakashka.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            laderboardKakashka.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            laderboardKakashka.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             friend1Image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             friend1Image.heightAnchor.constraint(equalToConstant: 76),
@@ -199,7 +199,7 @@ extension LaderboardViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    private func setupLaderboardNavigationBar() {
         let titleLabel = UILabel()
         titleLabel.text = "Final Scoreboard"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)

@@ -42,7 +42,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupViews()
+        setupGoStartViews()
     }
     
     required init?(coder: NSCoder) {
@@ -134,7 +134,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
 }
 
 extension StartAPartyTableViewCell {
-    func setupViews() {
+    func setupGoStartViews() {
         stackView.addArrangedSubview(friend1Button)
         stackView.addArrangedSubview(friend2Button)
         stackView.addArrangedSubview(friend3Button)

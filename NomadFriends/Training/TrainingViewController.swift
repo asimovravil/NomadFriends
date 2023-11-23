@@ -11,7 +11,7 @@ class TrainingViewController: UIViewController {
 
     var currentPage = 0
     
-    var backgroundView = UIImageView()
+    var training = UIImageView()
     var pageControl = UIPageControl()
     var imageView = UIImageView()
     var textTitleView = UILabel()
@@ -22,7 +22,7 @@ class TrainingViewController: UIViewController {
         super.viewDidLoad()
         
         updateContentForPage(currentPage)
-        setupViews()
+        setupTrainingViews()
     }
 
     func updateContentForPage(_ page: Int) {
@@ -54,12 +54,12 @@ class TrainingViewController: UIViewController {
 }
 
 extension TrainingViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupTrainingViews() {
+        training.image = UIImage(named: "background")
+        training.layer.masksToBounds = true
+        training.contentMode = .scaleAspectFill
+        training.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(training)
         
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = currentPage
@@ -93,10 +93,10 @@ extension TrainingViewController {
         view.addSubview(nextButton)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            training.topAnchor.constraint(equalTo: view.topAnchor),
+            training.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            training.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            training.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),

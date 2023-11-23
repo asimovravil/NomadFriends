@@ -9,14 +9,14 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var backgroundView = UIImageView()
+    var settingsSettings = UIImageView()
     var tableView = UITableView(frame: .zero, style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
-        setupNavigationBar()
+        setupSettingsViews()
+        setupSettingsNavigationBar()
     }
     
     @objc private func rateUsButtonTouch() {
@@ -73,12 +73,12 @@ class SettingsViewController: UIViewController {
 }
 
 extension SettingsViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupSettingsViews() {
+        settingsSettings.image = UIImage(named: "background")
+        settingsSettings.layer.masksToBounds = true
+        settingsSettings.contentMode = .scaleAspectFill
+        settingsSettings.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(settingsSettings)
         
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.reuseID)
         tableView.layer.cornerRadius = 15
@@ -99,10 +99,10 @@ extension SettingsViewController {
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            settingsSettings.topAnchor.constraint(equalTo: view.topAnchor),
+            settingsSettings.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            settingsSettings.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            settingsSettings.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
@@ -111,7 +111,7 @@ extension SettingsViewController {
         ])
     }
     
-    private func setupNavigationBar() {
+    private func setupSettingsNavigationBar() {
         let titleImageView = UIImageView(image: UIImage(named: "settingsNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView

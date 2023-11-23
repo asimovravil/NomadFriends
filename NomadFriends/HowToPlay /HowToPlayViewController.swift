@@ -11,7 +11,7 @@ class HowToPlayViewController: UIViewController {
 
     var currentPageIndex = 0
     
-    var backgroundView = UIImageView()
+    var goStart = UIImageView()
     var cardView = UIImageView()
     var cardImage = UIImageView()
     var cardLabel = UILabel()
@@ -22,8 +22,8 @@ class HowToPlayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupViews()
-        setupNavigationBar()
+        setupFAQViews()
+        setupFAQNavigationBar()
         updateViewForCurrentPage()
     }
     
@@ -59,12 +59,12 @@ class HowToPlayViewController: UIViewController {
 }
 
 extension HowToPlayViewController {
-    private func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    private func setupFAQViews() {
+        goStart.image = UIImage(named: "background")
+        goStart.layer.masksToBounds = true
+        goStart.contentMode = .scaleAspectFill
+        goStart.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(goStart)
         
         cardView.image = UIImage(named: "cardView")
         cardView.layer.masksToBounds = true
@@ -105,10 +105,10 @@ extension HowToPlayViewController {
         view.addSubview(amountLabel)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            goStart.topAnchor.constraint(equalTo: view.topAnchor),
+            goStart.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            goStart.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            goStart.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             cardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             cardView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -131,7 +131,7 @@ extension HowToPlayViewController {
         ])
     }
     
-    private func setupNavigationBar() {
+    private func setupFAQNavigationBar() {
         let titleImageView = UIImageView(image: UIImage(named: "howToPlayNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView

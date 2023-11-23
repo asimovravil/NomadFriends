@@ -16,7 +16,7 @@ class SettingsTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupViews()
+        setupSettingsViews()
     }
     
     required init?(coder: NSCoder) {
@@ -25,7 +25,7 @@ class SettingsTableViewCell: UITableViewCell {
 }
 
 extension SettingsTableViewCell {
-    private func setupViews() {
+    private func setupSettingsViews() {
         titleCell.text = "aldDLda"
         titleCell.textColor = .white
         titleCell.numberOfLines = 0

@@ -11,7 +11,7 @@ class BonusViewController: UIViewController {
     
     var friends: [FriendInfo] = []
     
-    var backgroundView = UIImageView()
+    var bonusCool = UIImageView()
     var stickView = UIImageView()
     var circleBonusView = UIImageView()
     var spinButton = UIButton()
@@ -24,8 +24,8 @@ class BonusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
-        setupNavigationBar()
+        setupBonusViews()
+        setupBonusNavigationBar()
     }
     
     @objc private func spinButtonPressed() {
@@ -82,12 +82,12 @@ class BonusViewController: UIViewController {
 }
 
 extension BonusViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "bonusBackground")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupBonusViews() {
+        bonusCool.image = UIImage(named: "bonusBackground")
+        bonusCool.layer.masksToBounds = true
+        bonusCool.contentMode = .scaleAspectFill
+        bonusCool.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bonusCool)
         
         circleBonusView.image = UIImage(named: "circleBonus")
         circleBonusView.layer.masksToBounds = true
@@ -139,10 +139,10 @@ extension BonusViewController {
         view.addSubview(getButton)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            bonusCool.topAnchor.constraint(equalTo: view.topAnchor),
+            bonusCool.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bonusCool.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bonusCool.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             spinButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
@@ -179,7 +179,7 @@ extension BonusViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    private func setupBonusNavigationBar() {
         let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
         closeButton.tintColor = .white
         navigationItem.leftBarButtonItem = closeButton

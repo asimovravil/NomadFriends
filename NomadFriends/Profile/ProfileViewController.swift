@@ -10,7 +10,7 @@ import Photos
 
 class ProfileViewController: UIViewController {
     
-    var backgroundView = UIImageView()
+    var profileProfile = UIImageView()
     var cameraImageView = UIImageView()
     var editButton = UIButton()
     var levelsImage = UIImageView()
@@ -24,8 +24,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupViews()
-        setupNavigationBar()
+        setupProfileViews()
+        setupProfileNavigationBar()
         loadProfileImage()
         loadUsername()
     }
@@ -59,12 +59,12 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController {
-    private func setupViews() {
-        backgroundView.image = UIImage(named: "profileBackground")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    private func setupProfileViews() {
+        profileProfile.image = UIImage(named: "profileBackground")
+        profileProfile.layer.masksToBounds = true
+        profileProfile.contentMode = .scaleAspectFill
+        profileProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(profileProfile)
         
         cameraImageView.image = UIImage(named: "cameraImage")
         cameraImageView.layer.masksToBounds = true
@@ -129,10 +129,10 @@ extension ProfileViewController {
         view.addSubview(deleteButton)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            profileProfile.topAnchor.constraint(equalTo: view.topAnchor),
+            profileProfile.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            profileProfile.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            profileProfile.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             cameraImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             cameraImageView.widthAnchor.constraint(equalToConstant: 120),
@@ -174,7 +174,7 @@ extension ProfileViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    private func setupProfileNavigationBar() {
         let titleImageView = UIImageView(image: UIImage(named: "profileNav"))
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView

@@ -9,7 +9,7 @@ import UIKit
 
 final class QuizViewController: UIViewController {
                     
-    var backgroundView = UIImageView()
+    var quizAk = UIImageView()
     var answeredQuestionsCount = 0
     var friends: [FriendInfo] = []
     var currentPlayerIndex: Int = 0
@@ -36,8 +36,8 @@ final class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
-        setupNavigationBar()
+        setupQuizViews()
+        setupQuizNavigationBar()
         setupFriendLabelsAndImages()
     }
     
@@ -120,12 +120,12 @@ final class QuizViewController: UIViewController {
 }
 
 extension QuizViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupQuizViews() {
+        quizAk.image = UIImage(named: "background")
+        quizAk.layer.masksToBounds = true
+        quizAk.contentMode = .scaleAspectFill
+        quizAk.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(quizAk)
         
         setupImageView(friend1Image, withImageName: "friend1")
         setupImageView(friend2Image, withImageName: "friend2")
@@ -178,10 +178,10 @@ extension QuizViewController {
         roundImage.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            quizAk.topAnchor.constraint(equalTo: view.topAnchor),
+            quizAk.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            quizAk.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            quizAk.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -203,7 +203,7 @@ extension QuizViewController {
         }
     }
     
-    private func setupNavigationBar() {
+    private func setupQuizNavigationBar() {
         let titleLabel = UILabel()
         titleLabel.text = "Question"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)

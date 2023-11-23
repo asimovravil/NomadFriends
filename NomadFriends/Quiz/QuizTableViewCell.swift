@@ -35,7 +35,7 @@ final class QuizTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupViews()
+        setupQuizViews()
         updateKekLolUI()
     }
     
@@ -97,7 +97,7 @@ final class QuizTableViewCell: UITableViewCell {
 }
 
 extension QuizTableViewCell {
-    func setupViews() {
+    func setupQuizViews() {
         contentView.addSubview(cardQuestion)
         contentView.addSubview(questionLabel)
         contentView.addSubview(firstAnswerButton)

@@ -9,7 +9,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
-    var backgroundView = UIImageView()
+    var menuMenu = UIImageView()
     var startAPartyButton = UIButton()
     var howToPlayButton = UIButton()
     var profileButton = UIButton()
@@ -18,7 +18,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupViews()
+        setupMenuViews()
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
@@ -45,12 +45,12 @@ class MenuViewController: UIViewController {
 }
 
 extension MenuViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "menuBackground")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupMenuViews() {
+        menuMenu.image = UIImage(named: "menuBackground")
+        menuMenu.layer.masksToBounds = true
+        menuMenu.contentMode = .scaleAspectFill
+        menuMenu.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(menuMenu)
         
         startAPartyButton.setImage(UIImage(named: "startAPartyButton"), for: .normal)
         startAPartyButton.addTarget(self, action: #selector(startAPartyButtonTouch), for: .touchUpInside)
@@ -73,10 +73,10 @@ extension MenuViewController {
         view.addSubview(settingsButton)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            menuMenu.topAnchor.constraint(equalTo: view.topAnchor),
+            menuMenu.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            menuMenu.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            menuMenu.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             profileButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             

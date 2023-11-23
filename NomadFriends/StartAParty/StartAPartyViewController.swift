@@ -9,7 +9,7 @@ import UIKit
 
 final class StartAPartyViewController: UIViewController {
 
-    var backgroundView = UIImageView()
+    var partyStart = UIImageView()
     var numberOfPlayers = 2
     var numberOfFriendsAmount = 2
     
@@ -24,8 +24,8 @@ final class StartAPartyViewController: UIViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(self, selector: #selector(playerNameChanged), name: NSNotification.Name("PlayerNameChanged"), object: nil)
-        setupViews()
-        setupNavigationBar()
+        setupGoStartViews()
+        setupGoStartNavigationBar()
     }
     
     @objc func playerNameChanged() {
@@ -96,12 +96,12 @@ final class StartAPartyViewController: UIViewController {
 }
 
 extension StartAPartyViewController {
-    func setupViews() {
-        backgroundView.image = UIImage(named: "background")
-        backgroundView.layer.masksToBounds = true
-        backgroundView.contentMode = .scaleAspectFill
-        backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(backgroundView)
+    func setupGoStartViews() {
+        partyStart.image = UIImage(named: "background")
+        partyStart.layer.masksToBounds = true
+        partyStart.contentMode = .scaleAspectFill
+        partyStart.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(partyStart)
         
         startAPartyButton.setImage(UIImage(named: "startAParty"), for: .normal)
         startAPartyButton.addTarget(self, action: #selector(createButtonPressed), for: .touchUpInside)
@@ -145,10 +145,10 @@ extension StartAPartyViewController {
         view.addSubview(plusButton)
         
         NSLayoutConstraint.activate([
-            backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
-            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            partyStart.topAnchor.constraint(equalTo: view.topAnchor),
+            partyStart.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            partyStart.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            partyStart.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             numberFriendsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 125),
             numberFriendsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
@@ -172,7 +172,7 @@ extension StartAPartyViewController {
         ])
     }
     
-    private func setupNavigationBar() {
+    private func setupGoStartNavigationBar() {
         let titleLabel = UILabel()
         titleLabel.text = "Add Players"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
