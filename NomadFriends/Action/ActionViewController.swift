@@ -248,7 +248,6 @@ extension ActionViewController {
             popIncorrect.topAnchor.constraint(equalTo: view.topAnchor),
             popIncorrect.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
             danceView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             cardQuestion.topAnchor.constraint(equalTo: danceView.bottomAnchor, constant: 40),
@@ -259,13 +258,25 @@ extension ActionViewController {
             questionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
             questionLabel.bottomAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: -16),
             
-            voteLabel.topAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: 135),
             voteLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -75),
         ])
+        
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
+                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -75),
+                voteLabel.topAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: 135),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+                voteLabel.topAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: 70),
+            ])
+        }
     }
     
     private func setupNavigationBar() {

@@ -139,7 +139,6 @@ extension BonusViewController {
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            spinButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             spinButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             stickView.topAnchor.constraint(equalTo: circleBonusView.topAnchor),
@@ -163,6 +162,16 @@ extension BonusViewController {
             getButton.bottomAnchor.constraint(equalTo: cardResultView.bottomAnchor),
             getButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                spinButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                spinButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
+            ])
+        }
     }
     
     private func setupNavigationBar() {

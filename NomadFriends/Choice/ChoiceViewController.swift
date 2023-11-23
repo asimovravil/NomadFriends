@@ -175,8 +175,17 @@ extension ChoiceViewController {
             
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -75),
         ])
+        
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -75),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            ])
+        }
     }
     
     private func setupNavigationBar() {

@@ -135,7 +135,6 @@ extension LaderboardViewController {
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            friend1Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 173),
             friend1Image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             friend1Image.heightAnchor.constraint(equalToConstant: 76),
             friend1Image.widthAnchor.constraint(equalToConstant: 76),
@@ -143,26 +142,20 @@ extension LaderboardViewController {
             friend1Label.topAnchor.constraint(equalTo: friend1Image.bottomAnchor, constant: 24),
             friend1Label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
 
-            friend2Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 225),
-            friend2Image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 46),
             friend2Image.heightAnchor.constraint(equalToConstant: 66),
             friend2Image.widthAnchor.constraint(equalToConstant: 66),
             
             friend2Label.topAnchor.constraint(equalTo: friend2Image.bottomAnchor, constant: 16),
             friend2Label.centerXAnchor.constraint(equalTo: friend2Image.centerXAnchor),
             
-            friend3Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 225),
-            friend3Image.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -46),
             friend3Image.heightAnchor.constraint(equalToConstant: 66),
             friend3Image.widthAnchor.constraint(equalToConstant: 66),
             
             friend3Label.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 16),
             friend3Label.centerXAnchor.constraint(equalTo: friend3Image.centerXAnchor),
             
-            friend4Image.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 196),
             friend4Image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 52),
             
-            friend4Label.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 210),
             friend4Label.leadingAnchor.constraint(equalTo: friend4Image.trailingAnchor, constant: 16),
             
             friend5Image.topAnchor.constraint(equalTo: friend4Image.bottomAnchor, constant: 22),
@@ -177,9 +170,32 @@ extension LaderboardViewController {
             friend6Label.topAnchor.constraint(equalTo: friend5Label.bottomAnchor, constant: 52),
             friend6Label.leadingAnchor.constraint(equalTo: friend6Image.trailingAnchor, constant: 16),
                         
-            playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             playAgainButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                friend1Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 173),
+                friend3Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 225),
+                friend3Image.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -46),
+                friend2Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 225),
+                friend2Image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 46),
+                friend4Image.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 196),
+                friend4Label.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 210),
+                playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                friend1Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 93),
+                friend3Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 144),
+                friend3Image.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -43),
+                friend2Image.topAnchor.constraint(equalTo: view.topAnchor, constant: 144),
+                friend2Image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 43),
+                friend4Image.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 176),
+                friend4Label.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 190),
+                playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            ])
+        }
     }
     
     private func setupNavigationBar() {
