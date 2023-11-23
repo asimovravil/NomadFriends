@@ -33,26 +33,71 @@ final class QuizTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        addedQuizCellSetup()
-        addedQuizCellValue()
-        addedQuizCellConstraints()
+        setupViews()
         updateKekLolUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    @objc public func updateKekLolUI() {
+        let questionText = quizBrain.getQuestionText()
+        let answers = quizBrain.getAnswers()
         
-    func addedQuizCellSetup() {
+        questionLabel.text = questionText
+        firstAnswerButton.setTitle(answers[0], for: .normal)
+        secondAnswerButton.setTitle(answers[1], for: .normal)
+        thirdAnswerButton.setTitle(answers[2], for: .normal)
+        fourthAnswerButton.setTitle(answers[3], for: .normal)
+        
+        countLabel.text = "\(quizBrain.questionNumber + 1)/\(quizBrain.quiz.count)"
+        
+        firstAnswerButton.backgroundColor = UIColor.clear
+        secondAnswerButton.backgroundColor = UIColor.clear
+        thirdAnswerButton.backgroundColor = UIColor.clear
+        fourthAnswerButton.backgroundColor = UIColor.clear
+        
+        answerSelected = false
+    }
+    
+    @objc private func answerButtonTapped(_ sender: UIButton) {
+        if !answerSelected {
+            let userAnswer = sender.currentTitle!
+            let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
+
+            if userGotItRight {
+                sender.backgroundColor = .green
+                userCorrectAnswers += 1
+            } else {
+                sender.backgroundColor = .red
+            }
+            
+            quizViewController?.updateCountLabel(with: quizBrain.questionNumber + 1, totalQuestions: quizBrain.quiz.count)
+
+            sender.layer.cornerRadius = 20
+            answerSelected = true
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.quizBrain.nextQuestion()
+                self.updateKekLolUI()
+                self.answerSelected = false
+                self.delegate?.didAnswerQuestion(correctAnswers: self.userCorrectAnswers)
+            }
+        }
+    }
+
+}
+
+extension QuizTableViewCell {
+    func setupViews() {
         contentView.addSubview(cardQuestion)
         contentView.addSubview(questionLabel)
         contentView.addSubview(firstAnswerButton)
         contentView.addSubview(secondAnswerButton)
         contentView.addSubview(thirdAnswerButton)
         contentView.addSubview(fourthAnswerButton)
-    }
-    
-    func addedQuizCellValue() {
+        
         cardQuestion.image = UIImage(named: "cardQuestion")
         cardQuestion.layer.masksToBounds = true
         cardQuestion.contentMode = .scaleAspectFill
@@ -104,59 +149,7 @@ final class QuizTableViewCell: UITableViewCell {
         fourthAnswerButton.layer.borderWidth = 2
         fourthAnswerButton.layer.borderColor = UIColor.white.cgColor
         fourthAnswerButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    @objc public func updateKekLolUI() {
-        let questionText = quizBrain.getQuestionText()
-        let answers = quizBrain.getAnswers()
         
-        questionLabel.text = questionText
-        firstAnswerButton.setTitle(answers[0], for: .normal)
-        secondAnswerButton.setTitle(answers[1], for: .normal)
-        thirdAnswerButton.setTitle(answers[2], for: .normal)
-        fourthAnswerButton.setTitle(answers[3], for: .normal)
-        
-        countLabel.text = "\(quizBrain.questionNumber + 1)/\(quizBrain.quiz.count)"
-        
-        firstAnswerButton.backgroundColor = UIColor.clear
-        secondAnswerButton.backgroundColor = UIColor.clear
-        thirdAnswerButton.backgroundColor = UIColor.clear
-        fourthAnswerButton.backgroundColor = UIColor.clear
-        
-        answerSelected = false
-    }
-    
-    @objc private func answerButtonTapped(_ sender: UIButton) {
-        if !answerSelected {
-            let userAnswer = sender.currentTitle!
-            let userGotItRight = quizBrain.checkAnswer(userAnswer: userAnswer)
-
-            if userGotItRight {
-                sender.backgroundColor = .green
-                userCorrectAnswers += 1
-            } else {
-                sender.backgroundColor = .red
-            }
-            
-            quizViewController?.updateCountLabel(with: quizBrain.questionNumber + 1, totalQuestions: quizBrain.quiz.count)
-
-            sender.layer.cornerRadius = 20
-            answerSelected = true
-
-            // Добавление задержки перед показом следующего вопроса
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                self.quizBrain.nextQuestion()
-                self.updateKekLolUI()
-                self.answerSelected = false
-                self.delegate?.didAnswerQuestion(correctAnswers: self.userCorrectAnswers)
-            }
-        }
-    }
-
-}
-
-extension QuizTableViewCell {
-    func addedQuizCellConstraints() {
         NSLayoutConstraint.activate([
             cardQuestion.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
             cardQuestion.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
