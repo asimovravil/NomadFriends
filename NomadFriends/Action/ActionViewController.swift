@@ -1,5 +1,5 @@
 //
-//  ChoiceViewController.swift
+//  ActionViewController.swift
 //  NomadFriends
 //
 //  Created by Ravil on 23.11.2023.
@@ -7,14 +7,15 @@
 
 import UIKit
 
-class ChoiceViewController: UIViewController {
-    
-    var friends: [FriendInfo] = []
+class ActionViewController: UIViewController {
     
     var backgroundView = UIImageView()
+    var tableView = UITableView(frame: .zero, style: .plain)
+    var cardQuestion = UIImageView()
+    var questionLabel = UILabel()
     var roundImage = UIImageView()
-    var questionButton = UIButton()
-    var actionButton = UIButton()
+    var danceView = UIImageView()
+    var voteLabel = UILabel()
     
     var stackView = UIStackView()
     var friend1Image = UIImageView()
@@ -36,7 +37,6 @@ class ChoiceViewController: UIViewController {
         
         setupViews()
         setupNavigationBar()
-        setupPlayerLabelsAndImages()
     }
     
     func setupLabel(_ label: UILabel, withText text: String) {
@@ -62,53 +62,48 @@ class ChoiceViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }
-    
-    private func setupPlayerLabelsAndImages() {
-        let labelImagePairs = [
-            (friend1Label, friend1Image),
-            (friend2Label, friend2Image),
-            (friend3Label, friend3Image),
-            (friend4Label, friend4Image),
-            (friend5Label, friend5Image),
-            (friend6Label, friend6Image)
-        ]
-
-        let maxPlayers = min(friends.count, 6)
-
-        for (index, pair) in labelImagePairs.enumerated() {
-            if index < maxPlayers {
-                let friend = friends[index]
-                pair.0.text = friend.name
-                let imageName = friend.imageName.isEmpty ? "friend1" : friend.imageName 
-                pair.1.image = UIImage(named: imageName)
-                pair.0.isHidden = false
-                pair.1.isHidden = false
-            } else {
-                pair.0.isHidden = true
-                pair.1.isHidden = true
-            }
-        }
-    }
-    
-    @objc func questionButtonTouch() {
-        let quizController = QuizViewController()
-        quizController.friends = friends
-        self.navigationController?.pushViewController(quizController, animated: true)
-    }
-    
-    @objc func actionButtonTouch() {
-        let actionController = ActionViewController()
-        self.navigationController?.pushViewController(actionController, animated: true)
-    }
 }
 
-extension ChoiceViewController {
+extension ActionViewController {
     func setupViews() {
         backgroundView.image = UIImage(named: "background")
         backgroundView.layer.masksToBounds = true
         backgroundView.contentMode = .scaleAspectFill
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(backgroundView)
+        
+        danceView.image = UIImage(named: "dance")
+        danceView.layer.masksToBounds = true
+        danceView.contentMode = .scaleAspectFill
+        danceView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(danceView)
+        
+        roundImage.image = UIImage(named: "round1")
+        roundImage.layer.masksToBounds = true
+        roundImage.contentMode = .scaleAspectFill
+        roundImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        cardQuestion.image = UIImage(named: "cardAction")
+        cardQuestion.layer.masksToBounds = true
+        cardQuestion.contentMode = .scaleAspectFill
+        cardQuestion.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardQuestion)
+        
+        questionLabel.text = "Perform your best dance move for 1 minute."
+        questionLabel.textColor = .white
+        questionLabel.textAlignment = .center
+        questionLabel.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
+        questionLabel.numberOfLines = 0
+        questionLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(questionLabel)
+        
+        voteLabel.text = "Vote whether the score is deserved"
+        voteLabel.textColor = .white
+        voteLabel.textAlignment = .center
+        voteLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
+        voteLabel.numberOfLines = 0
+        voteLabel.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(voteLabel)
         
         setupImageView(friend1Image, withImageName: "friend1")
         setupImageView(friend2Image, withImageName: "friend2")
@@ -117,7 +112,7 @@ extension ChoiceViewController {
         setupImageView(friend5Image, withImageName: "friend5")
         setupImageView(friend6Image, withImageName: "friend6")
         
-        setupLabel(friend1Label, withText: "")
+        setupLabel(friend1Label, withText: "Jane")
         setupLabel(friend2Label, withText: "Jack")
         setupLabel(friend3Label, withText: "Steven")
         setupLabel(friend4Label, withText: "Mary")
@@ -145,32 +140,25 @@ extension ChoiceViewController {
         stackView.addArrangedSubview(friend6Stack)
         view.addSubview(stackView)
         
-        roundImage.image = UIImage(named: "round1")
-        roundImage.layer.masksToBounds = true
-        roundImage.contentMode = .scaleAspectFill
-        roundImage.translatesAutoresizingMaskIntoConstraints = false
-        
-        questionButton.setImage(UIImage(named: "questionCard"), for: .normal)
-        questionButton.addTarget(self, action: #selector(questionButtonTouch), for: .touchUpInside)
-        questionButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(questionButton)
-        
-        actionButton.setImage(UIImage(named: "actionCard"), for: .normal)
-        actionButton.addTarget(self, action: #selector(actionButtonTouch), for: .touchUpInside)
-        actionButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(actionButton)
-        
         NSLayoutConstraint.activate([
             backgroundView.topAnchor.constraint(equalTo: view.topAnchor),
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            questionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -90),
-            questionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
+            danceView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            actionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 90),
-            actionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            cardQuestion.topAnchor.constraint(equalTo: danceView.bottomAnchor, constant: 40),
+            cardQuestion.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            questionLabel.topAnchor.constraint(equalTo: cardQuestion.topAnchor, constant: 16),
+            questionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+            questionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
+            questionLabel.bottomAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: -16),
+            
+            voteLabel.topAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: 135),
+            voteLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -180,7 +168,7 @@ extension ChoiceViewController {
     
     private func setupNavigationBar() {
         let titleLabel = UILabel()
-        titleLabel.text = "Question or Action?"
+        titleLabel.text = "Action"
         titleLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
         titleLabel.textColor = .white
         titleLabel.sizeToFit()
@@ -192,5 +180,3 @@ extension ChoiceViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 }
-
-
