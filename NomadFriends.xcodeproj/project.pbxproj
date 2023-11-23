@@ -38,6 +38,7 @@
 		F1B60BFE2B0F5BC4002D21FA /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */; };
 		F1B60C012B0F61A8002D21FA /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C002B0F61A8002D21FA /* ActionViewController.swift */; };
 		F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C032B0F9120002D21FA /* BonusViewController.swift */; };
+		F1B60C072B0F993E002D21FA /* LaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		F1B60C002B0F61A8002D21FA /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		F1B60C032B0F9120002D21FA /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
+		F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaderboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				F1B60BF62B0F5B93002D21FA /* Quiz */,
 				F1B60BFF2B0F6195002D21FA /* Action */,
 				F1B60C022B0F9115002D21FA /* Bonus */,
+				F1B60C052B0F9934002D21FA /* Laderboard */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -230,6 +233,14 @@
 			path = Bonus;
 			sourceTree = "<group>";
 		};
+		F1B60C052B0F9934002D21FA /* Laderboard */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */,
+			);
+			path = Laderboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +335,7 @@
 				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
 				F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
+				F1B60C072B0F993E002D21FA /* LaderboardViewController.swift in Sources */,
 				F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */,
 				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,

@@ -18,7 +18,6 @@ class BonusViewController: UIViewController {
     var noIWont = UIButton()
     var iDidIt = UIButton()
     var getButton = UIButton()
-    var tableView = UITableView(frame: .zero, style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
