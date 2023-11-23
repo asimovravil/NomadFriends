@@ -9,7 +9,13 @@ import UIKit
 
 class ActionViewController: UIViewController {
     
+    var popCorrect = UIImageView()
+    var popIncorrect = UIImageView()
+    
     var friends: [FriendInfo] = []
+    
+    var successClickCount = 0
+    var closeClickCount = 0
     
     var backgroundView = UIImageView()
     var tableView = UITableView(frame: .zero, style: .plain)
@@ -88,9 +94,13 @@ class ActionViewController: UIViewController {
         closeButton.setImage(UIImage(named: "close"), for: .normal)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
+        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        
         let successButton = UIButton()
         successButton.setImage(UIImage(named: "success"), for: .normal)
         successButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        successButton.addTarget(self, action: #selector(successButtonTapped), for: .touchUpInside)
 
         let stackView = UIStackView(arrangedSubviews: [successButton, closeButton, imageView, label])
         stackView.axis = .vertical
@@ -100,6 +110,40 @@ class ActionViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }
+    
+    @objc func successButtonTapped() {
+        successClickCount += 1
+        closeClickCount = max(closeClickCount - 1, 0)
+        checkForTransition()
+    }
+
+    @objc func closeButtonTapped() {
+        closeClickCount += 1
+        successClickCount = max(successClickCount - 1, 0)
+        checkForTransition()
+    }
+    
+    func checkForTransition() {
+        let totalVotes = successClickCount + closeClickCount
+        let majority = (friends.count / 2) + 1
+
+        if totalVotes >= majority {
+            if successClickCount > closeClickCount {
+                showPopupAndTransition(imageView: popCorrect)
+            } else if closeClickCount > successClickCount {
+                showPopupAndTransition(imageView: popIncorrect)
+            }
+        }
+    }
+
+    func showPopupAndTransition(imageView: UIImageView) {
+        imageView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            let controller = MenuViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
+    }
+
 }
 
 extension ActionViewController {
@@ -109,6 +153,20 @@ extension ActionViewController {
         backgroundView.contentMode = .scaleAspectFill
         backgroundView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(backgroundView)
+        
+        popCorrect.image = UIImage(named: "popCorrect")
+        popCorrect.layer.masksToBounds = true
+        popCorrect.contentMode = .scaleAspectFill
+        popCorrect.isHidden = true
+        popCorrect.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(popCorrect)
+        
+        popIncorrect.image = UIImage(named: "popIncorrect")
+        popIncorrect.layer.masksToBounds = true
+        popIncorrect.contentMode = .scaleAspectFill
+        popIncorrect.isHidden = true
+        popIncorrect.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(popIncorrect)
         
         danceView.image = UIImage(named: "dance")
         danceView.layer.masksToBounds = true
@@ -183,6 +241,12 @@ extension ActionViewController {
             backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            popCorrect.topAnchor.constraint(equalTo: view.topAnchor),
+            popCorrect.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            popIncorrect.topAnchor.constraint(equalTo: view.topAnchor),
+            popIncorrect.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
             danceView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
