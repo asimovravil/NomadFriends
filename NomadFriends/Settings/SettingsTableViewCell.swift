@@ -9,7 +9,7 @@ import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
 
-    var titleCell = UILabel()
+    var titleCellSettings = UILabel()
     
     static let reuseID = String(describing: SettingsTableViewCell.self)
     
@@ -26,18 +26,18 @@ class SettingsTableViewCell: UITableViewCell {
 
 extension SettingsTableViewCell {
     private func setupSettingsViews() {
-        titleCell.text = "aldDLda"
-        titleCell.textColor = .white
-        titleCell.numberOfLines = 0
-        titleCell.font = UIFont(name: "SFProDisplay-Regular", size: 17)
-        titleCell.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(titleCell)
+        titleCellSettings.text = "aldDLda"
+        titleCellSettings.textColor = .white
+        titleCellSettings.numberOfLines = 0
+        titleCellSettings.font = UIFont(name: "SFProDisplay-Regular", size: 17)
+        titleCellSettings.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(titleCellSettings)
         
         NSLayoutConstraint.activate([
-            titleCell.topAnchor.constraint(equalTo: contentView.topAnchor),
-            titleCell.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            titleCell.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            titleCell.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            titleCellSettings.topAnchor.constraint(equalTo: contentView.topAnchor),
+            titleCellSettings.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            titleCellSettings.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            titleCellSettings.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
     }
 }

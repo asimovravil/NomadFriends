@@ -13,69 +13,69 @@ final class StartAPartyViewController: UIViewController {
     var numberOfPlayers = 2
     var numberOfFriendsAmount = 2
     
-    var startAPartyButton = UIButton()
-    var tableView = UITableView(frame: .zero, style: .plain)
-    var numberFriendsLabel = UILabel()
-    var minusButton = UIButton()
-    var amountFriends = UILabel()
-    var plusButton = UIButton()
+    var startAPartyButtonStartParty = UIButton()
+    var tableViewStartParty = UITableView(frame: .zero, style: .plain)
+    var numberFriendsLabelStartParty = UILabel()
+    var minusButtonStartParty = UIButton()
+    var amountFriendsStartParty = UILabel()
+    var plusButtonStartParty = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(playerNameChanged), name: NSNotification.Name("PlayerNameChanged"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(playerNameChangedStartPartyChponk), name: NSNotification.Name("PlayerNameChanged"), object: nil)
         setupGoStartViews()
         setupGoStartNavigationBar()
     }
     
-    @objc func playerNameChanged() {
-        startAPartyButton.isEnabled = validatePlayerNames()
+    @objc func playerNameChangedStartPartyChponk() {
+        startAPartyButtonStartParty.isEnabled = validatePlayerNamesStartPartyChponk()
     }
     
-    @objc func minusButtonPressed() {
+    @objc func minusButtonStartPartyChponk() {
         numberOfPlayers -= 1
         numberOfFriendsAmount -= 1
-        tableView.reloadData()
+        tableViewStartParty.reloadData()
         
-        amountFriends.text = "\(numberOfFriendsAmount)"
+        amountFriendsStartParty.text = "\(numberOfFriendsAmount)"
         
         if numberOfPlayers > 0 {
-            plusButton.isEnabled = true
+            plusButtonStartParty.isEnabled = true
         }
         
         if numberOfPlayers < 3 {
-            minusButton.isEnabled = false
+            minusButtonStartParty.isEnabled = false
         }
         
-        playerNameChanged()
+        playerNameChangedStartPartyChponk()
     }
     
-    @objc func plusButtonPressed() {
+    @objc func plusButtonPressedStartPartyChponk() {
         numberOfPlayers += 1
         numberOfFriendsAmount += 1
-        minusButton.isEnabled = true
-        tableView.reloadData()
+        minusButtonStartParty.isEnabled = true
+        tableViewStartParty.reloadData()
         
-        amountFriends.text = "\(numberOfFriendsAmount)"
+        amountFriendsStartParty.text = "\(numberOfFriendsAmount)"
         
         if numberOfPlayers >= 6 {
-            plusButton.isEnabled = false
+            plusButtonStartParty.isEnabled = false
         }
         
-        playerNameChanged()
+        playerNameChangedStartPartyChponk()
     }
     
-    @objc func createButtonPressed() {
+    @objc func createButtonPressedStartPartyChponk() {
         let choiceController = ChoiceViewController()
-        choiceController.friends = fetchFriendsData()
+        choiceController.friends = fetchFriendsDataStartPartyChponk()
         self.navigationController?.pushViewController(choiceController, animated: true)
     }
 
-    private func fetchFriendsData() -> [FriendInfo] {
+    private func fetchFriendsDataStartPartyChponk() -> [FriendInfo] {
         var friends: [FriendInfo] = []
         for i in 0..<numberOfPlayers {
-            if let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell {
-                let name = cell.nameFriendTextField.text ?? "Player \(i + 1)"
+            if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell {
+                let name = cell.nameFriendTextFieldStartParty.text ?? "Player \(i + 1)"
                 var imageName = cell.selectedImageName
                 imageName = imageName.replacingOccurrences(of: "Active", with: "")
                 friends.append(FriendInfo(name: name, imageName: imageName))
@@ -84,10 +84,10 @@ final class StartAPartyViewController: UIViewController {
         return friends
     }
     
-    func validatePlayerNames() -> Bool {
+    func validatePlayerNamesStartPartyChponk() -> Bool {
         for i in 0..<numberOfPlayers {
-            if let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell,
-               cell.nameFriendTextField.text?.count ?? 0 < 3 {
+            if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell,
+               cell.nameFriendTextFieldStartParty.text?.count ?? 0 < 3 {
                 return false
             }
         }
@@ -103,46 +103,46 @@ extension StartAPartyViewController {
         partyStart.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(partyStart)
         
-        startAPartyButton.setImage(UIImage(named: "startAParty"), for: .normal)
-        startAPartyButton.addTarget(self, action: #selector(createButtonPressed), for: .touchUpInside)
-        startAPartyButton.isEnabled = false
-        startAPartyButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(startAPartyButton)
+        startAPartyButtonStartParty.setImage(UIImage(named: "startAParty"), for: .normal)
+        startAPartyButtonStartParty.addTarget(self, action: #selector(createButtonPressedStartPartyChponk), for: .touchUpInside)
+        startAPartyButtonStartParty.isEnabled = false
+        startAPartyButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(startAPartyButtonStartParty)
         
-        tableView.register(StartAPartyTableViewCell.self, forCellReuseIdentifier: StartAPartyTableViewCell.id)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.showsVerticalScrollIndicator = false
-        tableView.backgroundColor = .clear
-        tableView.separatorStyle = .none
-        tableView.rowHeight = 200
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
+        tableViewStartParty.register(StartAPartyTableViewCell.self, forCellReuseIdentifier: StartAPartyTableViewCell.id)
+        tableViewStartParty.dataSource = self
+        tableViewStartParty.delegate = self
+        tableViewStartParty.showsVerticalScrollIndicator = false
+        tableViewStartParty.backgroundColor = .clear
+        tableViewStartParty.separatorStyle = .none
+        tableViewStartParty.rowHeight = 200
+        tableViewStartParty.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableViewStartParty)
         
-        numberFriendsLabel.text = "Number of players"
-        numberFriendsLabel.textColor = .white
-        numberFriendsLabel.numberOfLines = 0
-        numberFriendsLabel.font = UIFont(name: "SFProDisplay-Medium", size: 18)
-        numberFriendsLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(numberFriendsLabel)
+        numberFriendsLabelStartParty.text = "Number of players"
+        numberFriendsLabelStartParty.textColor = .white
+        numberFriendsLabelStartParty.numberOfLines = 0
+        numberFriendsLabelStartParty.font = UIFont(name: "SFProDisplay-Medium", size: 18)
+        numberFriendsLabelStartParty.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(numberFriendsLabelStartParty)
         
-        minusButton.setImage(UIImage(named: "minus"), for: .normal)
-        minusButton.addTarget(self, action: #selector(minusButtonPressed), for: .touchUpInside)
-        minusButton.isEnabled = false
-        minusButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(minusButton)
+        minusButtonStartParty.setImage(UIImage(named: "minus"), for: .normal)
+        minusButtonStartParty.addTarget(self, action: #selector(minusButtonStartPartyChponk), for: .touchUpInside)
+        minusButtonStartParty.isEnabled = false
+        minusButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(minusButtonStartParty)
         
-        amountFriends.text = "\(numberOfFriendsAmount)"
-        amountFriends.textColor = .white
-        amountFriends.numberOfLines = 0
-        amountFriends.font = UIFont(name: "SFProDisplay-Medium", size: 24)
-        amountFriends.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(amountFriends)
+        amountFriendsStartParty.text = "\(numberOfFriendsAmount)"
+        amountFriendsStartParty.textColor = .white
+        amountFriendsStartParty.numberOfLines = 0
+        amountFriendsStartParty.font = UIFont(name: "SFProDisplay-Medium", size: 24)
+        amountFriendsStartParty.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(amountFriendsStartParty)
         
-        plusButton.setImage(UIImage(named: "plus"), for: .normal)
-        plusButton.addTarget(self, action: #selector(plusButtonPressed), for: .touchUpInside)
-        plusButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(plusButton)
+        plusButtonStartParty.setImage(UIImage(named: "plus"), for: .normal)
+        plusButtonStartParty.addTarget(self, action: #selector(plusButtonPressedStartPartyChponk), for: .touchUpInside)
+        plusButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(plusButtonStartParty)
         
         NSLayoutConstraint.activate([
             partyStart.topAnchor.constraint(equalTo: view.topAnchor),
@@ -150,25 +150,25 @@ extension StartAPartyViewController {
             partyStart.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             partyStart.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            numberFriendsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 125),
-            numberFriendsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            numberFriendsLabelStartParty.topAnchor.constraint(equalTo: view.topAnchor, constant: 125),
+            numberFriendsLabelStartParty.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             
-            plusButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            plusButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            plusButtonStartParty.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            plusButtonStartParty.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            amountFriends.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            amountFriends.trailingAnchor.constraint(equalTo: plusButton.leadingAnchor, constant: -20),
+            amountFriendsStartParty.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            amountFriendsStartParty.trailingAnchor.constraint(equalTo: plusButtonStartParty.leadingAnchor, constant: -20),
             
-            minusButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            minusButton.trailingAnchor.constraint(equalTo: amountFriends.leadingAnchor, constant: -20),
+            minusButtonStartParty.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            minusButtonStartParty.trailingAnchor.constraint(equalTo: amountFriendsStartParty.leadingAnchor, constant: -20),
             
-            tableView.topAnchor.constraint(equalTo: plusButton.bottomAnchor, constant: 24),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: startAPartyButton.topAnchor, constant: -44),
+            tableViewStartParty.topAnchor.constraint(equalTo: plusButtonStartParty.bottomAnchor, constant: 24),
+            tableViewStartParty.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableViewStartParty.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableViewStartParty.bottomAnchor.constraint(equalTo: startAPartyButtonStartParty.topAnchor, constant: -44),
             
-            startAPartyButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            startAPartyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            startAPartyButtonStartParty.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            startAPartyButtonStartParty.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
     

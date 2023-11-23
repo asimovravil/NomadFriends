@@ -11,49 +11,49 @@ import Photos
 class ProfileViewController: UIViewController {
     
     var profileProfile = UIImageView()
-    var cameraImageView = UIImageView()
-    var editButton = UIButton()
-    var levelsImage = UIImageView()
-    var levelsLabel = UILabel()
-    var levelsCoins = UILabel()
-    var friendsLabel = UILabel()
-    var cardProfileView = UIImageView()
-    var deleteButton = UIButton()
-    var setnameTextField = UITextField()
+    var cameraImageProfile = UIImageView()
+    var editButtonProfile = UIButton()
+    var levelsImageProfile = UIImageView()
+    var levelsLabelProfile = UILabel()
+    var levelsCoinsProfile = UILabel()
+    var friendsLabelProfile = UILabel()
+    var cardProfileViewProfile = UIImageView()
+    var deleteButtonProfile = UIButton()
+    var setnameTextFieldProfile = UITextField()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupProfileViews()
         setupProfileNavigationBar()
-        loadProfileImage()
-        loadUsername()
+        loadProfileImageProfileChponk()
+        loadUsernameProfileChponk()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        cameraImageView.layer.cornerRadius = 60
+        cameraImageProfile.layer.cornerRadius = 60
     }
     
-    @objc private func deleteButtonTouch() {
+    @objc private func deleteButtonProfileChponk() {
         UserDefaults.standard.removeObject(forKey: "userProfileImage")
         UserDefaults.standard.removeObject(forKey: "username")
         
-        cameraImageView.image = UIImage(named: "cameraImage")
-        setnameTextField.text = ""
+        cameraImageProfile.image = UIImage(named: "cameraImage")
+        setnameTextFieldProfile.text = ""
     }
     
-    func loadProfileImage() {
+    func loadProfileImageProfileChponk() {
         if let imageData = UserDefaults.standard.data(forKey: "userProfileImage"),
            let image = UIImage(data: imageData) {
-            cameraImageView.image = image
+            cameraImageProfile.image = image
         }
     }
     
-    func loadUsername() {
+    func loadUsernameProfileChponk() {
         if let username = UserDefaults.standard.string(forKey: "username") {
-            setnameTextField.text = username
+            setnameTextFieldProfile.text = username
         }
     }
 }
@@ -66,67 +66,67 @@ extension ProfileViewController {
         profileProfile.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(profileProfile)
         
-        cameraImageView.image = UIImage(named: "cameraImage")
-        cameraImageView.layer.masksToBounds = true
-        cameraImageView.contentMode = .scaleAspectFill
-        cameraImageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cameraImageView)
+        cameraImageProfile.image = UIImage(named: "cameraImage")
+        cameraImageProfile.layer.masksToBounds = true
+        cameraImageProfile.contentMode = .scaleAspectFill
+        cameraImageProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cameraImageProfile)
         
-        editButton.setImage(UIImage(named: "editButton"), for: .normal)
-        editButton.addTarget(self, action: #selector(editButtonTouch), for: .touchUpInside)
-        editButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(editButton)
+        editButtonProfile.setImage(UIImage(named: "editButton"), for: .normal)
+        editButtonProfile.addTarget(self, action: #selector(editButtonTouchProfileChponk), for: .touchUpInside)
+        editButtonProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(editButtonProfile)
         
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.gray,
             NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Medium", size: 24)!
         ]
-        setnameTextField.attributedPlaceholder = NSAttributedString(string: "Name", attributes: attributes)
-        setnameTextField.font = UIFont(name: "SFProDisplay-Medium", size: 24)
-        setnameTextField.textAlignment = .center
-        setnameTextField.layer.cornerRadius = 10
-        setnameTextField.textColor = .white
-        setnameTextField.keyboardType = .default
-        setnameTextField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(setnameTextField)
+        setnameTextFieldProfile.attributedPlaceholder = NSAttributedString(string: "Name", attributes: attributes)
+        setnameTextFieldProfile.font = UIFont(name: "SFProDisplay-Medium", size: 24)
+        setnameTextFieldProfile.textAlignment = .center
+        setnameTextFieldProfile.layer.cornerRadius = 10
+        setnameTextFieldProfile.textColor = .white
+        setnameTextFieldProfile.keyboardType = .default
+        setnameTextFieldProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(setnameTextFieldProfile)
         
-        cardProfileView.image = UIImage(named: "cardProfile")
-        cardProfileView.layer.masksToBounds = true
-        cardProfileView.contentMode = .scaleAspectFill
-        cardProfileView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardProfileView)
+        cardProfileViewProfile.image = UIImage(named: "cardProfile")
+        cardProfileViewProfile.layer.masksToBounds = true
+        cardProfileViewProfile.contentMode = .scaleAspectFill
+        cardProfileViewProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardProfileViewProfile)
         
-        levelsImage.image = UIImage(named: "levelImage")
-        levelsImage.layer.masksToBounds = true
-        levelsImage.contentMode = .scaleAspectFill
-        levelsImage.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(levelsImage)
+        levelsImageProfile.image = UIImage(named: "levelImage")
+        levelsImageProfile.layer.masksToBounds = true
+        levelsImageProfile.contentMode = .scaleAspectFill
+        levelsImageProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(levelsImageProfile)
         
-        levelsLabel.text = "Levels"
-        levelsLabel.textColor = .white
-        levelsLabel.numberOfLines = 0
-        levelsLabel.font = UIFont(name: "SFProDisplay-SemiBold", size: 20)
-        levelsLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(levelsLabel)
+        levelsLabelProfile.text = "Levels"
+        levelsLabelProfile.textColor = .white
+        levelsLabelProfile.numberOfLines = 0
+        levelsLabelProfile.font = UIFont(name: "SFProDisplay-SemiBold", size: 20)
+        levelsLabelProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(levelsLabelProfile)
         
-        levelsCoins.text = "0"
-        levelsCoins.textColor = .white
-        levelsCoins.numberOfLines = 0
-        levelsCoins.font = UIFont(name: "SFProDisplay-SemiBold", size: 20)
-        levelsCoins.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(levelsCoins)
+        levelsCoinsProfile.text = "0"
+        levelsCoinsProfile.textColor = .white
+        levelsCoinsProfile.numberOfLines = 0
+        levelsCoinsProfile.font = UIFont(name: "SFProDisplay-SemiBold", size: 20)
+        levelsCoinsProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(levelsCoinsProfile)
         
-        friendsLabel.text = "0"
-        friendsLabel.textColor = .white
-        friendsLabel.numberOfLines = 0
-        friendsLabel.font = UIFont(name: "SFProDisplay-SemiBold", size: 20)
-        friendsLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(friendsLabel)
+        friendsLabelProfile.text = "0"
+        friendsLabelProfile.textColor = .white
+        friendsLabelProfile.numberOfLines = 0
+        friendsLabelProfile.font = UIFont(name: "SFProDisplay-SemiBold", size: 20)
+        friendsLabelProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(friendsLabelProfile)
         
-        deleteButton.setImage(UIImage(named: "deleteAccount"), for: .normal)
-        deleteButton.addTarget(self, action: #selector(deleteButtonTouch), for: .touchUpInside)
-        deleteButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(deleteButton)
+        deleteButtonProfile.setImage(UIImage(named: "deleteAccount"), for: .normal)
+        deleteButtonProfile.addTarget(self, action: #selector(deleteButtonProfileChponk), for: .touchUpInside)
+        deleteButtonProfile.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(deleteButtonProfile)
         
         NSLayoutConstraint.activate([
             profileProfile.topAnchor.constraint(equalTo: view.topAnchor),
@@ -134,42 +134,42 @@ extension ProfileViewController {
             profileProfile.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             profileProfile.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            cameraImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cameraImageView.widthAnchor.constraint(equalToConstant: 120),
-            cameraImageView.heightAnchor.constraint(equalToConstant: 120),
+            cameraImageProfile.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cameraImageProfile.widthAnchor.constraint(equalToConstant: 120),
+            cameraImageProfile.heightAnchor.constraint(equalToConstant: 120),
             
-            setnameTextField.topAnchor.constraint(equalTo: cameraImageView.bottomAnchor, constant: 16),
-            setnameTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            setnameTextFieldProfile.topAnchor.constraint(equalTo: cameraImageProfile.bottomAnchor, constant: 16),
+            setnameTextFieldProfile.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            cardProfileView.topAnchor.constraint(equalTo: cameraImageView.bottomAnchor, constant: 70),
-            cardProfileView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardProfileViewProfile.topAnchor.constraint(equalTo: cameraImageProfile.bottomAnchor, constant: 70),
+            cardProfileViewProfile.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            levelsImage.topAnchor.constraint(equalTo: cardProfileView.topAnchor, constant: 16),
-            levelsImage.leadingAnchor.constraint(equalTo: cardProfileView.centerXAnchor, constant: -50),
+            levelsImageProfile.topAnchor.constraint(equalTo: cardProfileViewProfile.topAnchor, constant: 16),
+            levelsImageProfile.leadingAnchor.constraint(equalTo: cardProfileViewProfile.centerXAnchor, constant: -50),
             
-            levelsLabel.topAnchor.constraint(equalTo: cardProfileView.topAnchor, constant: 19),
-            levelsLabel.trailingAnchor.constraint(equalTo: cardProfileView.centerXAnchor, constant: 50),
+            levelsLabelProfile.topAnchor.constraint(equalTo: cardProfileViewProfile.topAnchor, constant: 19),
+            levelsLabelProfile.trailingAnchor.constraint(equalTo: cardProfileViewProfile.centerXAnchor, constant: 50),
             
-            levelsCoins.topAnchor.constraint(equalTo: levelsImage.bottomAnchor, constant: 26),
-            levelsCoins.leadingAnchor.constraint(equalTo: cardProfileView.leadingAnchor, constant: 80),
+            levelsCoinsProfile.topAnchor.constraint(equalTo: levelsImageProfile.bottomAnchor, constant: 26),
+            levelsCoinsProfile.leadingAnchor.constraint(equalTo: cardProfileViewProfile.leadingAnchor, constant: 80),
             
-            friendsLabel.topAnchor.constraint(equalTo: levelsImage.bottomAnchor, constant: 26),
-            friendsLabel.trailingAnchor.constraint(equalTo: cardProfileView.trailingAnchor, constant: -92),
+            friendsLabelProfile.topAnchor.constraint(equalTo: levelsImageProfile.bottomAnchor, constant: 26),
+            friendsLabelProfile.trailingAnchor.constraint(equalTo: cardProfileViewProfile.trailingAnchor, constant: -92),
             
-            editButton.bottomAnchor.constraint(equalTo: cameraImageView.bottomAnchor),
-            editButton.trailingAnchor.constraint(equalTo: cameraImageView.trailingAnchor),
+            editButtonProfile.bottomAnchor.constraint(equalTo: cameraImageProfile.bottomAnchor),
+            editButtonProfile.trailingAnchor.constraint(equalTo: cameraImageProfile.trailingAnchor),
             
-            deleteButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
-            deleteButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            deleteButtonProfile.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
+            deleteButtonProfile.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
-                cameraImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
+                cameraImageProfile.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
             ])
         } else {
             NSLayoutConstraint.activate([
-                cameraImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+                cameraImageProfile.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             ])
         }
     }
@@ -183,20 +183,20 @@ extension ProfileViewController {
 
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @objc private func editButtonTouch() {
+    @objc private func editButtonTouchProfileChponk() {
         let status = PHPhotoLibrary.authorizationStatus()
         if status == .notDetermined {
             PHPhotoLibrary.requestAuthorization { status in
                 if status == .authorized {
-                    self.presentImagePicker()
+                    self.presentImagePickerProfileChponk()
                 }
             }
         } else if status == .authorized {
-            self.presentImagePicker()
+            self.presentImagePickerProfileChponk()
         }
     }
 
-    func presentImagePicker() {
+    func presentImagePickerProfileChponk() {
         DispatchQueue.main.async {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -206,26 +206,26 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     // В методе, где вы устанавливаете изображение на кнопку:
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerControllerProfileChponk(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let selectedImage = info[.originalImage] as? UIImage {
-            let resizedImage = resizeImage(image: selectedImage, targetSize: cameraImageView.bounds.size)
+            let resizedImage = resizeImageProfileChponk(image: selectedImage, targetSize: cameraImageProfile.bounds.size)
 
             // Сохранение изображения
-            saveImageToLocalStorage(resizedImage)
+            saveImageToLocalStorageProfileChponk(resizedImage)
 
-            cameraImageView.image = resizedImage
+            cameraImageProfile.image = resizedImage
         }
 
         dismiss(animated: true, completion: nil)
     }
     
-    func saveImageToLocalStorage(_ image: UIImage) {
+    func saveImageToLocalStorageProfileChponk(_ image: UIImage) {
         if let imageData = image.pngData() {
             UserDefaults.standard.set(imageData, forKey: "userProfileImage")
         }
     }
     
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+    func resizeImageProfileChponk(image: UIImage, targetSize: CGSize) -> UIImage {
         let size = image.size
 
         let widthRatio  = targetSize.width  / size.width

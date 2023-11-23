@@ -12,9 +12,9 @@ class ChoiceViewController: UIViewController {
     var friends: [FriendInfo] = []
     
     var choceOpinion = UIImageView()
-    var roundImage = UIImageView()
-    var questionButton = UIButton()
-    var actionButton = UIButton()
+    var roundImageOpinion = UIImageView()
+    var questionButtonOpinion = UIButton()
+    var actionButtonOpinion = UIButton()
     
     var stackView = UIStackView()
     var friend1Image = UIImageView()
@@ -36,24 +36,24 @@ class ChoiceViewController: UIViewController {
         
         setupChoiceViews()
         setupChoiceNavigationBar()
-        setupFriendLabelsAndImages()
+        setupFriendLabelsAndImagesOpinionChponk()
     }
     
-    func setupLabel(_ label: UILabel, withText text: String) {
+    func setupLabelOpinionChponk(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 10)
         label.textColor = .white
         label.textAlignment = .center
     }
     
-    func setupImageView(_ imageView: UIImageView, withImageName imageName: String) {
+    func setupImageViewOpinionChponk(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func createVerticalStackView(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
+    func createVerticalStackViewOpinionChponk(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: [imageView, label])
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -63,7 +63,7 @@ class ChoiceViewController: UIViewController {
         return stackView
     }
     
-    private func setupFriendLabelsAndImages() {
+    private func setupFriendLabelsAndImagesOpinionChponk() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -84,19 +84,19 @@ class ChoiceViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabel(pair.0, withText: "Friend")
-                setupImageView(pair.1, withImageName: "friend1")
+                setupLabelOpinionChponk(pair.0, withText: "Friend")
+                setupImageViewOpinionChponk(pair.1, withImageName: "friend1")
             }
         }
     }
     
-    @objc func questionButtonTouch() {
+    @objc func questionButtonTouchOpinionChponk() {
         let quizController = QuizViewController()
         quizController.friends = friends
         self.navigationController?.pushViewController(quizController, animated: true)
     }
     
-    @objc func actionButtonTouch() {
+    @objc func actionButtonTouchOpinionChponk() {
         let actionController = ActionViewController()
         actionController.friends = friends
         self.navigationController?.pushViewController(actionController, animated: true)
@@ -111,26 +111,26 @@ extension ChoiceViewController {
         choceOpinion.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(choceOpinion)
         
-        setupImageView(friend1Image, withImageName: "friend1")
-        setupImageView(friend2Image, withImageName: "friend2")
-        setupImageView(friend3Image, withImageName: "friend3")
-        setupImageView(friend4Image, withImageName: "friend4")
-        setupImageView(friend5Image, withImageName: "friend5")
-        setupImageView(friend6Image, withImageName: "friend6")
+        setupImageViewOpinionChponk(friend1Image, withImageName: "friend1")
+        setupImageViewOpinionChponk(friend2Image, withImageName: "friend2")
+        setupImageViewOpinionChponk(friend3Image, withImageName: "friend3")
+        setupImageViewOpinionChponk(friend4Image, withImageName: "friend4")
+        setupImageViewOpinionChponk(friend5Image, withImageName: "friend5")
+        setupImageViewOpinionChponk(friend6Image, withImageName: "friend6")
         
-        setupLabel(friend1Label, withText: "Jane")
-        setupLabel(friend2Label, withText: "Jack")
-        setupLabel(friend3Label, withText: "Steven")
-        setupLabel(friend4Label, withText: "Mary")
-        setupLabel(friend5Label, withText: "Stefani")
-        setupLabel(friend6Label, withText: "Mike")
+        setupLabelOpinionChponk(friend1Label, withText: "Jane")
+        setupLabelOpinionChponk(friend2Label, withText: "Jack")
+        setupLabelOpinionChponk(friend3Label, withText: "Steven")
+        setupLabelOpinionChponk(friend4Label, withText: "Mary")
+        setupLabelOpinionChponk(friend5Label, withText: "Stefani")
+        setupLabelOpinionChponk(friend6Label, withText: "Mike")
         
-        let friend1Stack = createVerticalStackView(withImageView: friend1Image, andLabel: friend1Label)
-        let friend2Stack = createVerticalStackView(withImageView: friend2Image, andLabel: friend2Label)
-        let friend3Stack = createVerticalStackView(withImageView: friend3Image, andLabel: friend3Label)
-        let friend4Stack = createVerticalStackView(withImageView: friend4Image, andLabel: friend4Label)
-        let friend5Stack = createVerticalStackView(withImageView: friend5Image, andLabel: friend5Label)
-        let friend6Stack = createVerticalStackView(withImageView: friend6Image, andLabel: friend6Label)
+        let friend1Stack = createVerticalStackViewOpinionChponk(withImageView: friend1Image, andLabel: friend1Label)
+        let friend2Stack = createVerticalStackViewOpinionChponk(withImageView: friend2Image, andLabel: friend2Label)
+        let friend3Stack = createVerticalStackViewOpinionChponk(withImageView: friend3Image, andLabel: friend3Label)
+        let friend4Stack = createVerticalStackViewOpinionChponk(withImageView: friend4Image, andLabel: friend4Label)
+        let friend5Stack = createVerticalStackViewOpinionChponk(withImageView: friend5Image, andLabel: friend5Label)
+        let friend6Stack = createVerticalStackViewOpinionChponk(withImageView: friend6Image, andLabel: friend6Label)
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -146,20 +146,20 @@ extension ChoiceViewController {
         stackView.addArrangedSubview(friend6Stack)
         view.addSubview(stackView)
         
-        roundImage.image = UIImage(named: "round1")
-        roundImage.layer.masksToBounds = true
-        roundImage.contentMode = .scaleAspectFill
-        roundImage.translatesAutoresizingMaskIntoConstraints = false
+        roundImageOpinion.image = UIImage(named: "round1")
+        roundImageOpinion.layer.masksToBounds = true
+        roundImageOpinion.contentMode = .scaleAspectFill
+        roundImageOpinion.translatesAutoresizingMaskIntoConstraints = false
         
-        questionButton.setImage(UIImage(named: "questionCard"), for: .normal)
-        questionButton.addTarget(self, action: #selector(questionButtonTouch), for: .touchUpInside)
-        questionButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(questionButton)
+        questionButtonOpinion.setImage(UIImage(named: "questionCard"), for: .normal)
+        questionButtonOpinion.addTarget(self, action: #selector(questionButtonTouchOpinionChponk), for: .touchUpInside)
+        questionButtonOpinion.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(questionButtonOpinion)
         
-        actionButton.setImage(UIImage(named: "actionCard"), for: .normal)
-        actionButton.addTarget(self, action: #selector(actionButtonTouch), for: .touchUpInside)
-        actionButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(actionButton)
+        actionButtonOpinion.setImage(UIImage(named: "actionCard"), for: .normal)
+        actionButtonOpinion.addTarget(self, action: #selector(actionButtonTouchOpinionChponk), for: .touchUpInside)
+        actionButtonOpinion.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(actionButtonOpinion)
         
         NSLayoutConstraint.activate([
             choceOpinion.topAnchor.constraint(equalTo: view.topAnchor),
@@ -167,11 +167,11 @@ extension ChoiceViewController {
             choceOpinion.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             choceOpinion.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            questionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -90),
-            questionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            questionButtonOpinion.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -90),
+            questionButtonOpinion.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            actionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 90),
-            actionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            actionButtonOpinion.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 90),
+            actionButtonOpinion.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -195,7 +195,7 @@ extension ChoiceViewController {
         titleLabel.textColor = .white
         titleLabel.sizeToFit()
         
-        let roundImageBarButtonItem = UIBarButtonItem(customView: roundImage)
+        let roundImageBarButtonItem = UIBarButtonItem(customView: roundImageOpinion)
         navigationItem.rightBarButtonItem = roundImageBarButtonItem
         
         navigationItem.titleView = titleLabel

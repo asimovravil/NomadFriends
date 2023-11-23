@@ -10,13 +10,13 @@ import UIKit
 final class QuizViewController: UIViewController {
                     
     var quizAk = UIImageView()
-    var answeredQuestionsCount = 0
+    var answeredQuestionsCountQuiz = 0
     var friends: [FriendInfo] = []
     var currentPlayerIndex: Int = 0
     var selectedLevelIndex: Int?
-    var countLabel = UILabel()
-    var tableView = UITableView(frame: .zero, style: .plain)
-    var roundImage = UIImageView()
+    var countLabelQuiz = UILabel()
+    var tableViewQuiz = UITableView(frame: .zero, style: .plain)
+    var roundImageQuiz = UIImageView()
     
     var stackView = UIStackView()
     var friend1Image = UIImageView()
@@ -38,24 +38,24 @@ final class QuizViewController: UIViewController {
         
         setupQuizViews()
         setupQuizNavigationBar()
-        setupFriendLabelsAndImages()
+        setupFriendLabelsAndImagesQuizChponk()
     }
     
-    func setupLabel(_ label: UILabel, withText text: String) {
+    func setupLabelQuizChponk(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 10)
         label.textColor = .white
         label.textAlignment = .center
     }
     
-    func setupImageView(_ imageView: UIImageView, withImageName imageName: String) {
+    func setupImageViewQuizChponk(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func createVerticalStackView(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
+    func createVerticalStackViewQuizChponk(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
         let stackView = UIStackView(arrangedSubviews: [imageView, label])
         stackView.axis = .vertical
         stackView.alignment = .center
@@ -65,33 +65,33 @@ final class QuizViewController: UIViewController {
         return stackView
     }
     
-    func updateCountLabel(with currentQuestion: Int, totalQuestions: Int) {
-        countLabel.text = "\(currentQuestion)/\(totalQuestions)"
+    func updateCountLabelQuizChponk(with currentQuestion: Int, totalQuestions: Int) {
+        countLabelQuiz.text = "\(currentQuestion)/\(totalQuestions)"
     }
     
-    func didAnswerQuestion(correctly: Bool) {
+    func didAnswerQuestionQuizChponk(correctly: Bool) {
         if correctly {
             friends[currentPlayerIndex].score += 1
         }
         
         currentPlayerIndex = (currentPlayerIndex + 1) % friends.count
-        tableView.reloadData()
+        tableViewQuiz.reloadData()
 
-        answeredQuestionsCount += 1
+        answeredQuestionsCountQuiz += 1
 
-        if answeredQuestionsCount >= 1 {
-            navigateToLeaderboard()
+        if answeredQuestionsCountQuiz >= 1 {
+            navigateToQuizChponk()
         }
     }
 
-    private func navigateToLeaderboard() {
+    private func navigateToQuizChponk() {
         let controller = BonusViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    private func setupFriendLabelsAndImages() {
+    private func setupFriendLabelsAndImagesQuizChponk() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -112,8 +112,8 @@ final class QuizViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabel(pair.0, withText: "Friend")
-                setupImageView(pair.1, withImageName: "friend1")
+                setupLabelQuizChponk(pair.0, withText: "Friend")
+                setupImageViewQuizChponk(pair.1, withImageName: "friend1")
             }
         }
     }
@@ -127,26 +127,26 @@ extension QuizViewController {
         quizAk.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(quizAk)
         
-        setupImageView(friend1Image, withImageName: "friend1")
-        setupImageView(friend2Image, withImageName: "friend2")
-        setupImageView(friend3Image, withImageName: "friend3")
-        setupImageView(friend4Image, withImageName: "friend4")
-        setupImageView(friend5Image, withImageName: "friend5")
-        setupImageView(friend6Image, withImageName: "friend6")
+        setupImageViewQuizChponk(friend1Image, withImageName: "friend1")
+        setupImageViewQuizChponk(friend2Image, withImageName: "friend2")
+        setupImageViewQuizChponk(friend3Image, withImageName: "friend3")
+        setupImageViewQuizChponk(friend4Image, withImageName: "friend4")
+        setupImageViewQuizChponk(friend5Image, withImageName: "friend5")
+        setupImageViewQuizChponk(friend6Image, withImageName: "friend6")
         
-        setupLabel(friend1Label, withText: "Jane")
-        setupLabel(friend2Label, withText: "Jack")
-        setupLabel(friend3Label, withText: "Steven")
-        setupLabel(friend4Label, withText: "Mary")
-        setupLabel(friend5Label, withText: "Stefani")
-        setupLabel(friend6Label, withText: "Mike")
+        setupLabelQuizChponk(friend1Label, withText: "Jane")
+        setupLabelQuizChponk(friend2Label, withText: "Jack")
+        setupLabelQuizChponk(friend3Label, withText: "Steven")
+        setupLabelQuizChponk(friend4Label, withText: "Mary")
+        setupLabelQuizChponk(friend5Label, withText: "Stefani")
+        setupLabelQuizChponk(friend6Label, withText: "Mike")
         
-        let friend1Stack = createVerticalStackView(withImageView: friend1Image, andLabel: friend1Label)
-        let friend2Stack = createVerticalStackView(withImageView: friend2Image, andLabel: friend2Label)
-        let friend3Stack = createVerticalStackView(withImageView: friend3Image, andLabel: friend3Label)
-        let friend4Stack = createVerticalStackView(withImageView: friend4Image, andLabel: friend4Label)
-        let friend5Stack = createVerticalStackView(withImageView: friend5Image, andLabel: friend5Label)
-        let friend6Stack = createVerticalStackView(withImageView: friend6Image, andLabel: friend6Label)
+        let friend1Stack = createVerticalStackViewQuizChponk(withImageView: friend1Image, andLabel: friend1Label)
+        let friend2Stack = createVerticalStackViewQuizChponk(withImageView: friend2Image, andLabel: friend2Label)
+        let friend3Stack = createVerticalStackViewQuizChponk(withImageView: friend3Image, andLabel: friend3Label)
+        let friend4Stack = createVerticalStackViewQuizChponk(withImageView: friend4Image, andLabel: friend4Label)
+        let friend5Stack = createVerticalStackViewQuizChponk(withImageView: friend5Image, andLabel: friend5Label)
+        let friend6Stack = createVerticalStackViewQuizChponk(withImageView: friend6Image, andLabel: friend6Label)
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -162,20 +162,20 @@ extension QuizViewController {
         stackView.addArrangedSubview(friend6Stack)
         view.addSubview(stackView)
         
-        tableView.register(QuizTableViewCell.self, forCellReuseIdentifier: QuizTableViewCell.id)
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.backgroundColor = .clear
-        tableView.rowHeight = 730
-        tableView.showsVerticalScrollIndicator = false
-        tableView.separatorStyle = .none
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
+        tableViewQuiz.register(QuizTableViewCell.self, forCellReuseIdentifier: QuizTableViewCell.id)
+        tableViewQuiz.dataSource = self
+        tableViewQuiz.delegate = self
+        tableViewQuiz.backgroundColor = .clear
+        tableViewQuiz.rowHeight = 730
+        tableViewQuiz.showsVerticalScrollIndicator = false
+        tableViewQuiz.separatorStyle = .none
+        tableViewQuiz.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableViewQuiz)
         
-        roundImage.image = UIImage(named: "round1")
-        roundImage.layer.masksToBounds = true
-        roundImage.contentMode = .scaleAspectFill
-        roundImage.translatesAutoresizingMaskIntoConstraints = false
+        roundImageQuiz.image = UIImage(named: "round1")
+        roundImageQuiz.layer.masksToBounds = true
+        roundImageQuiz.contentMode = .scaleAspectFill
+        roundImageQuiz.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
             quizAk.topAnchor.constraint(equalTo: view.topAnchor),
@@ -183,10 +183,10 @@ extension QuizViewController {
             quizAk.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             quizAk.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableViewQuiz.topAnchor.constraint(equalTo: view.topAnchor),
+            tableViewQuiz.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableViewQuiz.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableViewQuiz.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -210,7 +210,7 @@ extension QuizViewController {
         titleLabel.textColor = .white
         titleLabel.sizeToFit()
         
-        let roundImageBarButtonItem = UIBarButtonItem(customView: roundImage)
+        let roundImageBarButtonItem = UIBarButtonItem(customView: roundImageQuiz)
         navigationItem.rightBarButtonItem = roundImageBarButtonItem
         
         navigationItem.titleView = titleLabel
@@ -222,12 +222,12 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTa
     func didAnswerQuestion(correctAnswers: Int) {
         friends[currentPlayerIndex].score = correctAnswers
         currentPlayerIndex = (currentPlayerIndex + 1) % friends.count
-        tableView.reloadData()
+        tableViewQuiz.reloadData()
 
-        answeredQuestionsCount += 1
+        answeredQuestionsCountQuiz += 1
 
-        if answeredQuestionsCount >= 1 {
-            navigateToLeaderboard()
+        if answeredQuestionsCountQuiz >= 1 {
+            navigateToQuizChponk()
         }
     }
     
@@ -239,7 +239,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuizTableViewCell.id, for: indexPath) as? QuizTableViewCell else {
             fatalError("Could not cast to QuizTableViewCell")
         }
-        cell.navigationController = self.navigationController
+        cell.navigationControllerQuizChponk = self.navigationController
         cell.quizViewController = self
         cell.selectionStyle = .none
         cell.backgroundColor = .clear

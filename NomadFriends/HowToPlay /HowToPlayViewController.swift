@@ -12,48 +12,48 @@ class HowToPlayViewController: UIViewController {
     var currentPageIndex = 0
     
     var goStart = UIImageView()
-    var cardView = UIImageView()
-    var cardImage = UIImageView()
-    var cardLabel = UILabel()
-    var amountLabel = UILabel()
-    var leftButton = UIButton()
-    var rightButton = UIButton()
+    var cardViewFAQ = UIImageView()
+    var cardImageFAQ = UIImageView()
+    var cardLabelFAQ = UILabel()
+    var amountLabelFAQ = UILabel()
+    var leftButtonFAQ = UIButton()
+    var rightButtonFAQ = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupFAQViews()
         setupFAQNavigationBar()
-        updateViewForCurrentPage()
+        updateViewForCurrentPageFAQChponk()
     }
     
-    @objc private func leftButtonTouch() {
+    @objc private func leftButtonFAQChponk() {
         if currentPageIndex > 0 {
             currentPageIndex -= 1
-            updateViewForCurrentPage()
+            updateViewForCurrentPageFAQChponk()
         }
     }
 
-    @objc private func rightButtonTouch() {
+    @objc private func rightButtonFAQChponk() {
         if currentPageIndex < cards.count - 1 {
             currentPageIndex += 1
-            updateViewForCurrentPage()
+            updateViewForCurrentPageFAQChponk()
         }
     }
     
-    private func updateViewForCurrentPage() {
+    private func updateViewForCurrentPageFAQChponk() {
         let currentPage = cards[currentPageIndex]
         
-        UIView.transition(with: cardImage, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            self.cardImage.image = UIImage(named: currentPage.imageName)
+        UIView.transition(with: cardImageFAQ, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.cardImageFAQ.image = UIImage(named: currentPage.imageName)
         }, completion: nil)
 
-        UIView.transition(with: cardLabel, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            self.cardLabel.text = currentPage.textTitle
+        UIView.transition(with: cardLabelFAQ, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.cardLabelFAQ.text = currentPage.textTitle
         }, completion: nil)
 
-        UIView.transition(with: amountLabel, duration: 0.5, options: .transitionCrossDissolve, animations: {
-            self.amountLabel.text = "\(self.currentPageIndex + 1)/\(cards.count)"
+        UIView.transition(with: amountLabelFAQ, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            self.amountLabelFAQ.text = "\(self.currentPageIndex + 1)/\(cards.count)"
         }, completion: nil)
     }
 }
@@ -66,43 +66,43 @@ extension HowToPlayViewController {
         goStart.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(goStart)
         
-        cardView.image = UIImage(named: "cardView")
-        cardView.layer.masksToBounds = true
-        cardView.contentMode = .scaleAspectFill
-        cardView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardView)
+        cardViewFAQ.image = UIImage(named: "cardView")
+        cardViewFAQ.layer.masksToBounds = true
+        cardViewFAQ.contentMode = .scaleAspectFill
+        cardViewFAQ.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardViewFAQ)
         
-        cardImage.image = UIImage(named: "cardImage1")
-        cardImage.layer.masksToBounds = true
-        cardImage.contentMode = .scaleAspectFill
-        cardImage.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardImage)
+        cardImageFAQ.image = UIImage(named: "cardImage1")
+        cardImageFAQ.layer.masksToBounds = true
+        cardImageFAQ.contentMode = .scaleAspectFill
+        cardImageFAQ.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardImageFAQ)
         
-        cardLabel.text = "Add all players, enter their names and chose avatar"
-        cardLabel.textColor = .white
-        cardLabel.textAlignment = .center
-        cardLabel.numberOfLines = 0
-        cardLabel.font = UIFont(name: "SFProDisplay-Medium", size: 20)
-        cardLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardLabel)
+        cardLabelFAQ.text = "Add all players, enter their names and chose avatar"
+        cardLabelFAQ.textColor = .white
+        cardLabelFAQ.textAlignment = .center
+        cardLabelFAQ.numberOfLines = 0
+        cardLabelFAQ.font = UIFont(name: "SFProDisplay-Medium", size: 20)
+        cardLabelFAQ.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardLabelFAQ)
         
-        leftButton.setImage(UIImage(named: "leftButton"), for: .normal)
-        leftButton.addTarget(self, action: #selector(leftButtonTouch), for: .touchUpInside)
-        leftButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(leftButton)
+        leftButtonFAQ.setImage(UIImage(named: "leftButton"), for: .normal)
+        leftButtonFAQ.addTarget(self, action: #selector(leftButtonFAQChponk), for: .touchUpInside)
+        leftButtonFAQ.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(leftButtonFAQ)
         
-        rightButton.setImage(UIImage(named: "rightButton"), for: .normal)
-        rightButton.addTarget(self, action: #selector(rightButtonTouch), for: .touchUpInside)
-        rightButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(rightButton)
+        rightButtonFAQ.setImage(UIImage(named: "rightButton"), for: .normal)
+        rightButtonFAQ.addTarget(self, action: #selector(rightButtonFAQChponk), for: .touchUpInside)
+        rightButtonFAQ.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(rightButtonFAQ)
         
-        amountLabel.text = "1/5"
-        amountLabel.textColor = .white
-        amountLabel.textAlignment = .center
-        amountLabel.numberOfLines = 0
-        amountLabel.font = UIFont(name: "SFProDisplay-Medium", size: 20)
-        amountLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(amountLabel)
+        amountLabelFAQ.text = "1/5"
+        amountLabelFAQ.textColor = .white
+        amountLabelFAQ.textAlignment = .center
+        amountLabelFAQ.numberOfLines = 0
+        amountLabelFAQ.font = UIFont(name: "SFProDisplay-Medium", size: 20)
+        amountLabelFAQ.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(amountLabelFAQ)
         
         NSLayoutConstraint.activate([
             goStart.topAnchor.constraint(equalTo: view.topAnchor),
@@ -110,24 +110,24 @@ extension HowToPlayViewController {
             goStart.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             goStart.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            cardView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cardView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            cardViewFAQ.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardViewFAQ.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            cardImage.topAnchor.constraint(equalTo: cardView.topAnchor),
-            cardImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardImageFAQ.topAnchor.constraint(equalTo: cardViewFAQ.topAnchor),
+            cardImageFAQ.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            cardLabel.topAnchor.constraint(equalTo: cardImage.bottomAnchor, constant: 30),
-            cardLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
-            cardLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
+            cardLabelFAQ.topAnchor.constraint(equalTo: cardImageFAQ.bottomAnchor, constant: 30),
+            cardLabelFAQ.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+            cardLabelFAQ.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
             
-            amountLabel.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16),
-            amountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            amountLabelFAQ.bottomAnchor.constraint(equalTo: cardViewFAQ.bottomAnchor, constant: -16),
+            amountLabelFAQ.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            leftButton.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16),
-            leftButton.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 16),
+            leftButtonFAQ.bottomAnchor.constraint(equalTo: cardViewFAQ.bottomAnchor, constant: -16),
+            leftButtonFAQ.leadingAnchor.constraint(equalTo: cardViewFAQ.leadingAnchor, constant: 16),
             
-            rightButton.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -16),
-            rightButton.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -16),
+            rightButtonFAQ.bottomAnchor.constraint(equalTo: cardViewFAQ.bottomAnchor, constant: -16),
+            rightButtonFAQ.trailingAnchor.constraint(equalTo: cardViewFAQ.trailingAnchor, constant: -16),
         ])
     }
     

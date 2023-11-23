@@ -9,21 +9,21 @@ import UIKit
 
 class ActionViewController: UIViewController {
     
-    var popCorrect = UIImageView()
-    var popIncorrect = UIImageView()
+    var popCorrectAction = UIImageView()
+    var popIncorrectAction = UIImageView()
     
     var friends: [FriendInfo] = []
     
-    var successClickCount = 0
-    var closeClickCount = 0
+    var successClickCountAction = 0
+    var closeClickCountAction = 0
     
-    var actionBat = UIImageView()
-    var tableView = UITableView(frame: .zero, style: .plain)
-    var cardQuestion = UIImageView()
-    var questionLabel = UILabel()
-    var roundImage = UIImageView()
-    var danceView = UIImageView()
-    var voteLabel = UILabel()
+    var actionBatAction = UIImageView()
+    var tableViewAction = UITableView(frame: .zero, style: .plain)
+    var cardQuestionAction = UIImageView()
+    var questionLabelAction = UILabel()
+    var roundImageAction = UIImageView()
+    var danceViewAction = UIImageView()
+    var voteLabelAction = UILabel()
     
     var stackView = UIStackView()
     var friend1Image = UIImageView()
@@ -45,10 +45,10 @@ class ActionViewController: UIViewController {
         
         setupActionViews()
         setupActionNavigationBar()
-        setupFriendLabelsAndImages()
+        setupFriendLabelsAndImagesActionhahaha()
     }
     
-    private func setupFriendLabelsAndImages() {
+    private func setupFriendLabelsAndImagesActionhahaha() {
         let labelImagePairs = [
             (friend1Label, friend1Image),
             (friend2Label, friend2Image),
@@ -69,38 +69,38 @@ class ActionViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabel(pair.0, withText: "Friend")
-                setupImageView(pair.1, withImageName: "friend1")
+                setupLabelActionhahaha(pair.0, withText: "Friend")
+                setupImageViewActionhahaha(pair.1, withImageName: "friend1")
             }
         }
     }
     
-    func setupLabel(_ label: UILabel, withText text: String) {
+    func setupLabelActionhahaha(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 10)
         label.textColor = .white
         label.textAlignment = .center
     }
     
-    func setupImageView(_ imageView: UIImageView, withImageName imageName: String) {
+    func setupImageViewActionhahaha(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func createVerticalStackView(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
+    func createVerticalStackViewActionhahaha(withImageView imageView: UIImageView, andLabel label: UILabel) -> UIStackView {
         let closeButton = UIButton()
         closeButton.setImage(UIImage(named: "close"), for: .normal)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         
-        closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        closeButton.addTarget(self, action: #selector(closeButtonTappedActionhahaha), for: .touchUpInside)
         
         let successButton = UIButton()
         successButton.setImage(UIImage(named: "success"), for: .normal)
         successButton.translatesAutoresizingMaskIntoConstraints = false
         
-        successButton.addTarget(self, action: #selector(successButtonTapped), for: .touchUpInside)
+        successButton.addTarget(self, action: #selector(successButtonTappedActionhahaha), for: .touchUpInside)
 
         let stackView = UIStackView(arrangedSubviews: [successButton, closeButton, imageView, label])
         stackView.axis = .vertical
@@ -111,32 +111,32 @@ class ActionViewController: UIViewController {
         return stackView
     }
     
-    @objc func successButtonTapped() {
-        successClickCount += 1
-        closeClickCount = max(closeClickCount - 1, 0)
-        checkForTransition()
+    @objc func successButtonTappedActionhahaha() {
+        successClickCountAction += 1
+        closeClickCountAction = max(closeClickCountAction - 1, 0)
+        checkForTransitionActionhahaha()
     }
 
-    @objc func closeButtonTapped() {
-        closeClickCount += 1
-        successClickCount = max(successClickCount - 1, 0)
-        checkForTransition()
+    @objc func closeButtonTappedActionhahaha() {
+        closeClickCountAction += 1
+        successClickCountAction = max(successClickCountAction - 1, 0)
+        checkForTransitionActionhahaha()
     }
     
-    func checkForTransition() {
-        let totalVotes = successClickCount + closeClickCount
+    func checkForTransitionActionhahaha() {
+        let totalVotes = successClickCountAction + closeClickCountAction
         let majority = (friends.count / 2) + 1
 
         if totalVotes >= majority {
-            if successClickCount > closeClickCount {
-                showPopupAndTransition(imageView: popCorrect)
-            } else if closeClickCount > successClickCount {
-                showPopupAndTransition(imageView: popIncorrect)
+            if successClickCountAction > closeClickCountAction {
+                showPopupAndTransitionActionhahaha(imageView: popCorrectAction)
+            } else if closeClickCountAction > successClickCountAction {
+                showPopupAndTransitionActionhahaha(imageView: popIncorrectAction)
             }
         }
     }
 
-    func showPopupAndTransition(imageView: UIImageView) {
+    func showPopupAndTransitionActionhahaha(imageView: UIImageView) {
         imageView.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             let controller = BonusViewController()
@@ -150,79 +150,79 @@ class ActionViewController: UIViewController {
 
 extension ActionViewController {
     func setupActionViews() {
-        actionBat.image = UIImage(named: "background")
-        actionBat.layer.masksToBounds = true
-        actionBat.contentMode = .scaleAspectFill
-        actionBat.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(actionBat)
+        actionBatAction.image = UIImage(named: "background")
+        actionBatAction.layer.masksToBounds = true
+        actionBatAction.contentMode = .scaleAspectFill
+        actionBatAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(actionBatAction)
         
-        popCorrect.image = UIImage(named: "popCorrect")
-        popCorrect.layer.masksToBounds = true
-        popCorrect.contentMode = .scaleAspectFill
-        popCorrect.isHidden = true
-        popCorrect.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(popCorrect)
+        popCorrectAction.image = UIImage(named: "popCorrect")
+        popCorrectAction.layer.masksToBounds = true
+        popCorrectAction.contentMode = .scaleAspectFill
+        popCorrectAction.isHidden = true
+        popCorrectAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(popCorrectAction)
         
-        popIncorrect.image = UIImage(named: "popIncorrect")
-        popIncorrect.layer.masksToBounds = true
-        popIncorrect.contentMode = .scaleAspectFill
-        popIncorrect.isHidden = true
-        popIncorrect.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(popIncorrect)
+        popIncorrectAction.image = UIImage(named: "popIncorrect")
+        popIncorrectAction.layer.masksToBounds = true
+        popIncorrectAction.contentMode = .scaleAspectFill
+        popIncorrectAction.isHidden = true
+        popIncorrectAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(popIncorrectAction)
         
-        danceView.image = UIImage(named: "dance")
-        danceView.layer.masksToBounds = true
-        danceView.contentMode = .scaleAspectFill
-        danceView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(danceView)
+        danceViewAction.image = UIImage(named: "dance")
+        danceViewAction.layer.masksToBounds = true
+        danceViewAction.contentMode = .scaleAspectFill
+        danceViewAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(danceViewAction)
         
-        roundImage.image = UIImage(named: "round1")
-        roundImage.layer.masksToBounds = true
-        roundImage.contentMode = .scaleAspectFill
-        roundImage.translatesAutoresizingMaskIntoConstraints = false
+        roundImageAction.image = UIImage(named: "round1")
+        roundImageAction.layer.masksToBounds = true
+        roundImageAction.contentMode = .scaleAspectFill
+        roundImageAction.translatesAutoresizingMaskIntoConstraints = false
         
-        cardQuestion.image = UIImage(named: "cardAction")
-        cardQuestion.layer.masksToBounds = true
-        cardQuestion.contentMode = .scaleAspectFill
-        cardQuestion.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardQuestion)
+        cardQuestionAction.image = UIImage(named: "cardAction")
+        cardQuestionAction.layer.masksToBounds = true
+        cardQuestionAction.contentMode = .scaleAspectFill
+        cardQuestionAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardQuestionAction)
         
-        questionLabel.text = "Perform your best dance move for 1 minute."
-        questionLabel.textColor = .white
-        questionLabel.textAlignment = .center
-        questionLabel.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
-        questionLabel.numberOfLines = 0
-        questionLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(questionLabel)
+        questionLabelAction.text = "Perform your best dance move for 1 minute."
+        questionLabelAction.textColor = .white
+        questionLabelAction.textAlignment = .center
+        questionLabelAction.font = UIFont(name: "SFProDisplay-Semibold", size: 20)
+        questionLabelAction.numberOfLines = 0
+        questionLabelAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(questionLabelAction)
         
-        voteLabel.text = "Vote whether the score is deserved"
-        voteLabel.textColor = .white
-        voteLabel.textAlignment = .center
-        voteLabel.font = UIFont(name: "SFProDisplay-Medium", size: 16)
-        voteLabel.numberOfLines = 0
-        voteLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(voteLabel)
+        voteLabelAction.text = "Vote whether the score is deserved"
+        voteLabelAction.textColor = .white
+        voteLabelAction.textAlignment = .center
+        voteLabelAction.font = UIFont(name: "SFProDisplay-Medium", size: 16)
+        voteLabelAction.numberOfLines = 0
+        voteLabelAction.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(voteLabelAction)
         
-        setupImageView(friend1Image, withImageName: "friend1")
-        setupImageView(friend2Image, withImageName: "friend2")
-        setupImageView(friend3Image, withImageName: "friend3")
-        setupImageView(friend4Image, withImageName: "friend4")
-        setupImageView(friend5Image, withImageName: "friend5")
-        setupImageView(friend6Image, withImageName: "friend6")
+        setupImageViewActionhahaha(friend1Image, withImageName: "friend1")
+        setupImageViewActionhahaha(friend2Image, withImageName: "friend2")
+        setupImageViewActionhahaha(friend3Image, withImageName: "friend3")
+        setupImageViewActionhahaha(friend4Image, withImageName: "friend4")
+        setupImageViewActionhahaha(friend5Image, withImageName: "friend5")
+        setupImageViewActionhahaha(friend6Image, withImageName: "friend6")
         
-        setupLabel(friend1Label, withText: "Jane")
-        setupLabel(friend2Label, withText: "Jack")
-        setupLabel(friend3Label, withText: "Steven")
-        setupLabel(friend4Label, withText: "Mary")
-        setupLabel(friend5Label, withText: "Stefani")
-        setupLabel(friend6Label, withText: "Mike")
+        setupLabelActionhahaha(friend1Label, withText: "Jane")
+        setupLabelActionhahaha(friend2Label, withText: "Jack")
+        setupLabelActionhahaha(friend3Label, withText: "Steven")
+        setupLabelActionhahaha(friend4Label, withText: "Mary")
+        setupLabelActionhahaha(friend5Label, withText: "Stefani")
+        setupLabelActionhahaha(friend6Label, withText: "Mike")
         
-        let friend1Stack = createVerticalStackView(withImageView: friend1Image, andLabel: friend1Label)
-        let friend2Stack = createVerticalStackView(withImageView: friend2Image, andLabel: friend2Label)
-        let friend3Stack = createVerticalStackView(withImageView: friend3Image, andLabel: friend3Label)
-        let friend4Stack = createVerticalStackView(withImageView: friend4Image, andLabel: friend4Label)
-        let friend5Stack = createVerticalStackView(withImageView: friend5Image, andLabel: friend5Label)
-        let friend6Stack = createVerticalStackView(withImageView: friend6Image, andLabel: friend6Label)
+        let friend1Stack = createVerticalStackViewActionhahaha(withImageView: friend1Image, andLabel: friend1Label)
+        let friend2Stack = createVerticalStackViewActionhahaha(withImageView: friend2Image, andLabel: friend2Label)
+        let friend3Stack = createVerticalStackViewActionhahaha(withImageView: friend3Image, andLabel: friend3Label)
+        let friend4Stack = createVerticalStackViewActionhahaha(withImageView: friend4Image, andLabel: friend4Label)
+        let friend5Stack = createVerticalStackViewActionhahaha(withImageView: friend5Image, andLabel: friend5Label)
+        let friend6Stack = createVerticalStackViewActionhahaha(withImageView: friend6Image, andLabel: friend6Label)
         
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
@@ -239,28 +239,28 @@ extension ActionViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            actionBat.topAnchor.constraint(equalTo: view.topAnchor),
-            actionBat.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            actionBat.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            actionBat.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            actionBatAction.topAnchor.constraint(equalTo: view.topAnchor),
+            actionBatAction.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            actionBatAction.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            actionBatAction.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            popCorrect.topAnchor.constraint(equalTo: view.topAnchor),
-            popCorrect.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            popCorrectAction.topAnchor.constraint(equalTo: view.topAnchor),
+            popCorrectAction.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            popIncorrect.topAnchor.constraint(equalTo: view.topAnchor),
-            popIncorrect.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            popIncorrectAction.topAnchor.constraint(equalTo: view.topAnchor),
+            popIncorrectAction.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            danceView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            danceViewAction.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            cardQuestion.topAnchor.constraint(equalTo: danceView.bottomAnchor, constant: 40),
-            cardQuestion.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardQuestionAction.topAnchor.constraint(equalTo: danceViewAction.bottomAnchor, constant: 40),
+            cardQuestionAction.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            questionLabel.topAnchor.constraint(equalTo: cardQuestion.topAnchor, constant: 16),
-            questionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
-            questionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
-            questionLabel.bottomAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: -16),
+            questionLabelAction.topAnchor.constraint(equalTo: cardQuestionAction.topAnchor, constant: 16),
+            questionLabelAction.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+            questionLabelAction.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32),
+            questionLabelAction.bottomAnchor.constraint(equalTo: cardQuestionAction.bottomAnchor, constant: -16),
             
-            voteLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            voteLabelAction.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
@@ -268,15 +268,15 @@ extension ActionViewController {
         
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
-                danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
+                danceViewAction.topAnchor.constraint(equalTo: view.topAnchor, constant: 170),
                 stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -75),
-                voteLabel.topAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: 135),
+                voteLabelAction.topAnchor.constraint(equalTo: cardQuestionAction.bottomAnchor, constant: 135),
             ])
         } else {
             NSLayoutConstraint.activate([
-                danceView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+                danceViewAction.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
                 stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-                voteLabel.topAnchor.constraint(equalTo: cardQuestion.bottomAnchor, constant: 70),
+                voteLabelAction.topAnchor.constraint(equalTo: cardQuestionAction.bottomAnchor, constant: 70),
             ])
         }
     }
@@ -288,7 +288,7 @@ extension ActionViewController {
         titleLabel.textColor = .white
         titleLabel.sizeToFit()
         
-        let roundImageBarButtonItem = UIBarButtonItem(customView: roundImage)
+        let roundImageBarButtonItem = UIBarButtonItem(customView: roundImageAction)
         navigationItem.rightBarButtonItem = roundImageBarButtonItem
         
         navigationItem.titleView = titleLabel

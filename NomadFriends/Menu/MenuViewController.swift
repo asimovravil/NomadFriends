@@ -10,10 +10,10 @@ import UIKit
 class MenuViewController: UIViewController {
 
     var menuMenu = UIImageView()
-    var startAPartyButton = UIButton()
-    var howToPlayButton = UIButton()
-    var profileButton = UIButton()
-    var settingsButton = UIButton()
+    var startAPartyButtonMenu = UIButton()
+    var howToPlayButtonMenu = UIButton()
+    var profileButtonMenu = UIButton()
+    var settingsButtonMenu = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,22 +23,22 @@ class MenuViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    @objc private func startAPartyButtonTouch() {
+    @objc private func startAPartyButtonMenuChponk() {
         let controller = StartAPartyViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func howToPlayButtonTouch() {
+    @objc private func howToPlayButtonMenuChponk() {
         let controller = HowToPlayViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func settingsButtonTouch() {
+    @objc private func settingsButtonMenuChponk() {
         let controller = SettingsViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func profileButtonTouch() {
+    @objc private func profileButtonMenuChponk() {
         let controller = ProfileViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -52,25 +52,25 @@ extension MenuViewController {
         menuMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(menuMenu)
         
-        startAPartyButton.setImage(UIImage(named: "startAPartyButton"), for: .normal)
-        startAPartyButton.addTarget(self, action: #selector(startAPartyButtonTouch), for: .touchUpInside)
-        startAPartyButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(startAPartyButton)
+        startAPartyButtonMenu.setImage(UIImage(named: "startAPartyButton"), for: .normal)
+        startAPartyButtonMenu.addTarget(self, action: #selector(startAPartyButtonMenuChponk), for: .touchUpInside)
+        startAPartyButtonMenu.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(startAPartyButtonMenu)
         
-        howToPlayButton.setImage(UIImage(named: "howToPlayButton"), for: .normal)
-        howToPlayButton.addTarget(self, action: #selector(howToPlayButtonTouch), for: .touchUpInside)
-        howToPlayButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(howToPlayButton)
+        howToPlayButtonMenu.setImage(UIImage(named: "howToPlayButton"), for: .normal)
+        howToPlayButtonMenu.addTarget(self, action: #selector(howToPlayButtonMenuChponk), for: .touchUpInside)
+        howToPlayButtonMenu.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(howToPlayButtonMenu)
         
-        profileButton.setImage(UIImage(named: "profileButton"), for: .normal)
-        profileButton.addTarget(self, action: #selector(profileButtonTouch), for: .touchUpInside)
-        profileButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(profileButton)
+        profileButtonMenu.setImage(UIImage(named: "profileButton"), for: .normal)
+        profileButtonMenu.addTarget(self, action: #selector(profileButtonMenuChponk), for: .touchUpInside)
+        profileButtonMenu.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(profileButtonMenu)
         
-        settingsButton.setImage(UIImage(named: "settingsButton"), for: .normal)
-        settingsButton.addTarget(self, action: #selector(settingsButtonTouch), for: .touchUpInside)
-        settingsButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(settingsButton)
+        settingsButtonMenu.setImage(UIImage(named: "settingsButton"), for: .normal)
+        settingsButtonMenu.addTarget(self, action: #selector(settingsButtonMenuChponk), for: .touchUpInside)
+        settingsButtonMenu.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(settingsButtonMenu)
         
         NSLayoutConstraint.activate([
             menuMenu.topAnchor.constraint(equalTo: view.topAnchor),
@@ -78,26 +78,26 @@ extension MenuViewController {
             menuMenu.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             menuMenu.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            profileButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            profileButtonMenu.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             
-            settingsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            settingsButtonMenu.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             
-            startAPartyButton.bottomAnchor.constraint(equalTo: profileButton.topAnchor, constant: -40),
-            startAPartyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            startAPartyButtonMenu.bottomAnchor.constraint(equalTo: profileButtonMenu.topAnchor, constant: -40),
+            startAPartyButtonMenu.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             
-            howToPlayButton.bottomAnchor.constraint(equalTo: settingsButton.topAnchor, constant: -40),
-            howToPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+            howToPlayButtonMenu.bottomAnchor.constraint(equalTo: settingsButtonMenu.topAnchor, constant: -40),
+            howToPlayButtonMenu.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
-                profileButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -92),
-                settingsButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -92),
+                profileButtonMenu.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -92),
+                settingsButtonMenu.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -92),
             ])
         } else {
             NSLayoutConstraint.activate([
-                profileButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
-                settingsButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+                profileButtonMenu.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
+                settingsButtonMenu.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
             ])
         }
     }

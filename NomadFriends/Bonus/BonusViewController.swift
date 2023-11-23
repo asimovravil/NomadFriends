@@ -12,14 +12,14 @@ class BonusViewController: UIViewController {
     var friends: [FriendInfo] = []
     
     var bonusCool = UIImageView()
-    var stickView = UIImageView()
-    var circleBonusView = UIImageView()
-    var spinButton = UIButton()
-    var cardDanceView = UIImageView()
-    var cardResultView = UIImageView()
-    var noIWont = UIButton()
-    var iDidIt = UIButton()
-    var getButton = UIButton()
+    var stickViewBonusCoolak = UIImageView()
+    var circleBonusBonusCoolak = UIImageView()
+    var spinButtonBonusCoolak = UIButton()
+    var cardDanceBonusCoolak = UIImageView()
+    var cardResultBonusCoolak = UIImageView()
+    var noIWontBonusCoolak = UIButton()
+    var iDidItBonusCoolak = UIButton()
+    var getButtonBonusCoolak = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +29,10 @@ class BonusViewController: UIViewController {
     }
     
     @objc private func spinButtonPressed() {
-        startSpinning()
+        startSpinningBonusCoolakGoAheade()
     }
     
-    private func startSpinning() {
+    private func startSpinningBonusCoolakGoAheade() {
         let fullRotation = CGFloat(Double.pi * 2)
         let spinAnimation = CABasicAnimation(keyPath: "transform.rotation")
         spinAnimation.fromValue = 0.0
@@ -42,38 +42,38 @@ class BonusViewController: UIViewController {
 
         CATransaction.begin()
         CATransaction.setCompletionBlock {
-            self.showResult()
+            self.showResultBonusCoolakGoAheade()
         }
-        circleBonusView.layer.add(spinAnimation, forKey: "360rotation")
+        circleBonusBonusCoolak.layer.add(spinAnimation, forKey: "360rotation")
         CATransaction.commit()
     }
 
-    private func showResult() {
+    private func showResultBonusCoolakGoAheade() {
         if Bool.random() {
-            cardDanceView.isHidden = false
-            noIWont.isHidden = false
-            iDidIt.isHidden = false
+            cardDanceBonusCoolak.isHidden = false
+            noIWontBonusCoolak.isHidden = false
+            iDidItBonusCoolak.isHidden = false
         } else {
-            cardResultView.isHidden = false
-            getButton.isHidden = false
+            cardResultBonusCoolak.isHidden = false
+            getButtonBonusCoolak.isHidden = false
         }
     }
     
-    @objc private func noIWontPressed() {
+    @objc private func noIWontPressedBonusCoolakGoAheade() {
         let controller = LaderboardViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func iDidItPressed() {
+    @objc private func iDidItPressedBonusCoolakGoAheade() {
         let controller = LaderboardViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    @objc private func getButtonPressed() {
+    @objc private func getButtonPressedBonusCoolakGoAheade() {
         let controller = LaderboardViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
@@ -89,54 +89,54 @@ extension BonusViewController {
         bonusCool.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bonusCool)
         
-        circleBonusView.image = UIImage(named: "circleBonus")
-        circleBonusView.layer.masksToBounds = true
-        circleBonusView.contentMode = .scaleAspectFill
-        circleBonusView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(circleBonusView)
+        circleBonusBonusCoolak.image = UIImage(named: "circleBonus")
+        circleBonusBonusCoolak.layer.masksToBounds = true
+        circleBonusBonusCoolak.contentMode = .scaleAspectFill
+        circleBonusBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(circleBonusBonusCoolak)
         
-        stickView.image = UIImage(named: "stick")
-        stickView.layer.masksToBounds = true
-        stickView.contentMode = .scaleAspectFill
-        stickView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stickView)
+        stickViewBonusCoolak.image = UIImage(named: "stick")
+        stickViewBonusCoolak.layer.masksToBounds = true
+        stickViewBonusCoolak.contentMode = .scaleAspectFill
+        stickViewBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stickViewBonusCoolak)
         
-        spinButton.setImage(UIImage(named: "spin"), for: .normal)
-        spinButton.addTarget(self, action: #selector(spinButtonPressed), for: .touchUpInside)
-        spinButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(spinButton)
+        spinButtonBonusCoolak.setImage(UIImage(named: "spin"), for: .normal)
+        spinButtonBonusCoolak.addTarget(self, action: #selector(spinButtonPressed), for: .touchUpInside)
+        spinButtonBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(spinButtonBonusCoolak)
         
-        cardDanceView.image = UIImage(named: "cardBonusDance")
-        cardDanceView.layer.masksToBounds = true
-        cardDanceView.contentMode = .scaleAspectFill
-        cardDanceView.isHidden = true
-        cardDanceView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardDanceView)
+        cardDanceBonusCoolak.image = UIImage(named: "cardBonusDance")
+        cardDanceBonusCoolak.layer.masksToBounds = true
+        cardDanceBonusCoolak.contentMode = .scaleAspectFill
+        cardDanceBonusCoolak.isHidden = true
+        cardDanceBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardDanceBonusCoolak)
         
-        cardResultView.image = UIImage(named: "cardBonusResult")
-        cardResultView.layer.masksToBounds = true
-        cardResultView.contentMode = .scaleAspectFill
-        cardResultView.isHidden = true
-        cardResultView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(cardResultView)
+        cardResultBonusCoolak.image = UIImage(named: "cardBonusResult")
+        cardResultBonusCoolak.layer.masksToBounds = true
+        cardResultBonusCoolak.contentMode = .scaleAspectFill
+        cardResultBonusCoolak.isHidden = true
+        cardResultBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(cardResultBonusCoolak)
         
-        noIWont.setImage(UIImage(named: "noIwont"), for: .normal)
-        noIWont.addTarget(self, action: #selector(noIWontPressed), for: .touchUpInside)
-        noIWont.isHidden = true
-        noIWont.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(noIWont)
+        noIWontBonusCoolak.setImage(UIImage(named: "noIwont"), for: .normal)
+        noIWontBonusCoolak.addTarget(self, action: #selector(noIWontPressedBonusCoolakGoAheade), for: .touchUpInside)
+        noIWontBonusCoolak.isHidden = true
+        noIWontBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(noIWontBonusCoolak)
         
-        iDidIt.setImage(UIImage(named: "iDidIt"), for: .normal)
-        iDidIt.addTarget(self, action: #selector(iDidItPressed), for: .touchUpInside)
-        iDidIt.isHidden = true
-        iDidIt.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(iDidIt)
+        iDidItBonusCoolak.setImage(UIImage(named: "iDidIt"), for: .normal)
+        iDidItBonusCoolak.addTarget(self, action: #selector(iDidItPressedBonusCoolakGoAheade), for: .touchUpInside)
+        iDidItBonusCoolak.isHidden = true
+        iDidItBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(iDidItBonusCoolak)
         
-        getButton.setImage(UIImage(named: "get"), for: .normal)
-        getButton.addTarget(self, action: #selector(getButtonPressed), for: .touchUpInside)
-        getButton.isHidden = true
-        getButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(getButton)
+        getButtonBonusCoolak.setImage(UIImage(named: "get"), for: .normal)
+        getButtonBonusCoolak.addTarget(self, action: #selector(getButtonPressedBonusCoolakGoAheade), for: .touchUpInside)
+        getButtonBonusCoolak.isHidden = true
+        getButtonBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(getButtonBonusCoolak)
         
         NSLayoutConstraint.activate([
             bonusCool.topAnchor.constraint(equalTo: view.topAnchor),
@@ -144,48 +144,48 @@ extension BonusViewController {
             bonusCool.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bonusCool.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            spinButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            spinButtonBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            stickView.topAnchor.constraint(equalTo: circleBonusView.topAnchor),
-            stickView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stickViewBonusCoolak.topAnchor.constraint(equalTo: circleBonusBonusCoolak.topAnchor),
+            stickViewBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            circleBonusView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            circleBonusView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            circleBonusBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            circleBonusBonusCoolak.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            cardDanceView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cardDanceView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            cardDanceBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardDanceBonusCoolak.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            cardResultView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            cardResultView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            cardResultBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cardResultBonusCoolak.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            noIWont.leadingAnchor.constraint(equalTo: cardDanceView.leadingAnchor),
-            noIWont.bottomAnchor.constraint(equalTo: cardDanceView.bottomAnchor),
+            noIWontBonusCoolak.leadingAnchor.constraint(equalTo: cardDanceBonusCoolak.leadingAnchor),
+            noIWontBonusCoolak.bottomAnchor.constraint(equalTo: cardDanceBonusCoolak.bottomAnchor),
             
-            iDidIt.trailingAnchor.constraint(equalTo: cardDanceView.trailingAnchor),
-            iDidIt.bottomAnchor.constraint(equalTo: cardDanceView.bottomAnchor),
+            iDidItBonusCoolak.trailingAnchor.constraint(equalTo: cardDanceBonusCoolak.trailingAnchor),
+            iDidItBonusCoolak.bottomAnchor.constraint(equalTo: cardDanceBonusCoolak.bottomAnchor),
             
-            getButton.bottomAnchor.constraint(equalTo: cardResultView.bottomAnchor),
-            getButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            getButtonBonusCoolak.bottomAnchor.constraint(equalTo: cardResultBonusCoolak.bottomAnchor),
+            getButtonBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
-                spinButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+                spinButtonBonusCoolak.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             ])
         } else {
             NSLayoutConstraint.activate([
-                spinButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
+                spinButtonBonusCoolak.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
             ])
         }
     }
     
     private func setupBonusNavigationBar() {
-        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTappedActionhahaha))
         closeButton.tintColor = .white
         navigationItem.leftBarButtonItem = closeButton
     }
     
-    @objc private func closeButtonTapped() {
+    @objc private func closeButtonTappedActionhahaha() {
         let controller = MenuViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)

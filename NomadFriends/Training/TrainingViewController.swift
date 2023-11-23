@@ -13,10 +13,10 @@ class TrainingViewController: UIViewController {
     
     var training = UIImageView()
     var pageControl = UIPageControl()
-    var imageView = UIImageView()
-    var textTitleView = UILabel()
-    var textSubTitleView = UILabel()
-    var nextButton = UIButton()
+    var imageTraining = UIImageView()
+    var textTitleTraining = UILabel()
+    var textSubTitleTraining = UILabel()
+    var nextButtonTraining = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,13 @@ class TrainingViewController: UIViewController {
 
     func updateContentForPage(_ page: Int) {
         let pageData = pages[page]
-        textTitleView.text = pageData.textTitle
-        textSubTitleView.text = pageData.textSubTitle
-        imageView.image = UIImage(named: pageData.imageName)
+        textTitleTraining.text = pageData.textTitle
+        textSubTitleTraining.text = pageData.textSubTitle
+        imageTraining.image = UIImage(named: pageData.imageName)
     }
     
     // Обработка нажатия на кнопку "Далее"
-    @objc func nextButtonTapped() {
+    @objc func nextButtonMenuChponk() {
         if currentPage < pages.count - 1 {
             currentPage += 1
         } else {
@@ -46,9 +46,9 @@ class TrainingViewController: UIViewController {
         pageControl.currentPage = currentPage
         
         if currentPage == pages.count - 1 {
-            nextButton.setImage(UIImage(named: "startAParty"), for: .normal)
+            nextButtonTraining.setImage(UIImage(named: "startAParty"), for: .normal)
         } else {
-            nextButton.setImage(UIImage(named: "next"), for: .normal)
+            nextButtonTraining.setImage(UIImage(named: "next"), for: .normal)
         }
     }
 }
@@ -68,29 +68,29 @@ extension TrainingViewController {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(pageControl)
         
-        imageView.contentMode = .scaleAspectFit
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(imageView)
+        imageTraining.contentMode = .scaleAspectFit
+        imageTraining.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(imageTraining)
         
-        textTitleView.textAlignment = .center
-        textTitleView.textColor = .white
-        textTitleView.numberOfLines = 0
-        textTitleView.font = UIFont(name: "SFProDisplay-Bold", size: 32)
-        textTitleView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(textTitleView)
+        textTitleTraining.textAlignment = .center
+        textTitleTraining.textColor = .white
+        textTitleTraining.numberOfLines = 0
+        textTitleTraining.font = UIFont(name: "SFProDisplay-Bold", size: 32)
+        textTitleTraining.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(textTitleTraining)
         
-        textSubTitleView.textAlignment = .center
-        textSubTitleView.textColor = .white
-        textSubTitleView.numberOfLines = 0
-        textSubTitleView.alpha = 0.65
-        textSubTitleView.font = UIFont(name: "SFProDisplay-Regular", size: 14)
-        textSubTitleView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(textSubTitleView)
+        textSubTitleTraining.textAlignment = .center
+        textSubTitleTraining.textColor = .white
+        textSubTitleTraining.numberOfLines = 0
+        textSubTitleTraining.alpha = 0.65
+        textSubTitleTraining.font = UIFont(name: "SFProDisplay-Regular", size: 14)
+        textSubTitleTraining.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(textSubTitleTraining)
         
-        nextButton.setImage(UIImage(named: "next"), for: .normal)
-        nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
-        nextButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(nextButton)
+        nextButtonTraining.setImage(UIImage(named: "next"), for: .normal)
+        nextButtonTraining.addTarget(self, action: #selector(nextButtonMenuChponk), for: .touchUpInside)
+        nextButtonTraining.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nextButtonTraining)
         
         NSLayoutConstraint.activate([
             training.topAnchor.constraint(equalTo: view.topAnchor),
@@ -98,32 +98,32 @@ extension TrainingViewController {
             training.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             training.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            imageView.topAnchor.constraint(equalTo: view.topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            imageTraining.topAnchor.constraint(equalTo: view.topAnchor),
+            imageTraining.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageTraining.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            textTitleView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 12),
-            textTitleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            textTitleView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            textTitleTraining.topAnchor.constraint(equalTo: imageTraining.bottomAnchor, constant: 12),
+            textTitleTraining.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textTitleTraining.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            textSubTitleView.topAnchor.constraint(equalTo: textTitleView.bottomAnchor, constant: 16),
-            textSubTitleView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            textSubTitleView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            textSubTitleTraining.topAnchor.constraint(equalTo: textTitleTraining.bottomAnchor, constant: 16),
+            textSubTitleTraining.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            textSubTitleTraining.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             
-            pageControl.bottomAnchor.constraint(equalTo: nextButton.topAnchor, constant: -17),
+            pageControl.bottomAnchor.constraint(equalTo: nextButtonTraining.topAnchor, constant: -17),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            nextButtonTraining.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
-                nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
+                nextButtonTraining.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
             ])
         } else {
             NSLayoutConstraint.activate([
-                nextButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-                imageView.heightAnchor.constraint(equalToConstant: 340)
+                nextButtonTraining.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                imageTraining.heightAnchor.constraint(equalToConstant: 340)
             ])
         }
     }

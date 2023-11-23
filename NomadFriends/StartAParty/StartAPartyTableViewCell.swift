@@ -29,7 +29,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
     var friend5Button = UIButton()
     var friend6Button = UIButton()
 
-    var nameFriendTextField = UITextField()
+    var nameFriendTextFieldStartParty = UITextField()
     
     var playerName: String? {
         didSet {
@@ -49,7 +49,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func resetButtons() {
+    func resetButtonsStartPartyChponk() {
         isFriend1ButtonActive = false
         isFriend2ButtonActive = false
         isFriend3ButtonActive = false
@@ -74,8 +74,8 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         self.playerName = playerName
     }
     
-    @objc func friend1ButtonPressed() {
-        resetButtons()
+    @objc func friend1ButtonPressedStartPartyChponk() {
+        resetButtonsStartPartyChponk()
         isFriend1ButtonActive = true
         selectedImageName = "friend1Active"
 
@@ -83,8 +83,8 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         friend1Button.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    @objc func friend2ButtonPressed() {
-        resetButtons()
+    @objc func friend2ButtonPressedStartPartyChponk() {
+        resetButtonsStartPartyChponk()
         isFriend2ButtonActive.toggle()
         selectedImageName = "friend2Active"
 
@@ -92,8 +92,8 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         friend2Button.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    @objc func friend3ButtonPressed() {
-        resetButtons()
+    @objc func friend3ButtonPressedStartPartyChponk() {
+        resetButtonsStartPartyChponk()
         isFriend3ButtonActive.toggle()
         selectedImageName = "friend3Active"
 
@@ -101,8 +101,8 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         friend3Button.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    @objc func friend4ButtonPressed() {
-        resetButtons()
+    @objc func friend4ButtonPressedStartPartyChponk() {
+        resetButtonsStartPartyChponk()
         isFriend4ButtonActive.toggle()
         selectedImageName = "friend4Active"
 
@@ -110,8 +110,8 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         friend4Button.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    @objc func friend5ButtonPressed() {
-        resetButtons()
+    @objc func friend5ButtonPressedStartPartyChponk() {
+        resetButtonsStartPartyChponk()
         isFriend4ButtonActive.toggle()
         selectedImageName = "friend5Active"
 
@@ -119,8 +119,8 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         friend5Button.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    @objc func friend6ButtonPressed() {
-        resetButtons()
+    @objc func friend6ButtonPressedStartPartyChponk() {
+        resetButtonsStartPartyChponk()
         isFriend4ButtonActive.toggle()
         selectedImageName = "friend6Active"
 
@@ -128,7 +128,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         friend6Button.setImage(UIImage(named: imageName), for: .normal)
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
+    @objc func textFieldDidChangeStartPartyChponk(_ textField: UITextField) {
         NotificationCenter.default.post(name: NSNotification.Name("PlayerNameChanged"), object: nil)
     }
 }
@@ -157,27 +157,27 @@ extension StartAPartyTableViewCell {
         contentView.addSubview(stackView)
         
         friend1Button.setImage(UIImage(named: "friend1"), for: .normal)
-        friend1Button.addTarget(self, action: #selector(friend1ButtonPressed), for: .touchUpInside)
+        friend1Button.addTarget(self, action: #selector(friend1ButtonPressedStartPartyChponk), for: .touchUpInside)
         friend1Button.translatesAutoresizingMaskIntoConstraints = false
         
         friend2Button.setImage(UIImage(named: "friend2"), for: .normal)
-        friend2Button.addTarget(self, action: #selector(friend2ButtonPressed), for: .touchUpInside)
+        friend2Button.addTarget(self, action: #selector(friend2ButtonPressedStartPartyChponk), for: .touchUpInside)
         friend2Button.translatesAutoresizingMaskIntoConstraints = false
         
         friend3Button.setImage(UIImage(named: "friend3"), for: .normal)
-        friend3Button.addTarget(self, action: #selector(friend3ButtonPressed), for: .touchUpInside)
+        friend3Button.addTarget(self, action: #selector(friend3ButtonPressedStartPartyChponk), for: .touchUpInside)
         friend3Button.translatesAutoresizingMaskIntoConstraints = false
         
         friend4Button.setImage(UIImage(named: "friend4"), for: .normal)
-        friend4Button.addTarget(self, action: #selector(friend4ButtonPressed), for: .touchUpInside)
+        friend4Button.addTarget(self, action: #selector(friend4ButtonPressedStartPartyChponk), for: .touchUpInside)
         friend4Button.translatesAutoresizingMaskIntoConstraints = false
         
         friend5Button.setImage(UIImage(named: "friend5"), for: .normal)
-        friend5Button.addTarget(self, action: #selector(friend5ButtonPressed), for: .touchUpInside)
+        friend5Button.addTarget(self, action: #selector(friend5ButtonPressedStartPartyChponk), for: .touchUpInside)
         friend5Button.translatesAutoresizingMaskIntoConstraints = false
         
         friend6Button.setImage(UIImage(named: "friend6"), for: .normal)
-        friend6Button.addTarget(self, action: #selector(friend6ButtonPressed), for: .touchUpInside)
+        friend6Button.addTarget(self, action: #selector(friend6ButtonPressedStartPartyChponk), for: .touchUpInside)
         friend6Button.translatesAutoresizingMaskIntoConstraints = false
         
         playerLabel.text = "Player"
@@ -191,18 +191,18 @@ extension StartAPartyTableViewCell {
             NSAttributedString.Key.foregroundColor: UIColor.gray,
             NSAttributedString.Key.font: UIFont(name: "SFProDisplay-Medium", size: 16)!
         ]
-        nameFriendTextField.attributedPlaceholder = NSAttributedString(string: "Name", attributes: attributes)
-        nameFriendTextField.font = UIFont(name: "SFProDisplay-Medium", size: 16)
-        nameFriendTextField.textAlignment = .center
-        nameFriendTextField.layer.cornerRadius = 20
-        nameFriendTextField.textColor = .white
-        nameFriendTextField.autocorrectionType = .no
-        nameFriendTextField.keyboardType = .default
-        nameFriendTextField.backgroundColor = UIColor(red: 123/255.0, green: 0/255.0, blue: 165/255.0, alpha: 1.0)
-        nameFriendTextField.delegate = self
-        nameFriendTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        nameFriendTextField.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(nameFriendTextField)
+        nameFriendTextFieldStartParty.attributedPlaceholder = NSAttributedString(string: "Name", attributes: attributes)
+        nameFriendTextFieldStartParty.font = UIFont(name: "SFProDisplay-Medium", size: 16)
+        nameFriendTextFieldStartParty.textAlignment = .center
+        nameFriendTextFieldStartParty.layer.cornerRadius = 20
+        nameFriendTextFieldStartParty.textColor = .white
+        nameFriendTextFieldStartParty.autocorrectionType = .no
+        nameFriendTextFieldStartParty.keyboardType = .default
+        nameFriendTextFieldStartParty.backgroundColor = UIColor(red: 123/255.0, green: 0/255.0, blue: 165/255.0, alpha: 1.0)
+        nameFriendTextFieldStartParty.delegate = self
+        nameFriendTextFieldStartParty.addTarget(self, action: #selector(textFieldDidChangeStartPartyChponk), for: .editingChanged)
+        nameFriendTextFieldStartParty.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(nameFriendTextFieldStartParty)
         
         NSLayoutConstraint.activate([
             cardFriends.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -217,10 +217,10 @@ extension StartAPartyTableViewCell {
             stackView.leadingAnchor.constraint(equalTo: cardFriends.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: cardFriends.trailingAnchor, constant: -16),
             
-            nameFriendTextField.bottomAnchor.constraint(equalTo: cardFriends.bottomAnchor, constant: -16),
-            nameFriendTextField.leadingAnchor.constraint(equalTo: cardFriends.leadingAnchor, constant: 16),
-            nameFriendTextField.trailingAnchor.constraint(equalTo: cardFriends.trailingAnchor, constant: -16),
-            nameFriendTextField.heightAnchor.constraint(equalToConstant: 50),
+            nameFriendTextFieldStartParty.bottomAnchor.constraint(equalTo: cardFriends.bottomAnchor, constant: -16),
+            nameFriendTextFieldStartParty.leadingAnchor.constraint(equalTo: cardFriends.leadingAnchor, constant: 16),
+            nameFriendTextFieldStartParty.trailingAnchor.constraint(equalTo: cardFriends.trailingAnchor, constant: -16),
+            nameFriendTextFieldStartParty.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
 }

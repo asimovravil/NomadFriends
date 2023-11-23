@@ -10,7 +10,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     var settingsSettings = UIImageView()
-    var tableView = UITableView(frame: .zero, style: .plain)
+    var tableViewSettings = UITableView(frame: .zero, style: .plain)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,23 +80,23 @@ extension SettingsViewController {
         settingsSettings.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(settingsSettings)
         
-        tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.reuseID)
-        tableView.layer.cornerRadius = 15
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.isScrollEnabled = false
-        tableView.rowHeight = 44
-        tableView.backgroundColor = UIColor(
+        tableViewSettings.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.reuseID)
+        tableViewSettings.layer.cornerRadius = 15
+        tableViewSettings.dataSource = self
+        tableViewSettings.delegate = self
+        tableViewSettings.isScrollEnabled = false
+        tableViewSettings.rowHeight = 44
+        tableViewSettings.backgroundColor = UIColor(
             red: 43.0/255.0,
             green: 0.0/255.0,
             blue: 83.0/255.0,
             alpha: 1.0
         )
         
-        tableView.showsVerticalScrollIndicator = false
-        tableView.separatorStyle = .none
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(tableView)
+        tableViewSettings.showsVerticalScrollIndicator = false
+        tableViewSettings.separatorStyle = .none
+        tableViewSettings.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableViewSettings)
         
         NSLayoutConstraint.activate([
             settingsSettings.topAnchor.constraint(equalTo: view.topAnchor),
@@ -104,10 +104,10 @@ extension SettingsViewController {
             settingsSettings.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             settingsSettings.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            tableView.heightAnchor.constraint(equalToConstant: 176),
+            tableViewSettings.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
+            tableViewSettings.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            tableViewSettings.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            tableViewSettings.heightAnchor.constraint(equalToConstant: 176),
         ])
     }
     
@@ -131,20 +131,20 @@ extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-            cell.titleCell.text = "Notifications"
+            cell.titleCellSettings.text = "Notifications"
             
             let switchView = UISwitch(frame: .zero)
             switchView.setOn(true, animated: true)
             switchView.addTarget(self, action: #selector(switchChanged(_:)), for: .valueChanged)
             cell.accessoryView = switchView
         case 1:
-            cell.titleCell.text = "Privacy Policy"
+            cell.titleCellSettings.text = "Privacy Policy"
         case 2:
-            cell.titleCell.text = "Rate Us"
+            cell.titleCellSettings.text = "Rate Us"
         case 3:
-            cell.titleCell.text = "Share App"
+            cell.titleCellSettings.text = "Share App"
         default:
-            cell.titleCell.text = "Unknown"
+            cell.titleCellSettings.text = "Unknown"
         }
         return cell
     }

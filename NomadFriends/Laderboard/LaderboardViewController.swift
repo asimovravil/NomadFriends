@@ -12,7 +12,7 @@ class LaderboardViewController: UIViewController {
     var friends: [FriendInfo] = []
     
     var laderboardKakashka = UIImageView()
-    var playAgainButton = UIButton()
+    var playAgainButtonLaderboardShit = UIButton()
     
     var friend1Image = UIImageView()
     var friend2Image = UIImageView()
@@ -57,19 +57,19 @@ class LaderboardViewController: UIViewController {
                 pair.0.isHidden = false
                 pair.1.isHidden = false
             } else {
-                setupLabel(pair.0, withText: "Friend")
-                setupImageView(pair.1, withImageName: "friend1")
+                setupLabelLaderboardShitSheeesh(pair.0, withText: "Friend")
+                setupImageLaderboardShitSheeesh(pair.1, withImageName: "friend1")
             }
         }
     }
     
-    @objc private func playAgainButtonTouch() {
+    @objc private func playAgainButtonLaderboardShitSheeesh() {
         let controller = MenuViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    func setupLabel(_ label: UILabel, withText text: String) {
+    func setupLabelLaderboardShitSheeesh(_ label: UILabel, withText text: String) {
         label.text = text
         label.font = UIFont(name: "SFProDisplay-Medium", size: 12)
         label.textColor = .white
@@ -77,7 +77,7 @@ class LaderboardViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    func setupImageView(_ imageView: UIImageView, withImageName imageName: String) {
+    func setupImageLaderboardShitSheeesh(_ imageView: UIImageView, withImageName imageName: String) {
         imageView.image = UIImage(named: imageName)
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
@@ -93,28 +93,28 @@ extension LaderboardViewController {
         laderboardKakashka.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(laderboardKakashka)
         
-        playAgainButton.setImage(UIImage(named: "playAgain"), for: .normal)
-        playAgainButton.addTarget(self, action: #selector(playAgainButtonTouch), for: .touchUpInside)
-        playAgainButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(playAgainButton)
+        playAgainButtonLaderboardShit.setImage(UIImage(named: "playAgain"), for: .normal)
+        playAgainButtonLaderboardShit.addTarget(self, action: #selector(playAgainButtonLaderboardShitSheeesh), for: .touchUpInside)
+        playAgainButtonLaderboardShit.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(playAgainButtonLaderboardShit)
         
-        setupImageView(friend1Image, withImageName: "friend1")
-        setupImageView(friend2Image, withImageName: "friend2")
-        setupImageView(friend3Image, withImageName: "friend3")
-        setupImageView(friend4Image, withImageName: "friend4")
-        setupImageView(friend5Image, withImageName: "friend5")
-        setupImageView(friend6Image, withImageName: "friend6")
+        setupImageLaderboardShitSheeesh(friend1Image, withImageName: "friend1")
+        setupImageLaderboardShitSheeesh(friend2Image, withImageName: "friend2")
+        setupImageLaderboardShitSheeesh(friend3Image, withImageName: "friend3")
+        setupImageLaderboardShitSheeesh(friend4Image, withImageName: "friend4")
+        setupImageLaderboardShitSheeesh(friend5Image, withImageName: "friend5")
+        setupImageLaderboardShitSheeesh(friend6Image, withImageName: "friend6")
         
         friend4Label.font = UIFont(name: "SFProDisplay-Medium", size: 18)
         friend5Label.font = UIFont(name: "SFProDisplay-Medium", size: 18)
         friend6Label.font = UIFont(name: "SFProDisplay-Medium", size: 18)
         
-        setupLabel(friend1Label, withText: "Jane")
-        setupLabel(friend2Label, withText: "Jack")
-        setupLabel(friend3Label, withText: "Steven")
-        setupLabel(friend4Label, withText: "Mary")
-        setupLabel(friend5Label, withText: "Stefani")
-        setupLabel(friend6Label, withText: "Mike")
+        setupLabelLaderboardShitSheeesh(friend1Label, withText: "Jane")
+        setupLabelLaderboardShitSheeesh(friend2Label, withText: "Jack")
+        setupLabelLaderboardShitSheeesh(friend3Label, withText: "Steven")
+        setupLabelLaderboardShitSheeesh(friend4Label, withText: "Mary")
+        setupLabelLaderboardShitSheeesh(friend5Label, withText: "Stefani")
+        setupLabelLaderboardShitSheeesh(friend6Label, withText: "Mike")
         
         view.addSubview(friend1Image)
         view.addSubview(friend2Image)
@@ -171,7 +171,7 @@ extension LaderboardViewController {
             friend6Label.topAnchor.constraint(equalTo: friend5Label.bottomAnchor, constant: 52),
             friend6Label.leadingAnchor.constraint(equalTo: friend6Image.trailingAnchor, constant: 16),
                         
-            playAgainButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            playAgainButtonLaderboardShit.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
@@ -183,7 +183,7 @@ extension LaderboardViewController {
                 friend2Image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 46),
                 friend4Image.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 196),
                 friend4Label.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 210),
-                playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+                playAgainButtonLaderboardShit.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             ])
         } else {
             NSLayoutConstraint.activate([
@@ -194,7 +194,7 @@ extension LaderboardViewController {
                 friend2Image.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 43),
                 friend4Image.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 176),
                 friend4Label.topAnchor.constraint(equalTo: friend3Image.bottomAnchor, constant: 190),
-                playAgainButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+                playAgainButtonLaderboardShit.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             ])
         }
     }
@@ -206,7 +206,7 @@ extension LaderboardViewController {
         titleLabel.textColor = .white
         titleLabel.sizeToFit()
         
-        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTappedActionhahaha))
         closeButton.tintColor = .white
         navigationItem.leftBarButtonItem = closeButton
                 
@@ -214,7 +214,7 @@ extension LaderboardViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    @objc private func closeButtonTapped() {
+    @objc private func closeButtonTappedActionhahaha() {
         let controller = MenuViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
