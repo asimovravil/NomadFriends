@@ -31,6 +31,7 @@
 		F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */; };
 		F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */; };
 		F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */; };
+		F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyViewController.swift; sourceTree = "<group>"; };
 		F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyTableViewCell.swift; sourceTree = "<group>"; };
 		F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfo.swift; sourceTree = "<group>"; };
+		F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				F1B60BE62B0DF427002D21FA /* Profile */,
 				F1B60BE72B0E03A7002D21FA /* HowToPlay  */,
 				F1B60BEC2B0F344F002D21FA /* StartAParty */,
+				F1B60BF32B0F4841002D21FA /* Choice */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -175,6 +178,14 @@
 				F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */,
 			);
 			path = StartAParty;
+			sourceTree = "<group>";
+		};
+		F1B60BF32B0F4841002D21FA /* Choice */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */,
+			);
+			path = Choice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 				F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */,
 				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,
+				F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

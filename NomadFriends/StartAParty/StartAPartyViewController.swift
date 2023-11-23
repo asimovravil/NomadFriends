@@ -12,7 +12,6 @@ final class StartAPartyViewController: UIViewController {
     var backgroundView = UIImageView()
     var numberOfPlayers = 2
     var numberOfFriendsAmount = 2
-    var selectedLevelIndex: Int?
     
     var startAPartyButton = UIButton()
     var tableView = UITableView(frame: .zero, style: .plain)
@@ -63,11 +62,9 @@ final class StartAPartyViewController: UIViewController {
     }
     
     @objc func createButtonPressed() {
-//        let loadingController = LevelLoadingViewController()
-//        loadingController.selectedLevelIndex = selectedLevelIndex
-//        loadingController.playersData = fetchPlayerData()
-//        loadingController.navigationItem.hidesBackButton = true
-//        self.navigationController?.pushViewController(loadingController, animated: true)
+        let choiceController = ChoiceViewController()
+        choiceController.friends = fetchPlayerData()
+        self.navigationController?.pushViewController(choiceController, animated: true)
     }
 
     private func fetchPlayerData() -> [FriendInfo] {
@@ -75,7 +72,8 @@ final class StartAPartyViewController: UIViewController {
         for i in 0..<numberOfPlayers {
             if let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell {
                 let name = cell.nameFriendTextField.text ?? "Player \(i + 1)"
-                let imageName = cell.selectedImageName
+                var imageName = cell.selectedImageName
+                imageName = imageName.replacingOccurrences(of: "Active", with: "")
                 players.append(FriendInfo(name: name, imageName: imageName))
             }
         }

@@ -212,7 +212,7 @@ extension StartAPartyTableViewCell {
             playerLabel.topAnchor.constraint(equalTo: cardFriends.topAnchor, constant: 16),
             playerLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
 
-            stackView.topAnchor.constraint(equalTo: playerLabel.bottomAnchor, constant: 10),
+            stackView.topAnchor.constraint(equalTo: playerLabel.bottomAnchor, constant: 11),
             stackView.leadingAnchor.constraint(equalTo: cardFriends.leadingAnchor, constant: 16),
             stackView.trailingAnchor.constraint(equalTo: cardFriends.trailingAnchor, constant: -16),
             
