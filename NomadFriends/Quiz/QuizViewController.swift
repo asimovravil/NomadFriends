@@ -133,7 +133,7 @@ extension QuizViewController {
         setupImageView(friend5Image, withImageName: "friend5")
         setupImageView(friend6Image, withImageName: "friend6")
         
-        setupLabel(friend1Label, withText: "")
+        setupLabel(friend1Label, withText: "Jane")
         setupLabel(friend2Label, withText: "Jack")
         setupLabel(friend3Label, withText: "Steven")
         setupLabel(friend4Label, withText: "Mary")

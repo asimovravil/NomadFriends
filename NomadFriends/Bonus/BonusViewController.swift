@@ -23,6 +23,7 @@ class BonusViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        setupNavigationBar()
     }
     
     @objc private func spinButtonPressed() {
@@ -162,6 +163,18 @@ extension BonusViewController {
             getButton.bottomAnchor.constraint(equalTo: cardResultView.bottomAnchor),
             getButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+    }
+    
+    private func setupNavigationBar() {
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(closeButtonTapped))
+        closeButton.tintColor = .white
+        navigationItem.leftBarButtonItem = closeButton
+    }
+    
+    @objc private func closeButtonTapped() {
+        let controller = MenuViewController()
+        controller.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
