@@ -8,7 +8,7 @@
 import UIKit
 import Photos
 
-class ProfileViewController: UIViewController {
+class gwefwe123ViewController: UIViewController {
     
     var profileProfile = UIImageView()
     var cameraImageProfile = UIImageView()
@@ -58,7 +58,7 @@ class ProfileViewController: UIViewController {
     }
 }
 
-extension ProfileViewController {
+extension gwefwe123ViewController {
     private func setupProfileViews() {
         profileProfile.image = UIImage(named: "profileBackground")
         profileProfile.layer.masksToBounds = true
@@ -181,7 +181,7 @@ extension ProfileViewController {
     }
 }
 
-extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension gwefwe123ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @objc private func editButtonTouchProfileChponk() {
         let status = PHPhotoLibrary.authorizationStatus()

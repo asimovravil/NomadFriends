@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BonusViewController: UIViewController {
+class gerge4312414214ViewController: UIViewController {
     
     var friends: [FriendInfo] = []
     
@@ -60,28 +60,28 @@ class BonusViewController: UIViewController {
     }
     
     @objc private func noIWontPressedBonusCoolakGoAheade() {
-        let controller = LaderboardViewController()
+        let controller = lalalallaOkekekekeekViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func iDidItPressedBonusCoolakGoAheade() {
-        let controller = LaderboardViewController()
+        let controller = lalalallaOkekekekeekViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func getButtonPressedBonusCoolakGoAheade() {
-        let controller = LaderboardViewController()
+        let controller = lalalallaOkekekekeekViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
-extension BonusViewController {
+extension gerge4312414214ViewController {
     func setupBonusViews() {
         bonusCool.image = UIImage(named: "bonusBackground")
         bonusCool.layer.masksToBounds = true
@@ -186,7 +186,7 @@ extension BonusViewController {
     }
     
     @objc private func closeButtonTappedActionhahaha() {
-        let controller = MenuViewController()
+        let controller = ahahah412414124ViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }

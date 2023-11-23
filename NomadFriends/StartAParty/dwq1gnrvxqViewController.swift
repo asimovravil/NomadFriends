@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StartAPartyViewController: UIViewController {
+final class dwq1gnrvxqViewController: UIViewController {
 
     var partyStart = UIImageView()
     var numberOfPlayers = 2
@@ -66,7 +66,7 @@ final class StartAPartyViewController: UIViewController {
     }
     
     @objc func createButtonPressedStartPartyChponk() {
-        let choiceController = ChoiceViewController()
+        let choiceController = ahaheaqwddqwd123123ViewController()
         choiceController.friends = fetchFriendsDataStartPartyChponk()
         self.navigationController?.pushViewController(choiceController, animated: true)
     }
@@ -74,7 +74,7 @@ final class StartAPartyViewController: UIViewController {
     private func fetchFriendsDataStartPartyChponk() -> [FriendInfo] {
         var friends: [FriendInfo] = []
         for i in 0..<numberOfPlayers {
-            if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell {
+            if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? ddqwdqd1124121TableViewCell {
                 let name = cell.nameFriendTextFieldStartParty.text ?? "Player \(i + 1)"
                 var imageName = cell.selectedImageName
                 imageName = imageName.replacingOccurrences(of: "Active", with: "")
@@ -86,7 +86,7 @@ final class StartAPartyViewController: UIViewController {
     
     func validatePlayerNamesStartPartyChponk() -> Bool {
         for i in 0..<numberOfPlayers {
-            if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? StartAPartyTableViewCell,
+            if let cell = tableViewStartParty.cellForRow(at: IndexPath(row: i, section: 0)) as? ddqwdqd1124121TableViewCell,
                cell.nameFriendTextFieldStartParty.text?.count ?? 0 < 3 {
                 return false
             }
@@ -95,7 +95,7 @@ final class StartAPartyViewController: UIViewController {
     }
 }
 
-extension StartAPartyViewController {
+extension dwq1gnrvxqViewController {
     func setupGoStartViews() {
         partyStart.image = UIImage(named: "background")
         partyStart.layer.masksToBounds = true
@@ -109,7 +109,7 @@ extension StartAPartyViewController {
         startAPartyButtonStartParty.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(startAPartyButtonStartParty)
         
-        tableViewStartParty.register(StartAPartyTableViewCell.self, forCellReuseIdentifier: StartAPartyTableViewCell.id)
+        tableViewStartParty.register(ddqwdqd1124121TableViewCell.self, forCellReuseIdentifier: ddqwdqd1124121TableViewCell.id)
         tableViewStartParty.dataSource = self
         tableViewStartParty.delegate = self
         tableViewStartParty.showsVerticalScrollIndicator = false
@@ -184,13 +184,13 @@ extension StartAPartyViewController {
     }
 }
 
-extension StartAPartyViewController: UITableViewDataSource, UITableViewDelegate {
+extension dwq1gnrvxqViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfPlayers
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: StartAPartyTableViewCell.id, for: indexPath) as? StartAPartyTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ddqwdqd1124121TableViewCell.id, for: indexPath) as? ddqwdqd1124121TableViewCell else {
             fatalError("Could not cast to StartAPartyTableViewCell")
         }
         cell.selectionStyle = .none

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class lalallafqjqfjqwf12321312ViewController: UIViewController {
     
     var settingsSettings = UIImageView()
     var tableViewSettings = UITableView(frame: .zero, style: .plain)
@@ -72,7 +72,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-extension SettingsViewController {
+extension lalallafqjqfjqwf12321312ViewController {
     func setupSettingsViews() {
         settingsSettings.image = UIImage(named: "background")
         settingsSettings.layer.masksToBounds = true
@@ -80,7 +80,7 @@ extension SettingsViewController {
         settingsSettings.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(settingsSettings)
         
-        tableViewSettings.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.reuseID)
+        tableViewSettings.register(dwdwql13cbwedqwTableViewCell.self, forCellReuseIdentifier: dwdwql13cbwedqwTableViewCell.reuseID)
         tableViewSettings.layer.cornerRadius = 15
         tableViewSettings.dataSource = self
         tableViewSettings.delegate = self
@@ -118,13 +118,13 @@ extension SettingsViewController {
     }
 }
 
-extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
+extension lalallafqjqfjqwf12321312ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.reuseID, for: indexPath) as? SettingsTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: dwdwql13cbwedqwTableViewCell.reuseID, for: indexPath) as? dwdwql13cbwedqwTableViewCell else {
             fatalError("Could not cast to SettingsTableViewCell")
         }
         cell.backgroundColor = .clear

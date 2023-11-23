@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HowToPlayViewController: UIViewController {
+class dqwdwq412211d12ViewController: UIViewController {
 
     var currentPageIndex = 0
     
@@ -58,7 +58,7 @@ class HowToPlayViewController: UIViewController {
     }
 }
 
-extension HowToPlayViewController {
+extension dqwdwq412211d12ViewController {
     private func setupFAQViews() {
         goStart.image = UIImage(named: "background")
         goStart.layer.masksToBounds = true

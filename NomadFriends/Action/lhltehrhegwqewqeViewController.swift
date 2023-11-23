@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ActionViewController: UIViewController {
+class lhltehrhegwqewqeViewController: UIViewController {
     
     var popCorrectAction = UIImageView()
     var popIncorrectAction = UIImageView()
@@ -139,7 +139,7 @@ class ActionViewController: UIViewController {
     func showPopupAndTransitionActionhahaha(imageView: UIImageView) {
         imageView.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let controller = BonusViewController()
+            let controller = gerge4312414214ViewController()
             controller.friends = self.friends
             controller.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(controller, animated: true)
@@ -148,7 +148,7 @@ class ActionViewController: UIViewController {
 
 }
 
-extension ActionViewController {
+extension lhltehrhegwqewqeViewController {
     func setupActionViews() {
         actionBatAction.image = UIImage(named: "background")
         actionBatAction.layer.masksToBounds = true

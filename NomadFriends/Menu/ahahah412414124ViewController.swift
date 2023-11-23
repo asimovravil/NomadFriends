@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class ahahah412414124ViewController: UIViewController {
 
     var menuMenu = UIImageView()
     var startAPartyButtonMenu = UIButton()
@@ -24,27 +24,27 @@ class MenuViewController: UIViewController {
     }
     
     @objc private func startAPartyButtonMenuChponk() {
-        let controller = StartAPartyViewController()
+        let controller = dwq1gnrvxqViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func howToPlayButtonMenuChponk() {
-        let controller = HowToPlayViewController()
+        let controller = dqwdwq412211d12ViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func settingsButtonMenuChponk() {
-        let controller = SettingsViewController()
+        let controller = lalallafqjqfjqwf12321312ViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc private func profileButtonMenuChponk() {
-        let controller = ProfileViewController()
+        let controller = gwefwe123ViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
 
-extension MenuViewController {
+extension ahahah412414124ViewController {
     func setupMenuViews() {
         menuMenu.image = UIImage(named: "menuBackground")
         menuMenu.layer.masksToBounds = true

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
+final class ddqwdqd1124121TableViewCell: UITableViewCell, UITextFieldDelegate {
     
     var selectedImageName: String = ""
     
@@ -37,7 +37,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
         }
     }
         
-    static let id = String(describing: StartAPartyTableViewCell.self)
+    static let id = String(describing: ddqwdqd1124121TableViewCell.self)
             
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -133,7 +133,7 @@ final class StartAPartyTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
 }
 
-extension StartAPartyTableViewCell {
+extension ddqwdqd1124121TableViewCell {
     func setupGoStartViews() {
         stackView.addArrangedSubview(friend1Button)
         stackView.addArrangedSubview(friend2Button)

@@ -11,12 +11,12 @@ protocol QuizTableViewCellDelegatedqwdq12421421421: AnyObject {
     func didAnswerQuestionADdwdkDKdLoh(correctAnswers: Int)
 }
 
-final class QuizTableViewCell: UITableViewCell {
+final class mnmnbnfn41233TableViewCell: UITableViewCell {
     
     weak var delegate: QuizTableViewCellDelegatedqwdq12421421421?
-    weak var quizViewController: QuizViewController?
+    weak var quizViewController: cclcql3123Controller?
 
-    static let id = String(describing: QuizTableViewCell.self)
+    static let id = String(describing: mnmnbnfn41233TableViewCell.self)
     var quizBrainQuizChponk = QuizMozgAHsaSJ()
     var answerSelected = false
     var userCorrectAnswers = 0
@@ -96,7 +96,7 @@ final class QuizTableViewCell: UITableViewCell {
 
 }
 
-extension QuizTableViewCell {
+extension mnmnbnfn41233TableViewCell {
     func setupQuizViews() {
         contentView.addSubview(cardQuestionQuizChponk)
         contentView.addSubview(questionLabelQuizChponk)

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BB22B0DC813002D21FA /* AppDelegate.swift */; };
 		F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BB42B0DC813002D21FA /* SceneDelegate.swift */; };
-		F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BB62B0DC813002D21FA /* TrainingViewController.swift */; };
+		F1B60BB72B0DC813002D21FA /* dqwd12311231ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BB62B0DC813002D21FA /* dqwd12311231ViewController.swift */; };
 		F1B60BBC2B0DC815002D21FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BBB2B0DC815002D21FA /* Assets.xcassets */; };
 		F1B60BBF2B0DC815002D21FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */; };
 		F1B60BC82B0DC878002D21FA /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BC72B0DC878002D21FA /* PageData.swift */; };
@@ -22,23 +22,23 @@
 		F1B60BD92B0DD227002D21FA /* SFProDisplay-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BD02B0DD227002D21FA /* SFProDisplay-Semibold.ttf */; };
 		F1B60BDA2B0DD227002D21FA /* SFProDisplay-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BD12B0DD227002D21FA /* SFProDisplay-Heavy.ttf */; };
 		F1B60BDB2B0DD227002D21FA /* SFProDisplay-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1B60BD22B0DD227002D21FA /* SFProDisplay-Thin.ttf */; };
-		F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */; };
-		F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */; };
-		F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */; };
-		F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */; };
-		F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */; };
+		F1B60BDE2B0DE343002D21FA /* ahahah412414124ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BDD2B0DE343002D21FA /* ahahah412414124ViewController.swift */; };
+		F1B60BE12B0DE7A3002D21FA /* lalallafqjqfjqwf12321312ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE02B0DE7A3002D21FA /* lalallafqjqfjqwf12321312ViewController.swift */; };
+		F1B60BE32B0DEBAC002D21FA /* dwdwql13cbwedqwTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE22B0DEBAC002D21FA /* dwdwql13cbwedqwTableViewCell.swift */; };
+		F1B60BE52B0DF423002D21FA /* gwefwe123ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE42B0DF423002D21FA /* gwefwe123ViewController.swift */; };
+		F1B60BE92B0E03E8002D21FA /* dqwdwq412211d12ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE82B0E03E8002D21FA /* dqwdwq412211d12ViewController.swift */; };
 		F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */; };
-		F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */; };
-		F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */; };
+		F1B60BEE2B0F3463002D21FA /* dwq1gnrvxqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BED2B0F3463002D21FA /* dwq1gnrvxqViewController.swift */; };
+		F1B60BF02B0F3471002D21FA /* ddqwdqd1124121TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEF2B0F3471002D21FA /* ddqwdqd1124121TableViewCell.swift */; };
 		F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */; };
-		F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */; };
-		F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */; };
-		F1B60BFA2B0F5BAF002D21FA /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */; };
+		F1B60BF52B0F4856002D21FA /* ahaheaqwddqwd123123ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF42B0F4856002D21FA /* ahaheaqwddqwd123123ViewController.swift */; };
+		F1B60BF82B0F5BA3002D21FA /* cclcql3123Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF72B0F5BA3002D21FA /* cclcql3123Controller.swift */; };
+		F1B60BFA2B0F5BAF002D21FA /* mnmnbnfn41233TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF92B0F5BAF002D21FA /* mnmnbnfn41233TableViewCell.swift */; };
 		F1B60BFC2B0F5BBB002D21FA /* Vopros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFB2B0F5BBB002D21FA /* Vopros.swift */; };
 		F1B60BFE2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFD2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift */; };
-		F1B60C012B0F61A8002D21FA /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C002B0F61A8002D21FA /* ActionViewController.swift */; };
-		F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C032B0F9120002D21FA /* BonusViewController.swift */; };
-		F1B60C072B0F993E002D21FA /* LaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */; };
+		F1B60C012B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C002B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift */; };
+		F1B60C042B0F9120002D21FA /* gerge4312414214ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C032B0F9120002D21FA /* gerge4312414214ViewController.swift */; };
+		F1B60C072B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C062B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift */; };
 		F1B60C0C2B0FB0C6002D21FA /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C082B0FB0C5002D21FA /* RoutineViewController.swift */; };
 		F1B60C0D2B0FB0C6002D21FA /* SamsaExternalDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C092B0FB0C6002D21FA /* SamsaExternalDownloading.swift */; };
 		F1B60C0E2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C0A2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift */; };
@@ -97,7 +97,7 @@
 		F1B60BAF2B0DC813002D21FA /* NomadFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NomadFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B60BB22B0DC813002D21FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B60BB42B0DC813002D21FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1B60BB62B0DC813002D21FA /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		F1B60BB62B0DC813002D21FA /* dqwd12311231ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dqwd12311231ViewController.swift; sourceTree = "<group>"; };
 		F1B60BBB2B0DC815002D21FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B60BBE2B0DC815002D21FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1B60BC02B0DC815002D21FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,23 +111,23 @@
 		F1B60BD02B0DD227002D21FA /* SFProDisplay-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Semibold.ttf"; sourceTree = "<group>"; };
 		F1B60BD12B0DD227002D21FA /* SFProDisplay-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Heavy.ttf"; sourceTree = "<group>"; };
 		F1B60BD22B0DD227002D21FA /* SFProDisplay-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Thin.ttf"; sourceTree = "<group>"; };
-		F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
-		F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		F1B60BDD2B0DE343002D21FA /* ahahah412414124ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahahah412414124ViewController.swift; sourceTree = "<group>"; };
+		F1B60BE02B0DE7A3002D21FA /* lalallafqjqfjqwf12321312ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lalallafqjqfjqwf12321312ViewController.swift; sourceTree = "<group>"; };
+		F1B60BE22B0DEBAC002D21FA /* dwdwql13cbwedqwTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dwdwql13cbwedqwTableViewCell.swift; sourceTree = "<group>"; };
+		F1B60BE42B0DF423002D21FA /* gwefwe123ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gwefwe123ViewController.swift; sourceTree = "<group>"; };
+		F1B60BE82B0E03E8002D21FA /* dqwdwq412211d12ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dqwdwq412211d12ViewController.swift; sourceTree = "<group>"; };
 		F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPage.swift; sourceTree = "<group>"; };
-		F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyViewController.swift; sourceTree = "<group>"; };
-		F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyTableViewCell.swift; sourceTree = "<group>"; };
+		F1B60BED2B0F3463002D21FA /* dwq1gnrvxqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dwq1gnrvxqViewController.swift; sourceTree = "<group>"; };
+		F1B60BEF2B0F3471002D21FA /* ddqwdqd1124121TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddqwdqd1124121TableViewCell.swift; sourceTree = "<group>"; };
 		F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfo.swift; sourceTree = "<group>"; };
-		F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
-		F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
+		F1B60BF42B0F4856002D21FA /* ahaheaqwddqwd123123ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ahaheaqwddqwd123123ViewController.swift; sourceTree = "<group>"; };
+		F1B60BF72B0F5BA3002D21FA /* cclcql3123Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cclcql3123Controller.swift; sourceTree = "<group>"; };
+		F1B60BF92B0F5BAF002D21FA /* mnmnbnfn41233TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mnmnbnfn41233TableViewCell.swift; sourceTree = "<group>"; };
 		F1B60BFB2B0F5BBB002D21FA /* Vopros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vopros.swift; sourceTree = "<group>"; };
 		F1B60BFD2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMozgAHsaSJ.swift; sourceTree = "<group>"; };
-		F1B60C002B0F61A8002D21FA /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
-		F1B60C032B0F9120002D21FA /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
-		F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaderboardViewController.swift; sourceTree = "<group>"; };
+		F1B60C002B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lhltehrhegwqewqeViewController.swift; sourceTree = "<group>"; };
+		F1B60C032B0F9120002D21FA /* gerge4312414214ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gerge4312414214ViewController.swift; sourceTree = "<group>"; };
+		F1B60C062B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lalalallaOkekekekeekViewController.swift; sourceTree = "<group>"; };
 		F1B60C082B0FB0C5002D21FA /* RoutineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		F1B60C092B0FB0C6002D21FA /* SamsaExternalDownloading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SamsaExternalDownloading.swift; sourceTree = "<group>"; };
 		F1B60C0A2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationWebBurgerViewController.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		F1B60BC62B0DC86C002D21FA /* Training */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BB62B0DC813002D21FA /* TrainingViewController.swift */,
+				F1B60BB62B0DC813002D21FA /* dqwd12311231ViewController.swift */,
 				F1B60BC72B0DC878002D21FA /* PageData.swift */,
 			);
 			path = Training;
@@ -266,7 +266,7 @@
 		F1B60BDC2B0DE285002D21FA /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BDD2B0DE343002D21FA /* MenuViewController.swift */,
+				F1B60BDD2B0DE343002D21FA /* ahahah412414124ViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -274,8 +274,8 @@
 		F1B60BDF2B0DE77C002D21FA /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BE02B0DE7A3002D21FA /* SettingsViewController.swift */,
-				F1B60BE22B0DEBAC002D21FA /* SettingsTableViewCell.swift */,
+				F1B60BE02B0DE7A3002D21FA /* lalallafqjqfjqwf12321312ViewController.swift */,
+				F1B60BE22B0DEBAC002D21FA /* dwdwql13cbwedqwTableViewCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -283,7 +283,7 @@
 		F1B60BE62B0DF427002D21FA /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */,
+				F1B60BE42B0DF423002D21FA /* gwefwe123ViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 		F1B60BE72B0E03A7002D21FA /* HowToPlay  */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */,
+				F1B60BE82B0E03E8002D21FA /* dqwdwq412211d12ViewController.swift */,
 				F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */,
 			);
 			path = "HowToPlay ";
@@ -300,8 +300,8 @@
 		F1B60BEC2B0F344F002D21FA /* StartAParty */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */,
-				F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */,
+				F1B60BED2B0F3463002D21FA /* dwq1gnrvxqViewController.swift */,
+				F1B60BEF2B0F3471002D21FA /* ddqwdqd1124121TableViewCell.swift */,
 				F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */,
 			);
 			path = StartAParty;
@@ -310,7 +310,7 @@
 		F1B60BF32B0F4841002D21FA /* Choice */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */,
+				F1B60BF42B0F4856002D21FA /* ahaheaqwddqwd123123ViewController.swift */,
 			);
 			path = Choice;
 			sourceTree = "<group>";
@@ -318,8 +318,8 @@
 		F1B60BF62B0F5B93002D21FA /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */,
-				F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */,
+				F1B60BF72B0F5BA3002D21FA /* cclcql3123Controller.swift */,
+				F1B60BF92B0F5BAF002D21FA /* mnmnbnfn41233TableViewCell.swift */,
 				F1B60BFB2B0F5BBB002D21FA /* Vopros.swift */,
 				F1B60BFD2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift */,
 			);
@@ -329,7 +329,7 @@
 		F1B60BFF2B0F6195002D21FA /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60C002B0F61A8002D21FA /* ActionViewController.swift */,
+				F1B60C002B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 		F1B60C022B0F9115002D21FA /* Bonus */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60C032B0F9120002D21FA /* BonusViewController.swift */,
+				F1B60C032B0F9120002D21FA /* gerge4312414214ViewController.swift */,
 			);
 			path = Bonus;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 		F1B60C052B0F9934002D21FA /* Laderboard */ = {
 			isa = PBXGroup;
 			children = (
-				F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */,
+				F1B60C062B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift */,
 			);
 			path = Laderboard;
 			sourceTree = "<group>";
@@ -483,30 +483,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1B60BC82B0DC878002D21FA /* PageData.swift in Sources */,
-				F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */,
+				F1B60BDE2B0DE343002D21FA /* ahahah412414124ViewController.swift in Sources */,
 				F1B60C0F2B0FB0C6002D21FA /* UIKitAppStore.swift in Sources */,
-				F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */,
+				F1B60BB72B0DC813002D21FA /* dqwd12311231ViewController.swift in Sources */,
 				F1B60BFC2B0F5BBB002D21FA /* Vopros.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
-				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
-				F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */,
-				F1B60C012B0F61A8002D21FA /* ActionViewController.swift in Sources */,
+				F1B60BE32B0DEBAC002D21FA /* dwdwql13cbwedqwTableViewCell.swift in Sources */,
+				F1B60C042B0F9120002D21FA /* gerge4312414214ViewController.swift in Sources */,
+				F1B60C012B0F61A8002D21FA /* lhltehrhegwqewqeViewController.swift in Sources */,
 				F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */,
-				F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */,
-				F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */,
+				F1B60BF82B0F5BA3002D21FA /* cclcql3123Controller.swift in Sources */,
+				F1B60BE92B0E03E8002D21FA /* dqwdwq412211d12ViewController.swift in Sources */,
 				F1B60BFE2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift in Sources */,
 				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
-				F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */,
+				F1B60BF02B0F3471002D21FA /* ddqwdqd1124121TableViewCell.swift in Sources */,
 				F1B60C0D2B0FB0C6002D21FA /* SamsaExternalDownloading.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
-				F1B60C072B0F993E002D21FA /* LaderboardViewController.swift in Sources */,
+				F1B60C072B0F993E002D21FA /* lalalallaOkekekekeekViewController.swift in Sources */,
 				F1B60C0E2B0FB0C6002D21FA /* ApplicationWebBurgerViewController.swift in Sources */,
-				F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */,
-				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
-				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,
+				F1B60BEE2B0F3463002D21FA /* dwq1gnrvxqViewController.swift in Sources */,
+				F1B60BE52B0DF423002D21FA /* gwefwe123ViewController.swift in Sources */,
+				F1B60BE12B0DE7A3002D21FA /* lalallafqjqfjqwf12321312ViewController.swift in Sources */,
 				F1B60C0C2B0FB0C6002D21FA /* RoutineViewController.swift in Sources */,
-				F1B60BFA2B0F5BAF002D21FA /* QuizTableViewCell.swift in Sources */,
-				F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */,
+				F1B60BFA2B0F5BAF002D21FA /* mnmnbnfn41233TableViewCell.swift in Sources */,
+				F1B60BF52B0F4856002D21FA /* ahaheaqwddqwd123123ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

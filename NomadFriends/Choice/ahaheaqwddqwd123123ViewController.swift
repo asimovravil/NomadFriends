@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChoiceViewController: UIViewController {
+class ahaheaqwddqwd123123ViewController: UIViewController {
     
     var friends: [FriendInfo] = []
     
@@ -91,19 +91,19 @@ class ChoiceViewController: UIViewController {
     }
     
     @objc func questionButtonTouchOpinionChponk() {
-        let quizController = QuizViewController()
+        let quizController = cclcql3123Controller()
         quizController.friends = friends
         self.navigationController?.pushViewController(quizController, animated: true)
     }
     
     @objc func actionButtonTouchOpinionChponk() {
-        let actionController = ActionViewController()
+        let actionController = lhltehrhegwqewqeViewController()
         actionController.friends = friends
         self.navigationController?.pushViewController(actionController, animated: true)
     }
 }
 
-extension ChoiceViewController {
+extension ahaheaqwddqwd123123ViewController {
     func setupChoiceViews() {
         choceOpinion.image = UIImage(named: "background")
         choceOpinion.layer.masksToBounds = true

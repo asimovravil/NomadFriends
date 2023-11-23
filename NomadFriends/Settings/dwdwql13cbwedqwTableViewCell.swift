@@ -7,11 +7,11 @@
 
 import UIKit
 
-class SettingsTableViewCell: UITableViewCell {
+class dwdwql13cbwedqwTableViewCell: UITableViewCell {
 
     var titleCellSettings = UILabel()
     
-    static let reuseID = String(describing: SettingsTableViewCell.self)
+    static let reuseID = String(describing: dwdwql13cbwedqwTableViewCell.self)
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,7 +24,7 @@ class SettingsTableViewCell: UITableViewCell {
     }
 }
 
-extension SettingsTableViewCell {
+extension dwdwql13cbwedqwTableViewCell {
     private func setupSettingsViews() {
         titleCellSettings.text = "aldDLda"
         titleCellSettings.textColor = .white

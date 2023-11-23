@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else {
                 if !UIKitAppStore.isOnboardingShowed {
                     self?.navigation = UINavigationController(
-                        rootViewController: TrainingViewController()
+                        rootViewController: dqwd12311231ViewController()
                     )
                 }
                 self?.window?.rootViewController = self?.navigation

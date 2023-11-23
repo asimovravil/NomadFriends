@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class QuizViewController: UIViewController {
+final class cclcql3123Controller: UIViewController {
                     
     var quizAk = UIImageView()
     var answeredQuestionsCountQuiz = 0
@@ -85,7 +85,7 @@ final class QuizViewController: UIViewController {
     }
 
     private func navigateToQuizChponk() {
-        let controller = BonusViewController()
+        let controller = gerge4312414214ViewController()
         controller.friends = friends
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
@@ -119,7 +119,7 @@ final class QuizViewController: UIViewController {
     }
 }
 
-extension QuizViewController {
+extension cclcql3123Controller {
     func setupQuizViews() {
         quizAk.image = UIImage(named: "background")
         quizAk.layer.masksToBounds = true
@@ -162,7 +162,7 @@ extension QuizViewController {
         stackView.addArrangedSubview(friend6Stack)
         view.addSubview(stackView)
         
-        tableViewQuiz.register(QuizTableViewCell.self, forCellReuseIdentifier: QuizTableViewCell.id)
+        tableViewQuiz.register(mnmnbnfn41233TableViewCell.self, forCellReuseIdentifier: mnmnbnfn41233TableViewCell.id)
         tableViewQuiz.dataSource = self
         tableViewQuiz.delegate = self
         tableViewQuiz.backgroundColor = .clear
@@ -218,7 +218,7 @@ extension QuizViewController {
     }
 }
 
-extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTableViewCellDelegatedqwdq12421421421 {
+extension cclcql3123Controller: UITableViewDataSource, UITableViewDelegate, QuizTableViewCellDelegatedqwdq12421421421 {
     func didAnswerQuestionADdwdkDKdLoh(correctAnswers: Int) {
         friends[currentPlayerIndex].score = correctAnswers
         currentPlayerIndex = (currentPlayerIndex + 1) % friends.count
@@ -236,7 +236,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: QuizTableViewCell.id, for: indexPath) as? QuizTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: mnmnbnfn41233TableViewCell.id, for: indexPath) as? mnmnbnfn41233TableViewCell else {
             fatalError("Could not cast to QuizTableViewCell")
         }
         cell.navigationControllerQuizChponk = self.navigationController

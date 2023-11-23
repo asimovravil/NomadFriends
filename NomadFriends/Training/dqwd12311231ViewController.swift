@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrainingViewController: UIViewController {
+class dqwd12311231ViewController: UIViewController {
 
     var currentPage = 0
     
@@ -37,7 +37,7 @@ class TrainingViewController: UIViewController {
         if currentPage < pages.count - 1 {
             currentPage += 1
         } else {
-            let controller = MenuViewController()
+            let controller = ahahah412414124ViewController()
             controller.navigationItem.hidesBackButton = true
             self.navigationController?.pushViewController(controller, animated: true)
         }
@@ -53,7 +53,7 @@ class TrainingViewController: UIViewController {
     }
 }
 
-extension TrainingViewController {
+extension dqwd12311231ViewController {
     func setupTrainingViews() {
         training.image = UIImage(named: "background")
         training.layer.masksToBounds = true

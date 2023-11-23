@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LaderboardViewController: UIViewController {
+class lalalallaOkekekekeekViewController: UIViewController {
     
     var friends: [FriendInfo] = []
     
@@ -64,7 +64,7 @@ class LaderboardViewController: UIViewController {
     }
     
     @objc private func playAgainButtonLaderboardShitSheeesh() {
-        let controller = MenuViewController()
+        let controller = ahahah412414124ViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
@@ -85,7 +85,7 @@ class LaderboardViewController: UIViewController {
     }
 }
 
-extension LaderboardViewController {
+extension lalalallaOkekekekeekViewController {
     func setupLaderboardViews() {
         laderboardKakashka.image = UIImage(named: "leaderBackground")
         laderboardKakashka.layer.masksToBounds = true
@@ -215,7 +215,7 @@ extension LaderboardViewController {
     }
     
     @objc private func closeButtonTappedActionhahaha() {
-        let controller = MenuViewController()
+        let controller = ahahah412414124ViewController()
         controller.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(controller, animated: true)
     }
