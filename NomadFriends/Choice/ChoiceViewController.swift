@@ -98,6 +98,7 @@ class ChoiceViewController: UIViewController {
     
     @objc func actionButtonTouch() {
         let actionController = ActionViewController()
+        actionController.friends = friends
         self.navigationController?.pushViewController(actionController, animated: true)
     }
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class ActionViewController: UIViewController {
     
+    var friends: [FriendInfo] = []
+    
     var backgroundView = UIImageView()
     var tableView = UITableView(frame: .zero, style: .plain)
     var cardQuestion = UIImageView()
@@ -37,6 +39,34 @@ class ActionViewController: UIViewController {
         
         setupViews()
         setupNavigationBar()
+        setupPlayerLabelsAndImages()
+    }
+    
+    private func setupPlayerLabelsAndImages() {
+        let labelImagePairs = [
+            (friend1Label, friend1Image),
+            (friend2Label, friend2Image),
+            (friend3Label, friend3Image),
+            (friend4Label, friend4Image),
+            (friend5Label, friend5Image),
+            (friend6Label, friend6Image)
+        ]
+
+        let maxPlayers = min(friends.count, 6)
+
+        for (index, pair) in labelImagePairs.enumerated() {
+            if index < maxPlayers {
+                let friend = friends[index]
+                pair.0.text = friend.name
+                let imageName = friend.imageName.isEmpty ? "friend1" : friend.imageName
+                pair.1.image = UIImage(named: imageName)
+                pair.0.isHidden = false
+                pair.1.isHidden = false
+            } else {
+                pair.0.isHidden = true
+                pair.1.isHidden = true
+            }
+        }
     }
     
     func setupLabel(_ label: UILabel, withText text: String) {
