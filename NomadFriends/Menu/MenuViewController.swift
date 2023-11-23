@@ -23,6 +23,11 @@ class MenuViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    @objc private func startAPartyButtonTouch() {
+        let controller = StartAPartyViewController()
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
     @objc private func howToPlayButtonTouch() {
         let controller = HowToPlayViewController()
         self.navigationController?.pushViewController(controller, animated: true)
@@ -48,6 +53,7 @@ extension MenuViewController {
         view.addSubview(backgroundView)
         
         startAPartyButton.setImage(UIImage(named: "startAPartyButton"), for: .normal)
+        startAPartyButton.addTarget(self, action: #selector(startAPartyButtonTouch), for: .touchUpInside)
         startAPartyButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(startAPartyButton)
         

@@ -28,6 +28,9 @@
 		F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */; };
 		F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */; };
 		F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */; };
+		F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */; };
+		F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */; };
+		F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		F1B60BE42B0DF423002D21FA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F1B60BE82B0E03E8002D21FA /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPage.swift; sourceTree = "<group>"; };
+		F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyViewController.swift; sourceTree = "<group>"; };
+		F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAPartyTableViewCell.swift; sourceTree = "<group>"; };
+		F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 				F1B60BDF2B0DE77C002D21FA /* Settings */,
 				F1B60BE62B0DF427002D21FA /* Profile */,
 				F1B60BE72B0E03A7002D21FA /* HowToPlay  */,
+				F1B60BEC2B0F344F002D21FA /* StartAParty */,
 				F1B60BBB2B0DC815002D21FA /* Assets.xcassets */,
 				F1B60BBD2B0DC815002D21FA /* LaunchScreen.storyboard */,
 				F1B60BC02B0DC815002D21FA /* Info.plist */,
@@ -158,6 +165,16 @@
 				F1B60BEA2B0E0A7D002D21FA /* CardPage.swift */,
 			);
 			path = "HowToPlay ";
+			sourceTree = "<group>";
+		};
+		F1B60BEC2B0F344F002D21FA /* StartAParty */ = {
+			isa = PBXGroup;
+			children = (
+				F1B60BED2B0F3463002D21FA /* StartAPartyViewController.swift */,
+				F1B60BEF2B0F3471002D21FA /* StartAPartyTableViewCell.swift */,
+				F1B60BF12B0F34EE002D21FA /* FriendInfo.swift */,
+			);
+			path = StartAParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,9 +261,12 @@
 				F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
+				F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */,
 				F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */,
 				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
+				F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */,
 				F1B60BB52B0DC813002D21FA /* SceneDelegate.swift in Sources */,
+				F1B60BEE2B0F3463002D21FA /* StartAPartyViewController.swift in Sources */,
 				F1B60BE52B0DF423002D21FA /* ProfileViewController.swift in Sources */,
 				F1B60BE12B0DE7A3002D21FA /* SettingsViewController.swift in Sources */,
 			);
