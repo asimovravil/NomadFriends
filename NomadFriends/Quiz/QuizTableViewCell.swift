@@ -7,17 +7,17 @@
 
 import UIKit
 
-protocol QuizTableViewCellDelegate: AnyObject {
-    func didAnswerQuestion(correctAnswers: Int)
+protocol QuizTableViewCellDelegatedqwdq12421421421: AnyObject {
+    func didAnswerQuestionADdwdkDKdLoh(correctAnswers: Int)
 }
 
 final class QuizTableViewCell: UITableViewCell {
     
-    weak var delegate: QuizTableViewCellDelegate?
+    weak var delegate: QuizTableViewCellDelegatedqwdq12421421421?
     weak var quizViewController: QuizViewController?
 
     static let id = String(describing: QuizTableViewCell.self)
-    var quizBrainQuizChponk = QuizBrain()
+    var quizBrainQuizChponk = QuizMozgAHsaSJ()
     var answerSelected = false
     var userCorrectAnswers = 0
     weak var navigationControllerQuizChponk: UINavigationController?
@@ -89,7 +89,7 @@ final class QuizTableViewCell: UITableViewCell {
                 self.quizBrainQuizChponk.nextQuestion()
                 self.updateCHAHCHAHUI()
                 self.answerSelected = false
-                self.delegate?.didAnswerQuestion(correctAnswers: self.userCorrectAnswers)
+                self.delegate?.didAnswerQuestionADdwdkDKdLoh(correctAnswers: self.userCorrectAnswers)
             }
         }
     }

@@ -218,8 +218,8 @@ extension QuizViewController {
     }
 }
 
-extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTableViewCellDelegate {
-    func didAnswerQuestion(correctAnswers: Int) {
+extension QuizViewController: UITableViewDataSource, UITableViewDelegate, QuizTableViewCellDelegatedqwdq12421421421 {
+    func didAnswerQuestionADdwdkDKdLoh(correctAnswers: Int) {
         friends[currentPlayerIndex].score = correctAnswers
         currentPlayerIndex = (currentPlayerIndex + 1) % friends.count
         tableViewQuiz.reloadData()

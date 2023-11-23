@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Question {
+struct Vopros {
     let text: String
     
     let answers: [String]

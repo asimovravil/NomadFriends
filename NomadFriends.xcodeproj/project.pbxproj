@@ -34,8 +34,8 @@
 		F1B60BF52B0F4856002D21FA /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */; };
 		F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */; };
 		F1B60BFA2B0F5BAF002D21FA /* QuizTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */; };
-		F1B60BFC2B0F5BBB002D21FA /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFB2B0F5BBB002D21FA /* Question.swift */; };
-		F1B60BFE2B0F5BC4002D21FA /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */; };
+		F1B60BFC2B0F5BBB002D21FA /* Vopros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFB2B0F5BBB002D21FA /* Vopros.swift */; };
+		F1B60BFE2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60BFD2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift */; };
 		F1B60C012B0F61A8002D21FA /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C002B0F61A8002D21FA /* ActionViewController.swift */; };
 		F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C032B0F9120002D21FA /* BonusViewController.swift */; };
 		F1B60C072B0F993E002D21FA /* LaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */; };
@@ -123,8 +123,8 @@
 		F1B60BF42B0F4856002D21FA /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTableViewCell.swift; sourceTree = "<group>"; };
-		F1B60BFB2B0F5BBB002D21FA /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
+		F1B60BFB2B0F5BBB002D21FA /* Vopros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vopros.swift; sourceTree = "<group>"; };
+		F1B60BFD2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMozgAHsaSJ.swift; sourceTree = "<group>"; };
 		F1B60C002B0F61A8002D21FA /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		F1B60C032B0F9120002D21FA /* BonusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusViewController.swift; sourceTree = "<group>"; };
 		F1B60C062B0F993E002D21FA /* LaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaderboardViewController.swift; sourceTree = "<group>"; };
@@ -320,8 +320,8 @@
 			children = (
 				F1B60BF72B0F5BA3002D21FA /* QuizViewController.swift */,
 				F1B60BF92B0F5BAF002D21FA /* QuizTableViewCell.swift */,
-				F1B60BFB2B0F5BBB002D21FA /* Question.swift */,
-				F1B60BFD2B0F5BC4002D21FA /* QuizBrain.swift */,
+				F1B60BFB2B0F5BBB002D21FA /* Vopros.swift */,
+				F1B60BFD2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -486,7 +486,7 @@
 				F1B60BDE2B0DE343002D21FA /* MenuViewController.swift in Sources */,
 				F1B60C0F2B0FB0C6002D21FA /* UIKitAppStore.swift in Sources */,
 				F1B60BB72B0DC813002D21FA /* TrainingViewController.swift in Sources */,
-				F1B60BFC2B0F5BBB002D21FA /* Question.swift in Sources */,
+				F1B60BFC2B0F5BBB002D21FA /* Vopros.swift in Sources */,
 				F1B60BB32B0DC813002D21FA /* AppDelegate.swift in Sources */,
 				F1B60BE32B0DEBAC002D21FA /* SettingsTableViewCell.swift in Sources */,
 				F1B60C042B0F9120002D21FA /* BonusViewController.swift in Sources */,
@@ -494,7 +494,7 @@
 				F1B60BF22B0F34EE002D21FA /* FriendInfo.swift in Sources */,
 				F1B60BF82B0F5BA3002D21FA /* QuizViewController.swift in Sources */,
 				F1B60BE92B0E03E8002D21FA /* HowToPlayViewController.swift in Sources */,
-				F1B60BFE2B0F5BC4002D21FA /* QuizBrain.swift in Sources */,
+				F1B60BFE2B0F5BC4002D21FA /* QuizMozgAHsaSJ.swift in Sources */,
 				F1B60BEB2B0E0A7D002D21FA /* CardPage.swift in Sources */,
 				F1B60BF02B0F3471002D21FA /* StartAPartyTableViewCell.swift in Sources */,
 				F1B60C0D2B0FB0C6002D21FA /* SamsaExternalDownloading.swift in Sources */,
