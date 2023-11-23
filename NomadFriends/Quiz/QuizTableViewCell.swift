@@ -22,6 +22,8 @@ final class QuizTableViewCell: UITableViewCell {
     var userCorrectAnswers = 0
     weak var navigationController: UINavigationController?
     
+    var popCorrect = UIImageView()
+    var popIncorrect = UIImageView()
     var cardQuestion = UIImageView()
     var questionLabel = UILabel()
     var countLabel = UILabel()
@@ -58,6 +60,9 @@ final class QuizTableViewCell: UITableViewCell {
         thirdAnswerButton.backgroundColor = UIColor.clear
         fourthAnswerButton.backgroundColor = UIColor.clear
         
+        popCorrect.isHidden = true
+        popIncorrect.isHidden = true
+        
         answerSelected = false
     }
     
@@ -68,9 +73,11 @@ final class QuizTableViewCell: UITableViewCell {
 
             if userGotItRight {
                 sender.backgroundColor = .green
+                popCorrect.isHidden = false
                 userCorrectAnswers += 1
             } else {
                 sender.backgroundColor = .red
+                popIncorrect.isHidden = false
             }
             
             quizViewController?.updateCountLabel(with: quizBrain.questionNumber + 1, totalQuestions: quizBrain.quiz.count)
@@ -97,6 +104,20 @@ extension QuizTableViewCell {
         contentView.addSubview(secondAnswerButton)
         contentView.addSubview(thirdAnswerButton)
         contentView.addSubview(fourthAnswerButton)
+        
+        popCorrect.image = UIImage(named: "popCorrect")
+        popCorrect.layer.masksToBounds = true
+        popCorrect.contentMode = .scaleAspectFill
+        popCorrect.isHidden = true
+        popCorrect.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(popCorrect)
+        
+        popIncorrect.image = UIImage(named: "popIncorrect")
+        popIncorrect.layer.masksToBounds = true
+        popIncorrect.contentMode = .scaleAspectFill
+        popIncorrect.isHidden = true
+        popIncorrect.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(popIncorrect)
         
         cardQuestion.image = UIImage(named: "cardQuestion")
         cardQuestion.layer.masksToBounds = true
@@ -151,6 +172,12 @@ extension QuizTableViewCell {
         fourthAnswerButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            popCorrect.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -100),
+            popCorrect.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
+            popIncorrect.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -100),
+            popIncorrect.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            
             cardQuestion.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
             cardQuestion.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             

@@ -196,6 +196,7 @@ extension StartAPartyTableViewCell {
         nameFriendTextField.textAlignment = .center
         nameFriendTextField.layer.cornerRadius = 20
         nameFriendTextField.textColor = .white
+        nameFriendTextField.autocorrectionType = .no
         nameFriendTextField.keyboardType = .default
         nameFriendTextField.backgroundColor = UIColor(red: 123/255.0, green: 0/255.0, blue: 165/255.0, alpha: 1.0)
         nameFriendTextField.delegate = self
