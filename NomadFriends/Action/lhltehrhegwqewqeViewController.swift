@@ -163,7 +163,7 @@ extension lhltehrhegwqewqeViewController {
         popCorrectAction.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(popCorrectAction)
         
-        popIncorrectAction.image = UIImage(named: "popIncorrect")
+        popIncorrectAction.image = UIImage(named: "tryHarderIncorrect")
         popIncorrectAction.layer.masksToBounds = true
         popIncorrectAction.contentMode = .scaleAspectFill
         popIncorrectAction.isHidden = true
