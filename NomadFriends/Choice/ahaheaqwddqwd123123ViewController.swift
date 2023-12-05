@@ -105,7 +105,7 @@ class ahaheaqwddqwd123123ViewController: UIViewController {
 
 extension ahaheaqwddqwd123123ViewController {
     func djqwdqjj32112313() {
-        choceOpinion.image = UIImage(named: "background")
+        choceOpinion.image = UIImage(named: "backgroundFootball")
         choceOpinion.layer.masksToBounds = true
         choceOpinion.contentMode = .scaleAspectFill
         choceOpinion.translatesAutoresizingMaskIntoConstraints = false

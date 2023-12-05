@@ -121,7 +121,7 @@ final class cclcql3123Controller: UIViewController {
 
 extension cclcql3123Controller {
     func cdqdwwqw53253() {
-        quizAk.image = UIImage(named: "background")
+        quizAk.image = UIImage(named: "backgroundFootball")
         quizAk.layer.masksToBounds = true
         quizAk.contentMode = .scaleAspectFill
         quizAk.translatesAutoresizingMaskIntoConstraints = false

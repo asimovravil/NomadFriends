@@ -106,7 +106,7 @@ extension gerge4312414214ViewController {
         spinButtonBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(spinButtonBonusCoolak)
         
-        cardDanceBonusCoolak.image = UIImage(named: "cardBonusDance")
+        cardDanceBonusCoolak.image = UIImage(named: "cardBonusTraining")
         cardDanceBonusCoolak.layer.masksToBounds = true
         cardDanceBonusCoolak.contentMode = .scaleAspectFill
         cardDanceBonusCoolak.isHidden = true

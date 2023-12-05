@@ -150,7 +150,7 @@ class lhltehrhegwqewqeViewController: UIViewController {
 
 extension lhltehrhegwqewqeViewController {
     func udqwiudqwiu13123() {
-        actionBatAction.image = UIImage(named: "background")
+        actionBatAction.image = UIImage(named: "backgroundFootball")
         actionBatAction.layer.masksToBounds = true
         actionBatAction.contentMode = .scaleAspectFill
         actionBatAction.translatesAutoresizingMaskIntoConstraints = false

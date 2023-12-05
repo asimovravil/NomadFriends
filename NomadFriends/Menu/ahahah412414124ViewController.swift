@@ -52,7 +52,7 @@ extension ahahah412414124ViewController {
         menuMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(menuMenu)
         
-        startAPartyButtonMenu.setImage(UIImage(named: "startAPartyButton"), for: .normal)
+        startAPartyButtonMenu.setImage(UIImage(named: "startATrainingButton"), for: .normal)
         startAPartyButtonMenu.addTarget(self, action: #selector(cascal321), for: .touchUpInside)
         startAPartyButtonMenu.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(startAPartyButtonMenu)
