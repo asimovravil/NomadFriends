@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             } else {
                 if !csd8c2313123.isOnboardingShowed {
                     self?.navigation = UINavigationController(
-                        rootViewController: gerge4312414214ViewController()
+                        rootViewController: dqwd12311231ViewController()
                     )
                 }
                 self?.window?.rootViewController = self?.navigation
