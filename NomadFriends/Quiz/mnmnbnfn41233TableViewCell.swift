@@ -171,6 +171,16 @@ extension mnmnbnfn41233TableViewCell {
         fourthAnswerButtonQuizChponk.layer.borderColor = UIColor.white.cgColor
         fourthAnswerButtonQuizChponk.translatesAutoresizingMaskIntoConstraints = false
         
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                cardQuestionQuizChponk.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                cardQuestionQuizChponk.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            ])
+        }
+        
         NSLayoutConstraint.activate([
             popCorrectQuizChponk.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -100),
             popCorrectQuizChponk.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -178,7 +188,6 @@ extension mnmnbnfn41233TableViewCell {
             popIncorrectQuizChponk.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -100),
             popIncorrectQuizChponk.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            cardQuestionQuizChponk.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 40),
             cardQuestionQuizChponk.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
             questionLabelQuizChponk.topAnchor.constraint(equalTo: cardQuestionQuizChponk.topAnchor, constant: 16),

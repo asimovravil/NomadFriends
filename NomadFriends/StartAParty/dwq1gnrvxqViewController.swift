@@ -165,7 +165,7 @@ extension dwq1gnrvxqViewController {
             tableViewStartParty.topAnchor.constraint(equalTo: plusButtonStartParty.bottomAnchor, constant: 24),
             tableViewStartParty.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableViewStartParty.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableViewStartParty.bottomAnchor.constraint(equalTo: startAPartyButtonStartParty.topAnchor, constant: -44),
+            tableViewStartParty.bottomAnchor.constraint(equalTo: startAPartyButtonStartParty.topAnchor, constant: -5),
             
             startAPartyButtonStartParty.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             startAPartyButtonStartParty.centerXAnchor.constraint(equalTo: view.centerXAnchor),

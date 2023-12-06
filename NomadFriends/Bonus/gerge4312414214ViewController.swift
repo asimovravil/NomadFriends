@@ -20,6 +20,7 @@ class gerge4312414214ViewController: UIViewController {
     var noIWontBonusCoolak = UIButton()
     var iDidItBonusCoolak = UIButton()
     var getButtonBonusCoolak = UIButton()
+    var titleCoolak = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,6 +102,15 @@ extension gerge4312414214ViewController {
         stickViewBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(stickViewBonusCoolak)
         
+        titleCoolak.text = "You have the lowest score, but you have a chance to get \nahead! Spin the roulette of fortune and get a score for the \ncompleted task or just like that! Good luck!"
+        titleCoolak.textAlignment = .center
+        titleCoolak.textColor = .white
+        titleCoolak.alpha = 0.65
+        titleCoolak.numberOfLines = 0
+        titleCoolak.font = UIFont(name: "SFProDisplay-Regular", size: 12)
+        titleCoolak.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(titleCoolak)
+        
         spinButtonBonusCoolak.setImage(UIImage(named: "spin"), for: .normal)
         spinButtonBonusCoolak.addTarget(self, action: #selector(cjacjsacja1313123), for: .touchUpInside)
         spinButtonBonusCoolak.translatesAutoresizingMaskIntoConstraints = false
@@ -144,6 +154,9 @@ extension gerge4312414214ViewController {
             bonusCool.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             bonusCool.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
+            titleCoolak.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            titleCoolak.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
             spinButtonBonusCoolak.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             stickViewBonusCoolak.topAnchor.constraint(equalTo: circleBonusBonusCoolak.topAnchor),
@@ -171,10 +184,12 @@ extension gerge4312414214ViewController {
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
                 spinButtonBonusCoolak.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+                titleCoolak.bottomAnchor.constraint(equalTo: spinButtonBonusCoolak.topAnchor, constant: -4),
             ])
         } else {
             NSLayoutConstraint.activate([
                 spinButtonBonusCoolak.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20),
+                titleCoolak.bottomAnchor.constraint(equalTo: spinButtonBonusCoolak.topAnchor),
             ])
         }
     }

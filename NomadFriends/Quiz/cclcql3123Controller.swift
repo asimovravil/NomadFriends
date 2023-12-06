@@ -79,7 +79,7 @@ final class cclcql3123Controller: UIViewController {
 
         answeredQuestionsCountQuiz += 1
 
-        if answeredQuestionsCountQuiz >= 1 {
+        if answeredQuestionsCountQuiz >= 10 {
             netnetnetnetn2424()
         }
     }
@@ -226,7 +226,7 @@ extension cclcql3123Controller: UITableViewDataSource, UITableViewDelegate, Quiz
 
         answeredQuestionsCountQuiz += 1
 
-        if answeredQuestionsCountQuiz >= 1 {
+        if answeredQuestionsCountQuiz >= 10 {
             netnetnetnetn2424()
         }
     }

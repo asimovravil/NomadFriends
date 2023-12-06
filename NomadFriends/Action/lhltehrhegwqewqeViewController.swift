@@ -170,7 +170,7 @@ extension lhltehrhegwqewqeViewController {
         popIncorrectAction.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(popIncorrectAction)
         
-        danceViewAction.image = UIImage(named: "dance")
+        danceViewAction.image = UIImage(named: "sport")
         danceViewAction.layer.masksToBounds = true
         danceViewAction.contentMode = .scaleAspectFill
         danceViewAction.translatesAutoresizingMaskIntoConstraints = false
